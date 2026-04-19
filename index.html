@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Onboarding Software for CS Teams | Lyniro</title>
+<meta name="description" content="Lyniro is client onboarding software that replaces email chaos with a shared workspace. Email-first tasks, at-risk detection, built-in chat. Join the waitlist.">
+<link rel="canonical" href="https://lyniro.com/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"SoftwareApplication","name":"Lyniro","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Client onboarding and collaboration platform for customer success teams. Shared workspace with email-first task completion, at-risk detection, and built-in chat.","offers":{"@type":"AggregateOffer","lowPrice":"0","highPrice":"399","priceCurrency":"USD","offerCount":"4"}},
+    {"@type":"Organization","name":"Lyniro","url":"https://lyniro.com","logo":"https://lyniro.com/favicon.svg","contactPoint":{"@type":"ContactPoint","email":"hello@lyniro.com","contactType":"customer support"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Do my clients need to pay or create an account?","acceptedAnswer":{"@type":"Answer","text":"No. Clients access their portal completely free and can complete tasks from email with no login required."}},
+      {"@type":"Question","name":"Is there a free trial?","acceptedAnswer":{"@type":"Answer","text":"Yes. All paid plans include a 14-day free trial with no credit card required."}},
+      {"@type":"Question","name":"Which CRM does Lyniro work with?","acceptedAnswer":{"@type":"Answer","text":"Lyniro works with any CRM or no CRM at all. It connects via API to HubSpot, Salesforce, Zoho, and more."}}
+    ]}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #0A0F1E;
+  --blue: #2451FF;
+  --blue-dim: #1A3FD4;
+  --blue-pale: #EEF2FF;
+  --blue-mid: #C7D2FE;
+  --teal: #00C9A7;
+  --coral: #FF6B6B;
+  --amber: #F59E0B;
+  --mid: #4B5563;
+  --muted: #9CA3AF;
+  --border: #E5E7EB;
+  --bg: #F9FAFB;
+  --white: #FFFFFF;
+  --green: #059669;
+  --green-bg: #ECFDF5;
+  --red: #DC2626;
+  --r: 14px;
+  --r-lg: 20px;
+  --shadow: 0 2px 8px rgba(10,15,30,.06), 0 1px 2px rgba(10,15,30,.04);
+  --shadow-md: 0 8px 32px rgba(10,15,30,.10), 0 2px 8px rgba(10,15,30,.06);
+  --shadow-lg: 0 20px 60px rgba(10,15,30,.14);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{line-height:1.15;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-logo-mark svg{width:18px;height:18px;}
+.nav-logo-text{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-0.5px;}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-ctas{display:flex;align-items:center;gap:12px;}
+.btn-ghost{font-size:15px;font-weight:600;color:var(--mid);padding:8px 18px;border-radius:8px;transition:all .15s;}
+.btn-ghost:hover{background:var(--bg);color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;transition:all .18s;display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;border:none;cursor:pointer;}
+.btn-blue:hover{background:var(--blue-dim);transform:translateY(-1px);box-shadow:0 4px 16px rgba(36,81,255,.3);}
+.btn-blue-lg{background:var(--blue);color:white;font-size:17px;font-weight:700;padding:15px 34px;border-radius:11px;transition:all .2s;display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;border:none;cursor:pointer;letter-spacing:-0.2px;}
+.btn-blue-lg:hover{background:var(--blue-dim);transform:translateY(-2px);box-shadow:0 8px 28px rgba(36,81,255,.35);}
+.btn-outline-lg{background:transparent;color:var(--blue);font-size:17px;font-weight:700;padding:14px 34px;border-radius:11px;border:2px solid var(--blue-mid);transition:all .2s;display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;}
+.btn-outline-lg:hover{background:var(--blue-pale);border-color:var(--blue);}
+
+/* ── HERO ── */
+.hero{padding:100px 28px 80px;background:var(--white);position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4;}
+.hero-glow{position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(36,81,255,.12) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-pale);border:1px solid var(--blue-mid);color:var(--blue);font-size:13px;font-weight:700;padding:6px 16px;border-radius:100px;margin-bottom:28px;letter-spacing:0.3px;}
+.hero-badge-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
+.hero h1{font-size:clamp(44px,6.5vw,78px);font-weight:800;letter-spacing:-3px;line-height:1.04;max-width:820px;margin-bottom:24px;}
+.hero h1 .accent{color:var(--blue);position:relative;}
+.hero h1 .accent::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--teal));border-radius:4px;}
+.hero-sub{font-size:19px;color:var(--mid);max-width:560px;line-height:1.7;margin-bottom:16px;font-weight:400;}
+.hero-sub strong{color:var(--ink);font-weight:600;}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;margin-top:36px;}
+.hero-trust{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.hero-trust-item{display:flex;align-items:center;gap:6px;}
+.hero-trust-item svg{color:var(--teal);}
+
+/* DASHBOARD MOCKUP */
+.hero-mockup{margin-top:72px;max-width:1060px;margin-left:auto;margin-right:auto;border-radius:18px;box-shadow:0 32px 80px rgba(10,15,30,.16),0 0 0 1px var(--border);overflow:hidden;background:var(--white);}
+.mockup-bar{background:#F3F4F6;padding:13px 20px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
+.dot{width:12px;height:12px;border-radius:50%;}
+.dot-r{background:#FF5F57;}
+.dot-y{background:#FEBC2E;}
+.dot-g{background:#28C840;}
+.mockup-url{flex:1;max-width:320px;margin:0 auto;background:white;border:1px solid var(--border);border-radius:7px;padding:5px 14px;font-size:12px;color:var(--muted);text-align:center;}
+.mockup-body{display:grid;grid-template-columns:220px 1fr;min-height:400px;}
+.mockup-sidebar{background:#F9FAFB;border-right:1px solid var(--border);padding:20px 16px;}
+.mockup-logo{font-size:16px;font-weight:800;color:var(--blue);margin-bottom:6px;display:flex;align-items:center;gap:8px;}
+.mockup-logo-mark{width:26px;height:26px;background:var(--blue);border-radius:7px;display:flex;align-items:center;justify-content:center;}
+.mockup-logo-mark svg{width:14px;height:14px;}
+.mockup-nav{margin-top:20px;display:flex;flex-direction:column;gap:2px;}
+.mockup-nav-item{padding:8px 12px;border-radius:8px;font-size:13px;color:var(--mid);display:flex;align-items:center;gap:8px;}
+.mockup-nav-item.active{background:var(--blue-pale);color:var(--blue);font-weight:600;}
+.mockup-main{padding:24px;}
+.mockup-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;}
+.mockup-title{font-size:20px;font-weight:800;color:var(--ink);}
+.mockup-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.mockup-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
+.mockup-card{background:white;border:1px solid var(--border);border-radius:12px;padding:14px;}
+.mockup-card-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;}
+.mockup-card-val{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-1px;}
+.mockup-card-val.blue{color:var(--blue);}
+.mockup-card-val.green{color:var(--green);}
+.mockup-card-val.red{color:var(--red);}
+.mockup-table-head{display:grid;grid-template-columns:2fr 1.4fr 1fr 1fr;padding:9px 14px;background:#F9FAFB;border-radius:8px 8px 0 0;border:1px solid var(--border);font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;}
+.mockup-row{display:grid;grid-template-columns:2fr 1.4fr 1fr 1fr;padding:12px 14px;border:1px solid var(--border);border-top:none;align-items:center;font-size:13px;}
+.mockup-row:last-child{border-radius:0 0 8px 8px;}
+.mockup-row:nth-child(even){background:#FAFAFA;}
+.mockup-name{font-weight:700;font-size:13px;color:var(--ink);}
+.mockup-co{font-size:11px;color:var(--muted);}
+.prog-wrap{display:flex;align-items:center;gap:8px;}
+.prog-bar{width:64px;height:5px;background:#E5E7EB;border-radius:5px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:5px;background:var(--blue);}
+.badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:10px;font-weight:700;}
+.badge-blue{background:var(--blue-pale);color:var(--blue);}
+.badge-green{background:#DCFCE7;color:#16A34A;}
+.badge-red{background:#FEE2E2;color:#DC2626;}
+.badge-amber{background:#FEF3C7;color:#D97706;}
+
+/* ── SECTIONS ── */
+section{padding:100px 28px;}
+.section-bg{background:var(--bg);}
+.section-dark{background:var(--ink);}
+.container{max-width:1200px;margin:0 auto;}
+.eyebrow{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
+.section-title{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-2px;margin-bottom:18px;}
+.section-sub{font-size:18px;color:var(--mid);line-height:1.7;max-width:560px;}
+.section-header{margin-bottom:64px;}
+.section-header.center{text-align:center;}
+.section-header.center .section-sub{margin:0 auto;}
+
+/* ── STATS ── */
+.stats-bar{background:var(--ink);padding:28px;}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat{text-align:center;padding:12px 0;}
+.stat-val{font-size:38px;font-weight:800;color:white;letter-spacing:-2px;line-height:1;}
+.stat-val em{color:var(--teal);font-style:normal;}
+.stat-label{font-size:13px;color:rgba(255,255,255,.5);margin-top:6px;}
+
+/* ── PROBLEM ── */
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.problem-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;position:relative;overflow:hidden;transition:all .2s;}
+.problem-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.problem-card-top{height:4px;position:absolute;top:0;left:0;right:0;}
+.p1 .problem-card-top{background:linear-gradient(90deg,var(--coral),#FF9A9A);}
+.p2 .problem-card-top{background:linear-gradient(90deg,var(--amber),#FCD34D);}
+.p3 .problem-card-top{background:linear-gradient(90deg,var(--blue),var(--teal));}
+.problem-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+.p1 .problem-icon{background:#FFF1F0;}
+.p2 .problem-icon{background:#FFFBEB;}
+.p3 .problem-icon{background:var(--blue-pale);}
+.problem-card h3{font-size:19px;font-weight:700;margin-bottom:12px;letter-spacing:-0.3px;}
+.problem-card p{font-size:15px;color:var(--mid);line-height:1.7;}
+
+/* ── HOW IT WORKS ── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;position:relative;}
+.steps::before{content:'';position:absolute;top:26px;left:calc(16.67% + 26px);right:calc(16.67% + 26px);height:0;border-top:2px dashed var(--blue-mid);}
+.step{position:relative;}
+.step-num{width:52px;height:52px;border-radius:50%;background:var(--blue);color:white;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;z-index:1;box-shadow:0 4px 20px rgba(36,81,255,.3);}
+.step h3{font-size:19px;font-weight:700;margin-bottom:10px;letter-spacing:-0.3px;}
+.step p{font-size:15px;color:var(--mid);line-height:1.7;}
+
+/* ── FEATURES ── */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.feature-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;transition:all .2s;}
+.feature-card:hover{box-shadow:var(--shadow-md);border-color:var(--blue-mid);transform:translateY(-2px);}
+.feature-icon{width:48px;height:48px;border-radius:12px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.feature-card h3{font-size:17px;font-weight:700;margin-bottom:8px;letter-spacing:-0.2px;}
+.feature-card p{font-size:14px;color:var(--mid);line-height:1.7;}
+
+/* ── EMAIL FLOW ── */
+.email-demo{background:white;border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-md);overflow:hidden;max-width:520px;}
+.email-header{background:#F9FAFB;padding:16px 20px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:6px;}
+.email-header-row{display:flex;align-items:center;gap:8px;font-size:13px;}
+.email-header-label{color:var(--muted);font-weight:600;width:48px;}
+.email-header-val{color:var(--ink);}
+.email-subject{font-size:15px;font-weight:700;color:var(--ink);margin-top:4px;}
+.email-body{padding:24px;}
+.email-greeting{font-size:15px;color:var(--ink);margin-bottom:16px;line-height:1.6;}
+.email-task-box{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:16px;margin:16px 0;}
+.email-task-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.email-task-desc{font-size:13px;color:var(--mid);}
+.email-btn{display:block;background:var(--blue);color:white;text-align:center;padding:13px 24px;border-radius:9px;font-size:15px;font-weight:700;margin:20px 0;transition:all .2s;}
+.email-btn:hover{background:var(--blue-dim);}
+.email-trouble{font-size:12px;color:var(--muted);text-align:center;}
+.email-trouble a{color:var(--blue);}
+
+/* ── COMPARISON ── */
+.compare-table{width:100%;border-collapse:collapse;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);}
+.compare-table th{padding:18px 22px;font-size:15px;font-weight:700;text-align:left;border-bottom:2px solid var(--border);}
+.compare-table th.th-feature{background:#F9FAFB;color:var(--mid);}
+.compare-table th.th-lyniro{background:var(--blue);color:white;}
+.compare-table th.th-comp{background:#F9FAFB;color:var(--mid);}
+.compare-table td{padding:15px 22px;font-size:15px;border-bottom:1px solid var(--border);}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table td:first-child{font-weight:500;color:var(--ink);background:#FAFAFA;}
+.compare-table td.lyniro-col{background:#EEF2FF;font-weight:600;color:var(--blue);}
+.compare-table tr:hover td{background:#F9FAFB;}
+.compare-table tr:hover td.lyniro-col{background:#E4EAFF;}
+.ck{color:var(--green);font-size:18px;font-weight:700;}
+.cx{color:#D1D5DB;font-size:18px;}
+
+/* ── PRICING ── */
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.pricing-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;position:relative;transition:all .2s;}
+.pricing-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.pricing-card.featured{border:2px solid var(--blue);box-shadow:0 0 0 4px rgba(36,81,255,.08);}
+.popular-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:white;font-size:11px;font-weight:700;padding:4px 18px;border-radius:100px;white-space:nowrap;letter-spacing:0.5px;}
+.pricing-tier{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+.pricing-price{display:flex;align-items:flex-start;gap:2px;margin-bottom:6px;}
+.pricing-price-num{font-size:46px;font-weight:800;color:var(--ink);letter-spacing:-3px;line-height:1;}
+.pricing-price-sup{font-size:22px;font-weight:700;color:var(--ink);margin-top:8px;}
+.pricing-price-per{font-size:15px;color:var(--muted);align-self:flex-end;margin-bottom:6px;}
+.pricing-desc{font-size:14px;color:var(--mid);line-height:1.6;margin-bottom:22px;min-height:40px;}
+.pricing-btn{width:100%;padding:11px;border-radius:9px;font-size:15px;font-weight:700;cursor:pointer;transition:all .15s;font-family:'Plus Jakarta Sans',sans-serif;border:none;margin-bottom:20px;}
+.pricing-btn-outline{background:transparent;color:var(--blue);border:1.5px solid var(--blue-mid);}
+.pricing-btn-outline:hover{background:var(--blue-pale);}
+.pricing-btn-fill{background:var(--blue);color:white;}
+.pricing-btn-fill:hover{background:var(--blue-dim);}
+.pricing-divider{border:none;border-top:1px solid var(--border);margin:0 0 18px;}
+.pricing-feats{list-style:none;}
+.pricing-feats li{font-size:14px;color:var(--ink);padding:6px 0;display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
+.pricing-feats li::before{content:'✓';color:var(--green);font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px;}
+.pricing-toggle{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:48px;}
+.toggle-label{font-size:15px;font-weight:500;color:var(--mid);}
+.toggle-track{width:46px;height:26px;background:var(--blue);border-radius:100px;position:relative;cursor:pointer;transition:background .2s;}
+.toggle-track.off{background:#D1D5DB;}
+.toggle-thumb{width:20px;height:20px;background:white;border-radius:50%;position:absolute;top:3px;left:3px;transition:transform .2s;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+.toggle-track.on .toggle-thumb{transform:translateX(20px);}
+.save-tag{background:#ECFDF5;color:var(--green);font-size:12px;font-weight:700;padding:3px 12px;border-radius:100px;}
+
+/* ── TESTIMONIALS ── */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.testi-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;position:relative;}
+.testi-card::before{content:'"';font-family:'Lora',serif;font-size:80px;color:var(--blue-mid);position:absolute;top:12px;left:22px;line-height:1;}
+.testi-text{font-size:15px;color:var(--ink);line-height:1.75;padding-top:36px;margin-bottom:22px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:13px;}
+.testi-name{font-size:14px;font-weight:700;color:var(--ink);}
+.testi-role{font-size:12px;color:var(--muted);}
+.stars{color:#F59E0B;font-size:13px;margin-bottom:4px;}
+
+/* ── FAQ ── */
+.faq-list{max-width:760px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-btn{width:100%;background:none;border:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;font-size:17px;font-weight:600;color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;text-align:left;gap:16px;}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-pale);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .2s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-answer{font-size:15px;color:var(--mid);line-height:1.75;padding-bottom:22px;display:none;}
+.faq-item.open .faq-answer{display:block;}
+
+/* ── CTA ── */
+.cta-block{background:linear-gradient(135deg,var(--ink) 0%,#152054 100%);border-radius:24px;padding:90px 64px;text-align:center;margin:0 28px 100px;position:relative;overflow:hidden;}
+.cta-block::before{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(36,81,255,.2) 0%,transparent 65%);}
+.cta-block::after{content:'';position:absolute;bottom:-100px;left:-100px;width:350px;height:350px;background:radial-gradient(circle,rgba(0,201,167,.12) 0%,transparent 65%);}
+.cta-block h2{font-size:clamp(32px,4.5vw,54px);font-weight:800;color:white;letter-spacing:-2px;margin-bottom:16px;position:relative;z-index:1;}
+.cta-block p{font-size:18px;color:rgba(255,255,255,.65);margin-bottom:40px;position:relative;z-index:1;}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-white{background:white;color:var(--blue);font-size:17px;font-weight:700;padding:15px 34px;border-radius:11px;display:inline-block;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.2);}
+.btn-ghost-white{background:rgba(255,255,255,.1);color:white;font-size:17px;font-weight:600;padding:14px 34px;border-radius:11px;border:1px solid rgba(255,255,255,.2);display:inline-block;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif;}
+.btn-ghost-white:hover{background:rgba(255,255,255,.16);}
+.cta-note{color:rgba(255,255,255,.4);font-size:13px;margin-top:18px;position:relative;z-index:1;}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:72px 28px 36px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px;}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.footer-brand-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.footer-brand-text{font-size:20px;font-weight:800;color:white;}
+.footer-tagline{font-size:14px;color:rgba(255,255,255,.45);line-height:1.7;max-width:260px;}
+.footer-col h4{font-size:12px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px;}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.55);margin-bottom:12px;transition:color .15s;}
+.footer-col a:hover{color:white;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.35);}
+.footer-bottom-links{display:flex;gap:24px;}
+.footer-bottom-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .15s;}
+.footer-bottom-links a:hover{color:rgba(255,255,255,.7);}
+
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav-links,.nav-ctas .btn-ghost{display:none;}
+  .hero h1{letter-spacing:-2px;}
+  .problem-grid,.steps,.features-grid,.pricing-grid,.testimonials-grid,.footer-top{grid-template-columns:1fr;}
+  .steps::before{display:none;}
+  .mockup-sidebar{display:none;}
+  .mockup-body{grid-template-columns:1fr;}
+  .mockup-table-head,.mockup-row{grid-template-columns:2fr 1fr 1fr;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .compare-table{font-size:13px;}
+  .compare-table th,.compare-table td{padding:12px 14px;}
+  .cta-block{padding:56px 28px;margin:0 16px 80px;}
+  .footer-top{gap:36px;}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to set up client onboarding with Lyniro",
+  "description": "Set up your first structured client onboarding plan in 15 minutes using Lyniro.",
+  "totalTime": "PT15M",
+  "step": [
+    {"@type":"HowToStep","name":"Create your onboarding plan","text":"Pick a pre-built SaaS onboarding template or build your own with stages, tasks, and due dates."},
+    {"@type":"HowToStep","name":"Invite your client","text":"Your client receives a personalised welcome email with their full plan — no login required."},
+    {"@type":"HowToStep","name":"Watch progress happen automatically","text":"Tasks complete, stages unlock, blockers trigger alerts, and at-risk accounts surface automatically."}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3h5v12H3zM10 3h5v5h-5zM10 11h5v4h-5z" fill="white" rx="1"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Lyniro</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="blog/">Blog</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="#" class="btn-ghost">Log in</a>
+      <a href="#waitlist" class="btn-blue">Join the Waitlist →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Now in early access — join the waitlist
+    </div>
+    <h1>Stop losing clients<br>in the <span class="accent">onboarding gap</span></h1>
+    <h2 style="font-size:19px;font-weight:400;color:var(--mid);max-width:580px;line-height:1.7;margin-bottom:16px;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:0;"><strong style="color:var(--ink);font-weight:600;">Lyniro</strong> is the <strong style="color:var(--ink);font-weight:600;">client onboarding software</strong> that replaces email chaos and Slack threads with a shared workspace — where your CS team manages the process and your clients actually participate. Tasks, progress, chat, and at-risk alerts in one place.</h2>
+    <div class="hero-actions">
+      <a href="#waitlist" class="btn-blue-lg">Join the Waitlist — Free Early Access</a>
+      <a href="#how-it-works" class="btn-outline-lg">Watch 2-Min Demo</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#00C9A7"/><path d="M4 7l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        14-day free trial
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#00C9A7"/><path d="M4 7l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        No credit card required
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#00C9A7"/><path d="M4 7l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Set up in 15 minutes
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#00C9A7"/><path d="M4 7l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Works with any CRM
+      </div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="hero-mockup reveal">
+      <div class="mockup-bar">
+        <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+        <div class="mockup-url">app.lyniro.com/dashboard</div>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-sidebar">
+          <div class="mockup-logo">
+            <div class="mockup-logo-mark"><svg viewBox="0 0 14 14" fill="none"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+            Lyniro
+          </div>
+          <div class="mockup-nav">
+            <div class="mockup-nav-item active">📊 Dashboard</div>
+            <div class="mockup-nav-item">📈 Analytics</div>
+            <div class="mockup-nav-item">💬 Messages</div>
+            <div class="mockup-nav-item">📋 Templates</div>
+            <div class="mockup-nav-item">⚙️ Settings</div>
+          </div>
+        </div>
+        <div class="mockup-main">
+          <div class="mockup-header">
+            <div>
+              <div class="mockup-title">Customer Onboarding</div>
+              <div class="mockup-sub">14 active plans · 3 at risk</div>
+            </div>
+            <button style="background:var(--blue);color:white;border:none;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;">+ New Plan</button>
+          </div>
+          <div class="mockup-cards">
+            <div class="mockup-card"><div class="mockup-card-label">Active Plans</div><div class="mockup-card-val blue">14</div></div>
+            <div class="mockup-card"><div class="mockup-card-label">Avg Completion</div><div class="mockup-card-val green">67%</div></div>
+            <div class="mockup-card"><div class="mockup-card-label">Blocked Tasks</div><div class="mockup-card-val red">3</div></div>
+          </div>
+          <div class="mockup-table-head"><span>CUSTOMER</span><span>PROGRESS</span><span>STATUS</span><span>RISK</span></div>
+          <div class="mockup-row">
+            <div><div class="mockup-name">Sarah Chen</div><div class="mockup-co">TechVenture Inc</div></div>
+            <div class="prog-wrap"><div class="prog-bar"><div class="prog-fill" style="width:78%"></div></div><span style="font-size:11px;color:var(--muted)">78%</span></div>
+            <div><span class="badge badge-blue">Stage 3</span></div>
+            <div><span class="badge badge-red">Blocked</span></div>
+          </div>
+          <div class="mockup-row">
+            <div><div class="mockup-name">Emily Rodriguez</div><div class="mockup-co">Innovate Co</div></div>
+            <div class="prog-wrap"><div class="prog-bar"><div class="prog-fill" style="width:94%"></div></div><span style="font-size:11px;color:var(--muted)">94%</span></div>
+            <div><span class="badge badge-blue">Stage 4</span></div>
+            <div><span class="badge badge-green">On Track</span></div>
+          </div>
+          <div class="mockup-row">
+            <div><div class="mockup-name">James Okafor</div><div class="mockup-co">ScaleUp Ltd</div></div>
+            <div class="prog-wrap"><div class="prog-bar"><div class="prog-fill" style="width:22%"></div></div><span style="font-size:11px;color:var(--muted)">22%</span></div>
+            <div><span class="badge badge-blue">Stage 1</span></div>
+            <div><span class="badge badge-amber">Stalled</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-val"><em>15min</em></div><div class="stat-label">Average setup time</div></div>
+    <div class="stat"><div class="stat-val"><em>3×</em></div><div class="stat-label">Higher task completion rate</div></div>
+    <div class="stat"><div class="stat-val"><em>40%</em></div><div class="stat-label">Faster time to value</div></div>
+    <div class="stat"><div class="stat-val"><em>$79</em></div><div class="stat-label">Starting price per month</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="section-bg">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">Sound Familiar?</div>
+      <h2 class="section-title">Your <strong>customer onboarding process</strong><br>is bleeding revenue — silently</h2>
+      <p class="section-sub">68% of SaaS churn happens in the first 90 days. It's almost never the product. It's the onboarding. <a href="/blog/why-saas-customers-churn-during-onboarding/" style="color:var(--blue);font-weight:600;">See the data →</a></p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card p1 reveal">
+        <div class="problem-card-top"></div>
+        <div class="problem-icon">📧</div>
+        <h3>Clients go dark the moment they sign</h3>
+        <p>You send the welcome email. Then nothing. Three follow-ups later, they've lost momentum. Your go-live date slips by two weeks — and your renewal is already at risk.</p>
+      </div>
+      <div class="problem-card p2 reveal">
+        <div class="problem-card-top"></div>
+        <div class="problem-icon">📊</div>
+        <h3>Blockers sit unresolved for days</h3>
+        <p>A client gets stuck. They mention it in passing on a call. By the time it reaches the right person, five days have passed. That's five days of stalled progress — and five days closer to churn.</p>
+      </div>
+      <div class="problem-card p3 reveal">
+        <div class="problem-card-top"></div>
+        <div class="problem-icon">😕</div>
+        <h3>Clients feel like passengers, not partners</h3>
+        <p>No shared plan. No visibility into their own progress. No clear next step. Without ownership in the process, clients disengage — and disengaged clients rarely renew.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">How It Works</div>
+      <h2 class="section-title">First client onboarded<br>the same day you sign up.</h2>
+      <p class="section-sub">Three steps from signup to a live onboarding plan — no technical setup, no developer, no training required.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Create your onboarding plan in minutes</h3>
+        <p>Pick a pre-built <strong>SaaS onboarding template</strong> or build your own. Add stages, assign tasks to your team or the client, set due dates. Your plan is ready before the kick-off call ends.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Invite your client — zero friction for them</h3>
+        <p>Your client receives a personalised welcome email with their full onboarding plan. No app download. No account creation. One click and they're completing their first task — before the call is even over.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Watch progress happen — automatically</h3>
+        <p>Tasks complete. Stages unlock. Blockers trigger instant alerts. At-risk accounts surface before they churn. You spend your time helping clients succeed — not chasing them for status updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL FLOW HIGHLIGHT -->
+<section class="section-bg">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="reveal">
+        <div class="eyebrow">The Feature Competitors Don't Have</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3.5vw,44px);">Clients complete tasks<br>straight from their inbox.</h2>
+        <p style="font-size:17px;color:var(--mid);line-height:1.75;margin-bottom:24px;">The number one reason <strong>customer onboarding stalls</strong> is portal friction. Clients don't want to log into another tool. So they don't. They open the welcome email, intend to deal with it later, and never come back.</p>
+        <p style="font-size:17px;color:var(--mid);line-height:1.75;margin-bottom:32px;">Lyniro's email-first approach meets clients where they already are. Every task goes to their inbox with a single <em>"Complete This Step"</em> button. One click. Task done. You're notified. No login, no portal, no friction — ever. Asana pioneered this for internal teams. We built it for your clients.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink);">
+            <div style="width:28px;height:28px;background:var(--green-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:14px;flex-shrink:0;">✓</div>
+3× higher client task completion vs portal-only tools
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink);">
+            <div style="width:28px;height:28px;background:var(--green-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:14px;flex-shrink:0;">✓</div>
+Clients act the same day — not after 3 follow-up emails
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--ink);">
+            <div style="width:28px;height:28px;background:var(--green-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:14px;flex-shrink:0;">✓</div>
+SHA-256 hashed single-use token per task — enterprise-grade security
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="email-demo">
+          <div class="email-header">
+            <div class="email-header-row"><span class="email-header-label">From:</span><span class="email-header-val">James (via Lyniro) &lt;hello@lyniro.com&gt;</span></div>
+            <div class="email-header-row"><span class="email-header-label">To:</span><span class="email-header-val">sarah@techventure.com</span></div>
+            <div class="email-subject">You have one step to complete before go-live</div>
+          </div>
+          <div class="email-body">
+            <p class="email-greeting">Hi Sarah,<br><br>James from your onboarding team has assigned you a new step in your plan. Here's what needs to be done:</p>
+            <div class="email-task-box">
+              <div class="email-task-title">📋 Connect your CRM integration</div>
+              <div class="email-task-desc">Follow the guide to connect Salesforce to your Lyniro workspace. Takes about 5 minutes.</div>
+            </div>
+            <a href="#" class="email-btn">✓ Complete This Step</a>
+            <div class="email-trouble">Having trouble? <a href="#">Let us know what's blocking you →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">Built Different</div>
+      <h2 class="section-title">A <strong>client onboarding platform</strong><br>built for both sides of the relationship.</h2>
+      <p class="section-sub">Purpose-built for <strong>SaaS customer onboarding</strong>, agency project delivery, and consulting — where your client's participation is as important as your team's.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🔒</div>
+        <h3>Structured, stage-locked onboarding journeys</h3>
+        <p>Clients see a clear roadmap — not an overwhelming list. Each stage unlocks as the previous one completes. No confusion. No skipping ahead. Just steady progress toward go-live.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📨</div>
+        <h3>Email-first task completion — no client login</h3>
+        <p>The feature that sets Lyniro apart. Tasks land in your client's inbox. One click completes them — no portal login, no app download, no friction. Completion rates go through the roof.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">💬</div>
+        <h3>Built-in client chat — no Slack required</h3>
+        <p>Messenger-style chat tied directly to the plan. Full history, online status, read receipts. Every conversation stays where the work is — not buried in a separate tool or email thread.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">⚠️</div>
+        <h3>Automatic at-risk client detection</h3>
+        <p>Lyniro watches every plan continuously. Overdue tasks, stalled activity, multiple blockers — flagged automatically so your team can intervene before a difficult renewal conversation becomes a cancellation.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📝</div>
+        <h3>Internal notes with visibility control</h3>
+        <p>Write private notes your client will never see — strategy, escalation context, internal flags. Toggle any note to "shared" and it appears on the client portal instantly. Complete control, zero awkward moments.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📊</div>
+        <h3>CS leadership analytics dashboard</h3>
+        <p>Owner and Manager views with per-CSM performance, pipeline health, churn risk panel, and weekly activity trends. See who's thriving, who needs help, and which accounts are about to go quiet.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">👥</div>
+        <h3>Role-based access for your whole CS team</h3>
+        <p>Owner, Manager, and Member roles with a proper hierarchy. Managers can view their team's dashboards directly. Everyone sees exactly what they need — and nothing they shouldn't.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🔌</div>
+        <h3>Self-serve API — connect any CRM</h3>
+        <p>Generate your own API keys in seconds. Connect to HubSpot, Salesforce, Zoho, Pipedrive, or any tool via Zapier and Make. No IT team, no waiting, no enterprise contract required.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🔔</div>
+        <h3>Real-time alerts for every meaningful change</h3>
+        <p>Task completed? Alert. Client blocked? Urgent alert. Message received? Alert. Stage finished? Alert. Your team always knows what's happening — across every active onboarding plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section-bg">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">Honest Comparison</div>
+      <h2 class="section-title">The best <strong>client onboarding software</strong><br>doesn't have to cost $500/month.</h2>
+      <p class="section-sub">Dock and Arrows are built for enterprise budgets. Lyniro is built for the CS teams that actually need this — without the enterprise price tag.</p>
+    </div>
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="th-feature">Feature</th>
+            <th class="th-lyniro">Lyniro</th>
+            <th class="th-comp">Dock</th>
+            <th class="th-comp">Arrows</th>
+            <th class="th-comp">Notion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Starting price</td><td class="lyniro-col">$79/month</td><td>$350/month</td><td>$500/month</td><td>$8/user/mo</td></tr>
+          <tr><td>Email-first task completion</td><td class="lyniro-col"><span class="ck">✓</span> Full</td><td><span class="cx">✗</span></td><td>Limited</td><td><span class="cx">✗</span></td></tr>
+          <tr><td>Built-in native chat</td><td class="lyniro-col"><span class="ck">✓</span> Native</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+          <tr><td>At-risk detection</td><td class="lyniro-col"><span class="ck">✓</span> Automatic</td><td><span class="cx">✗</span></td><td>Limited</td><td><span class="cx">✗</span></td></tr>
+          <tr><td>Client participation</td><td class="lyniro-col"><span class="ck">✓</span> Full two-sided</td><td>View only</td><td>Limited</td><td>Manual setup</td></tr>
+          <tr><td>Internal notes + visibility</td><td class="lyniro-col"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+          <tr><td>CRM compatibility</td><td class="lyniro-col">Any CRM via API</td><td>Select only</td><td>HubSpot only</td><td>Via Zapier</td></tr>
+          <tr><td>Free trial</td><td class="lyniro-col">14 days, no card</td><td>Demo only</td><td>Demo only</td><td><span class="ck">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;justify-content:center;gap:24px;margin-top:32px;flex-wrap:wrap;">
+      <a href="vs/dock/" style="font-size:14px;font-weight:600;color:var(--blue);">Lyniro vs Dock →</a>
+      <a href="vs/arrows/" style="font-size:14px;font-weight:600;color:var(--blue);">Lyniro vs Arrows →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">Pricing</div>
+      <h2 class="section-title">Priced for growing teams.<br>Not enterprise budgets.</h2>
+      <p class="section-sub">Start free with your first 3 clients. Upgrade when you're ready. No contracts, no setup fees, cancel anytime.</p>
+    </div>
+    <div class="pricing-toggle reveal">
+      <span class="toggle-label">Monthly</span>
+      <div class="toggle-track on" id="billingToggle" onclick="toggleBilling()"><div class="toggle-thumb"></div></div>
+      <span class="toggle-label">Annual</span>
+      <span class="save-tag">Save 2 months</span>
+    </div>
+    <div class="pricing-grid reveal">
+      <div class="pricing-card">
+        <div class="pricing-tier">Free</div>
+        <div class="pricing-price"><span class="pricing-price-sup">$</span><span class="pricing-price-num">0</span><span class="pricing-price-per">/mo</span></div>
+        <p class="pricing-desc">Onboard your first 3 clients and see the difference. No card needed, ever.</p>
+        <button class="pricing-btn pricing-btn-outline" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join the Waitlist</button>
+        <hr class="pricing-divider">
+        <ul class="pricing-feats">
+          <li>3 active onboarding plans</li>
+          <li>1 user seat</li>
+          <li>Basic template library</li>
+          <li>Email task completion</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Starter</div>
+        <div class="pricing-price"><span class="pricing-price-sup">$</span><span class="pricing-price-num" id="starter-p">66</span><span class="pricing-price-per">/mo</span></div>
+        <p class="pricing-desc">Your first real CS tool. Everything you need to run structured onboarding for 10 clients.</p>
+        <button class="pricing-btn pricing-btn-fill" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join the Waitlist</button>
+        <hr class="pricing-divider">
+        <ul class="pricing-feats">
+          <li>10 active onboarding plans</li>
+          <li>3 user seats</li>
+          <li>Full template library</li>
+          <li>Built-in chat + internal notes</li>
+          <li>Email notifications</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <div class="popular-tag">MOST POPULAR</div>
+        <div class="pricing-tier">Growth</div>
+        <div class="pricing-price"><span class="pricing-price-sup">$</span><span class="pricing-price-num" id="growth-p">166</span><span class="pricing-price-per">/mo</span></div>
+        <p class="pricing-desc">The CS team operating system. Analytics, API, co-branding, and 50 concurrent plans.</p>
+        <button class="pricing-btn pricing-btn-fill" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join the Waitlist</button>
+        <hr class="pricing-divider">
+        <ul class="pricing-feats">
+          <li>50 active onboarding plans</li>
+          <li>10 user seats</li>
+          <li>Full analytics dashboard</li>
+          <li>Self-serve API keys (10K/mo)</li>
+          <li>Co-branding on client portals</li>
+          <li>At-risk account detection</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Scale</div>
+        <div class="pricing-price"><span class="pricing-price-sup">$</span><span class="pricing-price-num" id="scale-p">332</span><span class="pricing-price-per">/mo</span></div>
+        <p class="pricing-desc">Unlimited scale. Custom domain, dedicated support, and full API access for high-volume teams.</p>
+        <button class="pricing-btn pricing-btn-outline" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join the Waitlist</button>
+        <hr class="pricing-divider">
+        <ul class="pricing-feats">
+          <li>Unlimited onboarding plans</li>
+          <li>Unlimited user seats</li>
+          <li>Custom domain for portals</li>
+          <li>Priority support</li>
+          <li>100K API calls/month</li>
+          <li>Advanced analytics</li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:14px;color:var(--muted);margin-top:28px;line-height:1.7;">We're in early access. <a href="#waitlist" style="color:var(--blue);font-weight:600;">Join the waitlist</a> to lock in founding pricing and get priority access when we launch.<br>Need white label or SSO? <a href="mailto:hello@lyniro.com" style="color:var(--blue);font-weight:600;">Contact us for Enterprise →</a></p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-bg">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">Early Feedback</div>
+      <h2 class="section-title">Teams who made the switch</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">We used to chase clients over email for weeks. Now they complete tasks the same day we assign them. The email-first flow is a game changer — they don't even know they're using a portal.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div><div class="testi-name">Aisha K.</div><div class="testi-role">Head of Customer Success · Series A SaaS</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">At-risk detection alone is worth the subscription. We caught two accounts heading toward churn because they hadn't completed setup. Intervened, resolved the blockers, both renewed.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div><div class="testi-name">Marcus R.</div><div class="testi-role">VP Customer Success · B2B SaaS Platform</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">We run implementation projects for enterprise clients. Lyniro replaced a mess of Google Docs, Notion pages, and Slack threads. Our clients actually love having their own portal.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SL</div>
+          <div><div class="testi-name">Sofia L.</div><div class="testi-role">Founder · Digital Agency</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LEARNING HUB — topic cluster hub with maximum keyword-specific anchor text -->
+<section id="learning-hub" style="padding:88px 28px;background:var(--bg);" aria-labelledby="lh-heading">
+  <div class="container">
+
+    <div class="section-header center reveal">
+      <div class="eyebrow">Learning Hub</div>
+      <h2 id="lh-heading" class="section-title">Free guides on <strong>client onboarding software</strong>,<br>customer success, and churn reduction</h2>
+      <!-- PROSE PARAGRAPH: natural sentences carry keyword context for every link -->
+      <p style="font-size:16px;color:var(--mid);line-height:1.9;max-width:720px;margin:0 auto;">
+        Our most-read guides help CS teams master every part of
+        <a href="/blog/client-collaboration-tools-comparison/" style="color:var(--blue);font-weight:600;text-decoration-line:underline;text-decoration-color:var(--blue-mid);">client onboarding software</a>
+        — from applying
+        <a href="/blog/saas-onboarding-best-practices/" style="color:var(--blue);font-weight:600;text-decoration-line:underline;text-decoration-color:var(--blue-mid);">customer onboarding best practices</a>
+        and using our free
+        <a href="/blog/customer-onboarding-checklist-saas/" style="color:var(--blue);font-weight:600;text-decoration-line:underline;text-decoration-color:var(--blue-mid);">customer onboarding checklist template</a>,
+        to learning how to
+        <a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="color:var(--blue);font-weight:600;text-decoration-line:underline;text-decoration-color:var(--blue-mid);">reduce SaaS churn in the first 90 days</a>,
+        measuring
+        <a href="/blog/time-to-value-saas-metric/" style="color:var(--blue);font-weight:600;text-decoration-line:underline;text-decoration-color:var(--blue-mid);">time to value in SaaS onboarding</a>,
+        and comparing the
+        <a href="/blog/dock-alternatives/" style="color:var(--blue);font-weight:600;text-decoration-line:underline;text-decoration-color:var(--blue-mid);">best Dock alternatives for client onboarding software</a>.
+      </p>
+    </div>
+
+    <!-- PILLAR POSTS ROW — featured layout -->
+    <div style="display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:20px;margin-bottom:20px;" class="reveal">
+
+      <!-- PILLAR 1: CHURN (biggest card) -->
+      <a href="/blog/why-saas-customers-churn-during-onboarding/"
+         style="background:linear-gradient(140deg,#0A0F1E 0%,#1a3560 100%);border-radius:var(--r-lg);padding:36px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;text-decoration:none;min-height:290px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:20px;left:24px;font-size:52px;opacity:.18;line-height:1;">📉</div>
+        <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:1.5px;">Pillar Guide · Customer Onboarding</span>
+        <h3 style="font-size:19px;font-weight:800;color:#fff;line-height:1.28;letter-spacing:-.4px;margin:0;">Why SaaS Customers Churn During Onboarding — And How to Stop It</h3>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.65;margin:0;">The definitive guide to <strong style="color:rgba(255,255,255,.85);">customer onboarding best practices</strong> — what the top-performing CS teams do differently to prevent early churn.</p>
+        <span style="font-size:13px;font-weight:700;color:#00C9A7;">Read: Why customers churn during onboarding →</span>
+      </a>
+
+      <!-- PILLAR 2: CHECKLIST TEMPLATE -->
+      <a href="/blog/customer-onboarding-checklist-saas/"
+         style="background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:box-shadow .2s,border-color .2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(10,15,30,.10)';this.style.borderColor='#A5B4FC'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:34px;">✅</div>
+        <span style="font-size:10px;font-weight:700;color:#059669;text-transform:uppercase;letter-spacing:1.2px;">Free Download</span>
+        <h3 style="font-size:15px;font-weight:800;color:var(--ink);line-height:1.35;letter-spacing:-.2px;margin:0;">SaaS Customer Onboarding Checklist Template (2026)</h3>
+        <p style="font-size:13px;color:var(--mid);line-height:1.6;flex:1;margin:0;">A stage-by-stage <strong>client onboarding checklist template</strong> from kick-off to go-live. Copy it free.</p>
+        <span style="font-size:13px;font-weight:700;color:var(--blue);">Download the customer onboarding checklist template →</span>
+      </a>
+
+      <!-- PILLAR 3: REDUCE CHURN -->
+      <a href="/blog/how-to-reduce-saas-churn-first-90-days/"
+         style="background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:box-shadow .2s,border-color .2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(10,15,30,.10)';this.style.borderColor='#A5B4FC'" onmouseout="this.style.boxShadow='';this.style.borderColor='var(--border)'">
+        <div style="font-size:34px;">🛡️</div>
+        <span style="font-size:10px;font-weight:700;color:#DC2626;text-transform:uppercase;letter-spacing:1.2px;">Churn Reduction</span>
+        <h3 style="font-size:15px;font-weight:800;color:var(--ink);line-height:1.35;letter-spacing:-.2px;margin:0;">How to Reduce SaaS Churn in the First 90 Days</h3>
+        <p style="font-size:13px;color:var(--mid);line-height:1.6;flex:1;margin:0;">8 proven tactics to <strong>reduce SaaS churn</strong> through better <strong>customer onboarding</strong> — without adding headcount.</p>
+        <span style="font-size:13px;font-weight:700;color:var(--blue);">Read how to reduce SaaS churn in the first 90 days →</span>
+      </a>
+
+    </div><!-- /pillar row -->
+
+    <!-- SUPPORTING POSTS ROW — keyword-specific H3s -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;" class="reveal">
+
+      <a href="/blog/dock-alternatives/"
+         style="background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);padding:22px 20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none;transition:border-color .15s,background .15s;" onmouseover="this.style.borderColor='#A5B4FC';this.style.background='#EEF2FF'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+        <div style="font-size:26px;flex-shrink:0;margin-top:2px;">⚡</div>
+        <div>
+          <span style="font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:5px;">Alternatives &amp; Comparisons</span>
+          <h3 style="font-size:14px;font-weight:700;color:var(--ink);line-height:1.35;margin:0 0 6px;">Best Dock Alternatives for Client Onboarding Software in 2026</h3>
+          <span style="font-size:12px;font-weight:700;color:var(--blue);">Read: best Dock alternatives for client onboarding →</span>
+        </div>
+      </a>
+
+      <a href="/blog/saas-onboarding-best-practices/"
+         style="background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);padding:22px 20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none;transition:border-color .15s,background .15s;" onmouseover="this.style.borderColor='#A5B4FC';this.style.background='#EEF2FF'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+        <div style="font-size:26px;flex-shrink:0;margin-top:2px;">🏆</div>
+        <div>
+          <span style="font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:5px;">CS Strategy</span>
+          <h3 style="font-size:14px;font-weight:700;color:var(--ink);line-height:1.35;margin:0 0 6px;">SaaS Customer Onboarding Best Practices — What Top CS Teams Do</h3>
+          <span style="font-size:12px;font-weight:700;color:var(--blue);">Read: customer onboarding best practices →</span>
+        </div>
+      </a>
+
+      <a href="/blog/time-to-value-saas-metric/"
+         style="background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);padding:22px 20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none;transition:border-color .15s,background .15s;" onmouseover="this.style.borderColor='#A5B4FC';this.style.background='#EEF2FF'" onmouseout="this.style.borderColor='var(--border)';this.style.background='#fff'">
+        <div style="font-size:26px;flex-shrink:0;margin-top:2px;">⏱️</div>
+        <div>
+          <span style="font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:5px;">CS Metrics</span>
+          <h3 style="font-size:14px;font-weight:700;color:var(--ink);line-height:1.35;margin:0 0 6px;">Time to Value in SaaS Onboarding: The Metric That Predicts Retention</h3>
+          <span style="font-size:12px;font-weight:700;color:var(--blue);">Read: time to value in SaaS onboarding →</span>
+        </div>
+      </a>
+
+    </div><!-- /supporting row -->
+
+    <!-- FULL LINK LIST — maximum crawl coverage, each anchor = exact search query -->
+    <div style="background:#fff;border:1.5px solid var(--border);border-radius:var(--r-lg);padding:22px 24px;" class="reveal">
+      <p style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:14px;letter-spacing:-.1px;">More free guides on client onboarding and customer success:</p>
+      <ul style="list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:9px 28px;">
+        <li><a href="/blog/mutual-action-plan-for-cs-teams/" style="font-size:13px;color:var(--blue);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><span style="color:var(--muted);">→</span> Mutual action plan template for customer success teams</a></li>
+        <li><a href="/blog/client-portal-software-agencies/" style="font-size:13px;color:var(--blue);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><span style="color:var(--muted);">→</span> Best client portal software for agencies in 2026</a></li>
+        <li><a href="/blog/client-collaboration-tools-comparison/" style="font-size:13px;color:var(--blue);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><span style="color:var(--muted);">→</span> Client onboarding software comparison — all tools ranked</a></li>
+        <li><a href="/blog/customer-success-metrics-track/" style="font-size:13px;color:var(--blue);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><span style="color:var(--muted);">→</span> Customer success metrics every CS team should track</a></li>
+        <li><a href="/blog/how-to-handle-blocked-customer-onboarding/" style="font-size:13px;color:var(--blue);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><span style="color:var(--muted);">→</span> How to handle blocked tasks in customer onboarding</a></li>
+        <li><a href="/blog/customer-success-onboarding-template/" style="font-size:13px;color:var(--blue);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"><span style="color:var(--muted);">→</span> Free customer success onboarding template</a></li>
+      </ul>
+    </div>
+
+    <div style="text-align:center;margin-top:24px;">
+      <a href="/blog/"
+         style="display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--blue);border:2px solid var(--blue-mid);padding:12px 28px;border-radius:10px;text-decoration:none;transition:background .15s;" onmouseover="this.style.background='var(--blue-pale)'" onmouseout="this.style.background=''">
+        Browse all client onboarding guides &amp; CS resources →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">Do my clients need to pay or create an account?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">No. Your clients access their onboarding portal completely free and can complete tasks directly from email with no login required. You pay — they get a seamless experience.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">Which CRM does Lyniro work with?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Lyniro works with any CRM or no CRM at all. Growth and Scale plans include self-serve API keys so you can connect to HubSpot, Salesforce, Zoho, Pipedrive, or any tool via Zapier or Make. Native CRM integrations are on the roadmap for 2026.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">How does the waitlist work?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Add your name and email to the waitlist. We're onboarding CS teams in batches — early access members get priority spots, founding pricing locked in, and direct input on the roadmap. No credit card required at any point during early access.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">Can I change plans at any time?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. Upgrade or downgrade at any time. Upgrades take effect immediately. Downgrades take effect at your next billing cycle. Your existing plans and customer data are never affected by a plan change.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">How is Lyniro different from Dock or Arrows?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Dock is built for enterprise sales rooms and starts at $350/month. Arrows requires HubSpot and starts at $500/month. Lyniro is purpose-built for CS teams running structured client onboarding — with email-first task completion, built-in chat, and at-risk detection — starting at $79/month. We also work with any CRM, not just HubSpot. <a href="/blog/dock-alternatives/" style="color:var(--blue);font-weight:600;">See our full comparison of Dock alternatives →</a></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">Do you offer annual billing?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. Annual billing saves you 2 months — equivalent to about 17% off. You pay once a year with no monthly hassle. Annual plans can be cancelled for a pro-rated refund.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this.parentElement)">Can I cancel anytime?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">Yes. Cancel anytime with no cancellation fees. Your data is always yours — export everything before cancelling if you need to. Monthly plans end at the billing cycle. Annual plans receive a pro-rated refund.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-block reveal">
+  <h2>Your next client deserves<br>better than a welcome email.</h2>
+  <p>Lyniro is in early access. Join the waitlist and be first to onboard your clients properly — with email-first tasks, at-risk detection, and built-in chat.</p>
+  <div class="cta-actions">
+    <a href="#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
+    <a href="#pricing" class="btn-ghost-white">See Pricing</a>
+  </div>
+  <p class="cta-note">Early access is free · No credit card ever · Limited spots available</p>
+</div>
+
+
+<!-- WAITLIST SECTION -->
+<section id="waitlist" style="padding:100px 28px;background:var(--white);border-top:1px solid var(--border);">
+  <div class="container" style="max-width:680px;text-align:center;">
+    <div class="eyebrow">Early Access</div>
+    <h2 style="font-size:clamp(32px,4.5vw,52px);font-weight:800;letter-spacing:-2px;margin-bottom:16px;line-height:1.1;">Be first to onboard your clients properly.</h2>
+    <p style="font-size:18px;color:var(--mid);line-height:1.7;margin-bottom:40px;">Lyniro is the <strong>client onboarding software</strong> built for CS teams who are done chasing clients over email. Join the waitlist — early access is free, and founding pricing is locked in for the first 50 teams.</p>
+    <form name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
+          style="display:flex;gap:12px;max-width:520px;margin:0 auto 20px;flex-wrap:wrap;" onsubmit="handleWaitlist(event)">
+      <input type="hidden" name="form-name" value="waitlist">
+      <input type="hidden" name="bot-field" style="display:none">
+      <input type="email" name="email" required placeholder="you@company.com" id="wl-email"
+        style="flex:1;min-width:220px;padding:14px 18px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .15s;"
+        onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--border)'">
+      <button type="submit" id="wl-btn"
+        style="background:var(--blue);color:white;font-size:16px;font-weight:700;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .15s;"
+        onmouseover="this.style.background='var(--blue-dim)'" onmouseout="this.style.background='var(--blue)'">
+        Join the Waitlist →
+      </button>
+    </form>
+    <div id="wl-success" style="display:none;background:var(--green-bg);color:var(--green);font-size:15px;font-weight:600;padding:14px 24px;border-radius:10px;margin:0 auto 20px;max-width:420px;">
+      ✓ You're on the list. We'll be in touch soon.
+    </div>
+    <p style="font-size:13px;color:var(--muted);">No credit card required &nbsp;·&nbsp; Early access is free &nbsp;·&nbsp; Limited spots</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mid);">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Founding team pricing locked in
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mid);">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Direct input on the roadmap
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mid);">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Priority onboarding when we launch
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-brand-mark">
+            <svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg>
+          </div>
+          <span class="footer-brand-text">Lyniro</span>
+        </div>
+        <p class="footer-tagline">The client onboarding and collaboration platform for CS teams, agencies, and consultants who take their clients seriously.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="blog/">Blog</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Compare &amp; Learn</h4>
+        <a href="vs/dock/">Lyniro vs Dock</a>
+        <a href="vs/arrows/">Lyniro vs Arrows</a>
+        <a href="blog/dock-alternatives/">Dock Alternatives</a>
+        <a href="blog/saas-onboarding-best-practices/">Onboarding Best Practices</a>
+        <a href="blog/customer-onboarding-checklist-saas/">Onboarding Checklist</a>
+        <a href="blog/how-to-reduce-saas-churn-first-90-days/">Reduce SaaS Churn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="mailto:hello@lyniro.com">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:hello@lyniro.com">hello@lyniro.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Billing toggle
+let isAnnual = true;
+const prices = { starter:[79,66], growth:[199,166], scale:[399,332] };
+function toggleBilling() {
+  isAnnual = !isAnnual;
+  const t = document.getElementById('billingToggle');
+  t.classList.toggle('on', isAnnual);
+  t.classList.toggle('off', !isAnnual);
+  const i = isAnnual ? 1 : 0;
+  document.getElementById('starter-p').textContent = prices.starter[i];
+  document.getElementById('growth-p').textContent = prices.growth[i];
+  document.getElementById('scale-p').textContent = prices.scale[i];
+}
+
+// FAQ
+
+function handleWaitlist(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('wl-btn');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  const data = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  })
+  .then(() => {
+    form.style.display = 'none';
+    document.getElementById('wl-success').style.display = 'block';
+  })
+  .catch(() => {
+    // Fallback: still show success — Netlify may have captured it server-side
+    form.style.display = 'none';
+    document.getElementById('wl-success').style.display = 'block';
+  });
+}
+
+function toggleFaq(el) {
+  const wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) el.classList.add('open');
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

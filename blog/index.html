@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Onboarding Blog — Guides, Checklists &amp; CS Best Practices | Lyniro</title>
+<meta name="description" content="Free guides on client onboarding software, customer onboarding checklists, SaaS churn reduction, and customer success best practices — for CS teams and agencies.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://lyniro.com/blog/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Lyniro Blog — Client Onboarding & Customer Success",
+  "url": "https://lyniro.com/blog/",
+  "description": "Practical guides on client onboarding software, customer success strategy, and reducing SaaS churn.",
+  "publisher": {"@type": "Organization", "name": "Lyniro", "url": "https://lyniro.com"}
+}
+</script>
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--red:#DC2626;--teal:#00C9A7;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3{line-height:1.2;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
+.btn-blue:hover{background:var(--blue-dim);}
+
+.blog-hero{padding:72px 28px 56px;background:linear-gradient(180deg,#EEF2FF 0%,#FFFFFF 100%);text-align:center;border-bottom:1px solid var(--border);}
+.eyebrow{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;}
+.blog-hero h1{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-2px;margin-bottom:16px;line-height:1.1;}
+.blog-hero p{font-size:17px;color:var(--mid);max-width:560px;margin:0 auto 24px;line-height:1.65;}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.hero-links a{font-size:13px;font-weight:600;color:var(--blue);background:var(--blue-pale);border:1px solid var(--blue-mid);padding:6px 16px;border-radius:100px;transition:all .15s;}
+.hero-links a:hover{background:var(--blue-mid);}
+
+.blog-main{max-width:1200px;margin:0 auto;padding:56px 28px 96px;}
+
+.featured{display:grid;grid-template-columns:1.5fr 1fr;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:48px;transition:all .2s;}
+.featured:hover{box-shadow:0 8px 32px rgba(10,15,30,.10);transform:translateY(-2px);}
+.featured-img{background:linear-gradient(135deg,#0A0F1E,#1E3A8A);min-height:260px;display:flex;align-items:center;justify-content:center;font-size:72px;}
+.featured-body{padding:40px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px;margin-bottom:14px;letter-spacing:0.3px;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:#DCFCE7;color:var(--green);}
+.tag-red{background:#FEE2E2;color:var(--red);}
+.tag-amber{background:#FEF3C7;color:#D97706;}
+.tag-purple{background:#F5F3FF;color:#7C3AED;}
+.featured-body h2{font-size:24px;font-weight:800;letter-spacing:-0.8px;margin-bottom:10px;line-height:1.3;}
+.featured-body p{font-size:15px;color:var(--mid);line-height:1.65;margin-bottom:20px;}
+.featured-meta{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted);padding-top:16px;border-top:1px solid var(--border);}
+.read-link{color:var(--blue);font-weight:700;}
+
+.section-label{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--border);}
+.section-label-badge{font-size:11px;font-weight:700;background:var(--blue-pale);color:var(--blue);padding:3px 10px;border-radius:100px;}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px;}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:all .2s;}
+.card:hover{box-shadow:0 8px 32px rgba(10,15,30,.10);transform:translateY(-3px);border-color:var(--blue-mid);}
+.card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:44px;}
+.card-body{padding:20px;flex:1;display:flex;flex-direction:column;}
+.card h3{font-size:16px;font-weight:700;letter-spacing:-0.3px;margin-bottom:8px;line-height:1.35;color:var(--ink);}
+.card p{font-size:13px;color:var(--mid);line-height:1.6;flex:1;margin-bottom:14px;}
+.card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);padding-top:10px;border-top:1px solid var(--border);}
+.card-read{color:var(--blue);font-weight:700;font-size:13px;}
+
+.topic-links{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 28px;margin-bottom:48px;}
+.topic-links h3{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:16px;}
+.topic-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
+.topic-link{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--blue);font-weight:600;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:9px;transition:all .15s;}
+.topic-link:hover{border-color:var(--blue-mid);background:var(--blue-pale);}
+.topic-link span{font-size:18px;}
+
+.blog-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:20px;padding:64px;text-align:center;}
+.blog-cta h2{font-size:36px;font-weight:800;color:white;margin-bottom:12px;letter-spacing:-1.5px;line-height:1.15;}
+.blog-cta p{font-size:17px;color:rgba(255,255,255,.65);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 32px;border-radius:10px;display:inline-block;margin-bottom:32px;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.internal-links-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.internal-links-cta a{font-size:13px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 16px;border-radius:100px;transition:all .15s;}
+.internal-links-cta a:hover{background:rgba(255,255,255,.18);color:white;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:18px;font-weight:800;color:white;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .featured{grid-template-columns:1fr;}
+  .grid,.grid-2{grid-template-columns:1fr;}
+  .topic-links-grid{grid-template-columns:1fr;}
+  .blog-cta{padding:40px 24px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      Lyniro
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
+    </div>
+    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="eyebrow">The Lyniro Learning Hub</div>
+  <h1>Free guides on <strong>client onboarding software</strong>,<br>SaaS churn reduction &amp; CS strategy</h1>
+  <p>Practical, data-backed articles for <strong>CS teams</strong> who want faster <strong>customer onboarding</strong>, lower churn, and clients who actually complete their tasks.</p>
+  <p style="font-size:15px;color:var(--mid);margin-top:10px;line-height:1.75;">Start with our <a href="/blog/customer-onboarding-checklist-saas/" style="color:var(--blue);font-weight:600;">free customer onboarding checklist template</a>, learn how to <a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="color:var(--blue);font-weight:600;">reduce SaaS churn in the first 90 days</a>, compare the <a href="/blog/dock-alternatives/" style="color:var(--blue);font-weight:600;">best Dock alternatives for client onboarding software</a>, apply <a href="/blog/saas-onboarding-best-practices/" style="color:var(--blue);font-weight:600;">customer onboarding best practices</a>, or understand why <a href="/blog/time-to-value-saas-metric/" style="color:var(--blue);font-weight:600;">time to value in SaaS onboarding</a> is the metric that predicts renewal.</p>
+  <div class="hero-links">
+    <a href="/blog/customer-onboarding-checklist-saas/" title="SaaS customer onboarding checklist template">Onboarding checklist template</a>
+    <a href="/blog/how-to-reduce-saas-churn-first-90-days/" title="How to reduce SaaS churn">Reduce SaaS churn</a>
+    <a href="/blog/saas-onboarding-best-practices/" title="SaaS onboarding best practices">Onboarding best practices</a>
+    <a href="/blog/dock-alternatives/" title="Best Dock alternatives 2026">Dock alternatives</a>
+    <a href="/blog/time-to-value-saas-metric/" title="Time to value SaaS metric">Time to value</a>
+  </div>
+</div>
+
+<div class="blog-main">
+
+  <!-- FEATURED POST -->
+  <a href="/blog/why-saas-customers-churn-during-onboarding/" class="featured"
+     title="Why SaaS customers churn during onboarding — customer onboarding best practices">
+    <div class="featured-img">📉</div>
+    <div class="featured-body">
+      <span class="post-tag tag-blue">Must Read · Customer Onboarding</span>
+      <h2>Why 68% of SaaS Customers Churn During Onboarding — And How to Stop It</h2>
+      <p>Most CS teams lose customers not because the product fails — but because the onboarding does. This is the definitive guide to <strong>customer onboarding best practices</strong> that prevent early churn — including <a href="/blog/customer-onboarding-checklist-saas/" style="color:var(--blue);font-weight:600;">a free checklist template</a> and <a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="color:var(--blue);font-weight:600;">8 tactics to reduce SaaS churn in 90 days</a>.</p>
+      <div class="featured-meta">
+        <span>April 6, 2026 · 8 min read</span>
+        <span class="read-link">Read the full guide →</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- QUICK TOPIC NAVIGATION -->
+  <div class="topic-links">
+    <h3>Jump to a topic:</h3>
+    <div class="topic-links-grid">
+      <a href="#comparisons" class="topic-link"><span>⚖️</span> Comparisons &amp; Alternatives</a>
+      <a href="#strategy" class="topic-link"><span>🏆</span> CS Strategy &amp; Best Practices</a>
+      <a href="#templates" class="topic-link"><span>✅</span> Templates &amp; Checklists</a>
+      <a href="#churn" class="topic-link"><span>🛡️</span> Churn Reduction</a>
+    </div>
+  </div>
+
+  <!-- COMPARISONS -->
+  <div id="comparisons">
+    <div class="section-label">
+      Comparisons &amp; Alternatives
+      <span class="section-label-badge">High buyer intent</span>
+    </div>
+    <p style="font-size:15px;color:var(--mid);line-height:1.75;margin-bottom:24px;max-width:720px;">Looking for the best <strong>client onboarding software</strong> for your team? Our comparison guides cover the leading tools — including <a href="/blog/dock-alternatives/" style="color:var(--blue);font-weight:600;">the best Dock alternatives for client onboarding software in 2026</a>, a full <a href="/blog/client-collaboration-tools-comparison/" style="color:var(--blue);font-weight:600;">client onboarding software comparison</a> across Lyniro, Dock, Arrows, and Notion, and <a href="/blog/client-portal-software-agencies/" style="color:var(--blue);font-weight:600;">the best client portal software for agencies</a>. Pick the right tool without sitting through a sales demo.</p>
+    <div class="grid">
+      <a href="/blog/dock-alternatives/" class="card"
+         title="Best Dock alternatives for client onboarding software 2026">
+        <div class="card-img" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE);">⚡</div>
+        <div class="card-body">
+          <span class="post-tag tag-blue">Comparisons</span>
+          <h3>Best <strong>Dock Alternatives</strong> in 2026 — Cheaper, Simpler, Better Client Onboarding</h3>
+          <p>Dock starts at $350/month. These five <strong>client onboarding software</strong> alternatives give you more for a fraction of the price. Also see our <a href="/blog/client-collaboration-tools-comparison/" style="color:var(--blue);font-weight:600;">full software comparison →</a></p>
+          <div class="card-meta"><span>April 5 · 7 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/client-collaboration-tools-comparison/" class="card"
+         title="Client collaboration tools comparison — Lyniro vs Dock vs Arrows vs Notion">
+        <div class="card-img" style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE);">⚖️</div>
+        <div class="card-body">
+          <span class="post-tag tag-purple">Comparisons</span>
+          <h3><strong>Client Onboarding Software</strong> Compared — Lyniro vs Dock vs Arrows vs Notion</h3>
+          <p>Head-to-head on features, pricing, and which <strong>customer onboarding platform</strong> is actually built for your team size.</p>
+          <div class="card-meta"><span>March 12 · 7 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/client-portal-software-agencies/" class="card"
+         title="Best client portal software for agencies 2026">
+        <div class="card-img" style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE);">🏢</div>
+        <div class="card-body">
+          <span class="post-tag tag-purple">Agency Tools</span>
+          <h3>Best <strong>Client Portal Software</strong> for Agencies in 2026</h3>
+          <p>The best tools for managing <strong>client onboarding</strong> and project delivery — compared by price, features, and client adoption.</p>
+          <div class="card-meta"><span>March 25 · 6 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- CS STRATEGY -->
+  <div id="strategy">
+    <div class="section-label">
+      CS Strategy &amp; Customer Onboarding Best Practices
+      <span class="section-label-badge">Thought leadership</span>
+    </div>
+    <p style="font-size:15px;color:var(--mid);line-height:1.75;margin-bottom:24px;max-width:720px;">These guides cover the <strong>customer onboarding best practices</strong> that separate CS teams with 90%+ completion rates from everyone else. Start with our pillar guide on <a href="/blog/saas-onboarding-best-practices/" style="color:var(--blue);font-weight:600;">SaaS customer onboarding best practices</a>, then use <a href="/blog/time-to-value-saas-metric/" style="color:var(--blue);font-weight:600;">time to value in SaaS onboarding</a> to benchmark whether your changes are working. For stalled or blocked accounts, read <a href="/blog/how-to-handle-blocked-customer-onboarding/" style="color:var(--blue);font-weight:600;">how to handle blocked tasks in customer onboarding</a>, and pair it with the <a href="/blog/mutual-action-plan-for-cs-teams/" style="color:var(--blue);font-weight:600;">mutual action plan template for CS teams</a> to keep both sides accountable.</p>
+    <div class="grid">
+      <a href="/blog/saas-onboarding-best-practices/" class="card"
+         title="SaaS customer onboarding best practices for CS teams">
+        <div class="card-img" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE);">🏆</div>
+        <div class="card-body">
+          <span class="post-tag tag-blue">CS Strategy</span>
+          <h3><strong>Customer Onboarding Best Practices</strong> — What the Top 10% of CS Teams Do</h3>
+          <p>Eight practices that high-performing <strong>SaaS onboarding</strong> teams share. Pair with our <a href="/blog/time-to-value-saas-metric/" style="color:var(--blue);font-weight:600;">time to value guide →</a></p>
+          <div class="card-meta"><span>March 20 · 7 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/time-to-value-saas-metric/" class="card"
+         title="Time to value in SaaS — the onboarding metric that predicts retention">
+        <div class="card-img" style="background:linear-gradient(135deg,#FFF7ED,#FEF3C7);">⏱️</div>
+        <div class="card-body">
+          <span class="post-tag tag-amber">CS Metrics</span>
+          <h3><strong>Time to Value</strong> in SaaS: The Onboarding Metric That Predicts Retention</h3>
+          <p>The single strongest predictor of customer retention in <strong>SaaS onboarding</strong> — and how to measure and reduce it.</p>
+          <div class="card-meta"><span>March 29 · 7 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/mutual-action-plan-for-cs-teams/" class="card"
+         title="Mutual action plan guide for customer success teams">
+        <div class="card-img" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);">🤝</div>
+        <div class="card-body">
+          <span class="post-tag tag-green">Client Collaboration</span>
+          <h3>The Mutual Action Plan: How Top CS Teams Use <strong>Shared Onboarding Workspaces</strong></h3>
+          <p>How the best <strong>customer success teams</strong> use mutual action plans to onboard faster and retain more clients.</p>
+          <div class="card-meta"><span>April 3 · 6 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/customer-success-metrics-track/" class="card"
+         title="Customer success metrics every CS team should track">
+        <div class="card-img" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE);">📊</div>
+        <div class="card-body">
+          <span class="post-tag tag-blue">CS Metrics</span>
+          <h3>8 <strong>Customer Success Metrics</strong> Every CS Team Should Track in 2026</h3>
+          <p>Which metrics actually predict retention? The eight that matter most for <strong>SaaS onboarding</strong> teams — with benchmarks.</p>
+          <div class="card-meta"><span>March 15 · 8 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/how-to-handle-blocked-customer-onboarding/" class="card"
+         title="How to handle blocked tasks in customer onboarding">
+        <div class="card-img" style="background:linear-gradient(135deg,#FEF2F2,#FEE2E2);">🚧</div>
+        <div class="card-body">
+          <span class="post-tag tag-red">Onboarding Problems</span>
+          <h3>How to Handle Blocked Tasks in <strong>Customer Onboarding</strong> Before They Become Churn</h3>
+          <p>Blocked tasks are the silent churn trigger. Here's the exact framework for resolving them fast during <strong>client onboarding</strong>.</p>
+          <div class="card-meta"><span>March 18 · 5 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/why-saas-customers-churn-during-onboarding/" class="card"
+         title="Why SaaS customers churn during onboarding">
+        <div class="card-img" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE);">📉</div>
+        <div class="card-body">
+          <span class="post-tag tag-blue">Must Read</span>
+          <h3>Why 68% of SaaS Customers Churn During <strong>Customer Onboarding</strong></h3>
+          <p>The data on why <strong>SaaS onboarding</strong> fails. Then read: <a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="color:var(--blue);font-weight:600;">8 tactics to reduce SaaS churn →</a></p>
+          <div class="card-meta"><span>April 6 · 8 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- CHURN REDUCTION -->
+  <div id="churn">
+    <div class="section-label">
+      Reduce SaaS Churn
+      <span class="section-label-badge">High impact</span>
+    </div>
+    <p style="font-size:15px;color:var(--mid);line-height:1.75;margin-bottom:24px;max-width:720px;">68% of SaaS churn happens in the first 90 days — almost always during <strong>customer onboarding</strong>. Read <a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="color:var(--blue);font-weight:600;">how to reduce SaaS churn in the first 90 days</a>, understand <a href="/blog/why-saas-customers-churn-during-onboarding/" style="color:var(--blue);font-weight:600;">why SaaS customers churn during onboarding</a>, and measure the impact using <a href="/blog/time-to-value-saas-metric/" style="color:var(--blue);font-weight:600;">time to value in SaaS onboarding</a> — the single leading indicator that predicts whether a customer will renew.</p>
+    <div class="grid grid-2">
+      <a href="/blog/how-to-reduce-saas-churn-first-90-days/" class="card"
+         title="How to reduce SaaS churn in the first 90 days">
+        <div class="card-img" style="background:linear-gradient(135deg,#FEF2F2,#FEE2E2);">🛡️</div>
+        <div class="card-body">
+          <span class="post-tag tag-red">Churn Reduction</span>
+          <h3>How to <strong>Reduce SaaS Churn</strong> in the First 90 Days — 8 Proven Tactics</h3>
+          <p>Eight specific tactics that <strong>reduce customer onboarding churn</strong> without adding headcount to your CS team. Includes real benchmarks.</p>
+          <div class="card-meta"><span>March 28 · 7 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+      <a href="/blog/why-saas-customers-churn-during-onboarding/" class="card"
+         title="SaaS customer onboarding churn — causes and solutions">
+        <div class="card-img" style="background:linear-gradient(135deg,#FEF2F2,#FEE2E2);">📉</div>
+        <div class="card-body">
+          <span class="post-tag tag-red">Churn Data</span>
+          <h3>Why 68% of SaaS Customers Churn During <strong>Onboarding</strong> — The Data and the Fix</h3>
+          <p>Research-backed analysis of why early <strong>SaaS churn</strong> happens in the onboarding phase — and what the top-performing teams do instead.</p>
+          <div class="card-meta"><span>April 6 · 8 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- TEMPLATES -->
+  <div id="templates">
+    <div class="section-label">
+      Templates &amp; Checklists
+      <span class="section-label-badge">Free to use</span>
+    </div>
+    <p style="font-size:15px;color:var(--mid);line-height:1.75;margin-bottom:24px;max-width:720px;">Free templates built for CS teams — no signup required. Our <a href="/blog/customer-onboarding-checklist-saas/" style="color:var(--blue);font-weight:600;">SaaS customer onboarding checklist template</a> walks you through every stage from kick-off call to go-live. Our <a href="/blog/customer-success-onboarding-template/" style="color:var(--blue);font-weight:600;">customer success onboarding template</a> gives you the full task structure with owners and timelines. And our <a href="/blog/mutual-action-plan-for-cs-teams/" style="color:var(--blue);font-weight:600;">mutual action plan template</a> is the shared-workspace version clients actually participate in.</p>
+    <div class="grid">
+      <a href="/blog/customer-onboarding-checklist-saas/" class="card"
+         title="Free SaaS customer onboarding checklist template 2026">
+        <div class="card-img" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);">✅</div>
+        <div class="card-body">
+          <span class="post-tag tag-green">Free Template</span>
+          <h3>The Ultimate <strong>SaaS Customer Onboarding Checklist</strong> for 2026 (Free Template)</h3>
+          <p>Stage-by-stage <strong>client onboarding checklist</strong> from kick-off call to go-live. Built for CS teams. Free to download and adapt.</p>
+          <div class="card-meta"><span>April 2 · 6 min</span><span class="card-read">Download the template →</span></div>
+        </div>
+      </a>
+      <a href="/blog/customer-success-onboarding-template/" class="card"
+         title="Free customer success onboarding template">
+        <div class="card-img" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);">📋</div>
+        <div class="card-body">
+          <span class="post-tag tag-green">Free Template</span>
+          <h3>Free <strong>Customer Success Onboarding Template</strong> — Stages, Tasks &amp; Timelines</h3>
+          <p>A ready-to-use <strong>CS onboarding template</strong> covering all four stages. Adapt it for your product in under an hour.</p>
+          <div class="card-meta"><span>March 22 · 5 min</span><span class="card-read">Download free →</span></div>
+        </div>
+      </a>
+      <a href="/blog/mutual-action-plan-for-cs-teams/" class="card"
+         title="Mutual action plan template for CS teams">
+        <div class="card-img" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);">🤝</div>
+        <div class="card-body">
+          <span class="post-tag tag-green">Templates</span>
+          <h3><strong>Mutual Action Plan Template</strong> for Customer Success Teams</h3>
+          <p>The shared workspace model that turns one-sided onboarding into a true <strong>client collaboration</strong> process both sides own.</p>
+          <div class="card-meta"><span>April 3 · 6 min</span><span class="card-read">Read →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <!-- TOPIC CLUSTER CROSS-LINKS — signals topical authority to Google -->
+  <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 32px;margin-bottom:24px;">
+    <h3 style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;">Related topics:</h3>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;">
+      <div>
+        <p style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Client Onboarding Software</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="/blog/dock-alternatives/" style="font-size:14px;color:var(--blue);font-weight:600;">Best Dock alternatives for CS teams</a></li>
+          <li><a href="/blog/client-collaboration-tools-comparison/" style="font-size:14px;color:var(--blue);font-weight:600;">Client onboarding software comparison</a></li>
+          <li><a href="/blog/client-portal-software-agencies/" style="font-size:14px;color:var(--blue);font-weight:600;">Client portal software for agencies</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Customer Onboarding Best Practices</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="/blog/saas-onboarding-best-practices/" style="font-size:14px;color:var(--blue);font-weight:600;">SaaS customer onboarding best practices</a></li>
+          <li><a href="/blog/customer-onboarding-checklist-saas/" style="font-size:14px;color:var(--blue);font-weight:600;">Customer onboarding checklist template</a></li>
+          <li><a href="/blog/mutual-action-plan-for-cs-teams/" style="font-size:14px;color:var(--blue);font-weight:600;">Mutual action plan for CS teams</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Reduce SaaS Churn</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;">Reduce SaaS churn in the first 90 days</a></li>
+          <li><a href="/blog/why-saas-customers-churn-during-onboarding/" style="font-size:14px;color:var(--blue);font-weight:600;">Why customers churn during onboarding</a></li>
+          <li><a href="/blog/how-to-handle-blocked-customer-onboarding/" style="font-size:14px;color:var(--blue);font-weight:600;">Handle blocked tasks in customer onboarding</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CS Metrics &amp; Strategy</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="/blog/time-to-value-saas-metric/" style="font-size:14px;color:var(--blue);font-weight:600;">Time to value in SaaS onboarding</a></li>
+          <li><a href="/blog/customer-success-metrics-track/" style="font-size:14px;color:var(--blue);font-weight:600;">Customer success metrics to track</a></li>
+          <li><a href="/blog/customer-success-onboarding-template/" style="font-size:14px;color:var(--blue);font-weight:600;">Customer success onboarding template</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-cta">
+    <h2>Ready to put these<br>best practices into action?</h2>
+    <p>Lyniro is the <strong>client onboarding software</strong> that puts these best practices into action automatically — email-first task completion, at-risk detection, built-in chat. We're in early access. <strong>Join the waitlist</strong> for free founding-team pricing.</p>
+    <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
+    <div class="internal-links-cta">
+      <a href="/#features">See all features</a>
+      <a href="/vs/dock/">Lyniro vs Dock</a>
+      <a href="/vs/arrows/">Lyniro vs Arrows</a>
+      <a href="/#waitlist">Join the waitlist</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Lyniro</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/vs/dock/">vs Dock</a>
+      <a href="/vs/arrows/">vs Arrows</a>
+      <a href="/blog/">All Articles</a>
+    </div>
+    <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>
