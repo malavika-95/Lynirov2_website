@@ -4,61 +4,130 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Time to Value in SaaS Onboarding — The Metric That Predicts Retention | Lyniro</title>
-<meta name="description" content="Time to value is the strongest predictor of SaaS retention. Here's how to define it, measure it, and reduce it — starting this week.">
+<meta name="description" content="Time to value (TTV) is the leading indicator that predicts whether a SaaS customer will churn or renew. Here is how to define, measure, and reduce it.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/blog/time-to-value-saas-metric/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Time to Value in SaaS Onboarding: The Metric That Predicts Retention Better Than NPS","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"March 29, 2026","description":"Time to value is the strongest predictor of SaaS retention. Here's how to define it, measure it, and reduce it — starting this week."}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Time to Value in SaaS Onboarding -- The Metric That Predicts Retention","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-06","dateModified":"2026-04-21"}</script>
 <style>
-:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--r:14px;}
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
 .nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
-.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
 .btn-blue:hover{background:var(--blue-dim);}
+
+/* Post layout */
 .post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
 .post-inner{max-width:760px;margin:0 auto;}
-.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
 .tag-blue{background:var(--blue-pale);color:var(--blue);}
-.post-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px;}
-.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-meta span{display:flex;align-items:center;gap:4px;}
 .post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:"Lora",serif;font-style:italic;}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+
+/* Body */
 .post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
-.post-body p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:20px;}
-.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;}
-.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:28px 0 10px;}
-.post-body ul,.post-body ol{padding-left:24px;margin-bottom:20px;}
-.post-body li{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:6px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
 .post-body strong{color:var(--ink);font-weight:700;}
-.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);}
-.post-cta{background:linear-gradient(135deg,var(--ink),#152054);border-radius:20px;padding:48px;text-align:center;margin:48px 0;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+
+/* Stat/callout boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+
+/* Image/diagram container */
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+
+/* Table */
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+
+/* CTA */
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
 .post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
-.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;}
-.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* Related */
 .related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
 .related-inner{max-width:760px;margin:0 auto;}
-.related-inner h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.related-links{display:flex;flex-wrap:wrap;gap:10px;}
-footer{background:var(--ink);padding:32px 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-size:18px;font-weight:800;color:white;}
-.footer-links{display:flex;gap:20px;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
-@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .post-cta{padding:32px 20px;}
+  .stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -72,51 +141,129 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
     </div>
-    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+    <a href="/#waitlist" class="btn-blue">Join Waitlist →</a>
   </div>
 </nav>
-
 <div class="post-hero">
   <div class="post-inner">
-    <span class="post-tag tag-blue">CS Metrics</span>
-    <h1>Time to Value in SaaS Onboarding: The Metric That Predicts Retention Better Than NPS</h1>
-    <div class="post-meta">
-      <span>Lyniro Team</span>
-      <span>·</span>
-      <span>March 29, 2026</span>
-      <span>·</span>
-      <span>7 min read</span>
-    </div>
-    <p class="post-intro">You track NPS. You track renewal rate. You probably track health scores. But the single metric most correlated with first-year retention is one most CS teams do not formally measure: time to value.</p>
+    <span class="post-tag tag-purple">CS Metrics</span>
+    <h1>Time to Value in SaaS Onboarding — The Metric That Predicts Retention</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>·</span> <span>April 2026</span> <span>·</span> <span>9 min read</span></div>
+    <p class="post-intro">Completion percentage tells you where an account is. Time to value tells you whether it will stay. The two metrics measure different things, and the second one is far more predictive of renewal.</p>
   </div>
 </div>
-
 <div class="post-body">
-  <h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">What time to value actually means</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Time to value is not the same as onboarding completion. Onboarding completion is an internal milestone. Time to value is the moment the customer experiences the outcome they paid for. A customer can complete every onboarding task and still not have reached their value moment. Find the action that predicts renewal. That is your value moment. Measure days from contract signing to first occurrence.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">How to define your product's value moment</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Ask your best customers — the ones who renew, expand, and refer others — what they remember as the moment Lyniro (or your product) clicked for them. The answer is usually specific: 'When our first client completed their onboarding without us chasing them.' That is your value moment.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">How to measure TTV</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Contract date → value moment date = TTV in days. Track per cohort, per CSM, and per customer segment. If your best CSM has a TTV of 18 days and your average is 34 days, you have a 16-day improvement opportunity sitting in your own team.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The four biggest TTV killers</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Delayed kick-off scheduling — every day between signing and kick-off is a day added to TTV. Client task delays — if clients take 3–5 days per task and there are 8 tasks, that alone is 24–40 days. Unresolved blockers — a single stuck task can stall an entire onboarding for a week. No visibility — when neither side can see where things stand, nobody acts urgently.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">How to reduce TTV starting this week</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Book the kick-off before the contract is signed. Switch to email-first task completion so clients act the same day you assign tasks. Set a 24-hour blocker response SLA. Identify the single highest-friction task in your onboarding and redesign it. The compound effect of these four changes typically reduces TTV by 30–50% within 60 days.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">TTV as a sales tool</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">The best CS leaders use TTV in sales conversations. 'Our average customer is fully live and seeing results within 21 days' is a competitive differentiator that prospects remember — especially those who have been burned by a 6-month implementation elsewhere.</p>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#why-ttv-matters">Why TTV matters more than completion percentage</a></li>
+<li><a href="#defining-first-value">How to define "first value" for your product</a></li>
+<li><a href="#measuring-ttv">How to measure time to value</a></li>
+<li><a href="#reducing-ttv">How to reduce time to value</a></li>
+<li><a href="#ttv-and-churn">The connection between TTV and long-term retention</a></li></ol>
+  </div>
+
+  <p>Time to value (TTV) is the time between a customer signing a contract and the moment they experience their first meaningful outcome from the product. Not full onboarding completion — not going live — but that specific moment when a customer thinks "this is actually working."</p>
+  <p>It is the most predictive metric in the customer success toolkit. Customers who reach their first value milestone quickly are significantly more likely to complete onboarding, expand their usage, and renew. Customers who do not reach it in the first 30 days are at meaningfully higher churn risk — even if they are technically still "in onboarding."</p>
+
+  <h2 id="why-ttv-matters">Why TTV Matters More Than Completion Percentage</h2>
+  <p>CS teams typically track onboarding completion percentage as their primary metric. It is easy to measure, easy to report, and gives a sense of progress. The problem is that completion percentage measures activity, not outcome.</p>
+  <p>A customer can be 80% through an onboarding plan and still be at serious churn risk — if they have completed eight of ten tasks but have not yet used the product in a way that created value. Conversely, a customer who is only 40% through the plan but has already achieved a meaningful outcome is far less likely to churn, because they now have a reason to continue.</p>
+  <p>TTV puts the focus on outcomes rather than activity. It asks the question that actually matters: when did this customer first get value from what they paid for?</p>
+
+  <div class="stat-row stat-row-2">
+    <div class="stat-box"><span class="stat-number">30 days</span><span class="stat-label">The critical window — customers reaching a first value milestone within 30 days renew at dramatically higher rates</span></div>
+    <div class="stat-box"><span class="stat-number">90%</span><span class="stat-label">of users churn if they do not understand a product's value in the first week (UserGuiding, 2025)</span></div>
+  </div>
+
+  <h2 id="defining-first-value">How to Define "First Value" for Your Product</h2>
+  <p>The definition of first value is specific to each product and each customer. There is no universal answer. But there is a universal framework for finding it.</p>
+  <p>Ask this question: what is the smallest, fastest outcome this customer can achieve that would make them glad they bought the product? Not the full outcome they signed up for. The first stepping stone toward it.</p>
+  <p>For a CRM: the first deal moved through the pipeline using the new system. For a customer success platform: the first onboarding plan completed by a client. For an analytics tool: the first insight that changed a decision. These are specific, observable, measurable moments.</p>
+  <p>Define this for your product and build your onboarding plan around reaching it as fast as possible — before tackling all the setup, configuration, and training that comes after. Fast first value creates momentum. Momentum makes everything else easier.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="220" fill="#F9FAFB"/>
+      <text x="350" y="24" font-family="Plus Jakarta Sans" font-size="12" fill="#0A0F1E" text-anchor="middle" font-weight="700">Two onboarding approaches -- same end goal, very different TTV</text>
+      <text x="175" y="55" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle" font-weight="600">Traditional: setup-first</text>
+      <rect x="40" y="65" width="80" height="32" rx="6" fill="#E5E7EB"/>
+      <text x="80" y="85" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Setup</text>
+      <text x="130" y="85" font-family="Plus Jakarta Sans" font-size="14" fill="#9CA3AF" text-anchor="middle">&#8594;</text>
+      <rect x="150" y="65" width="80" height="32" rx="6" fill="#E5E7EB"/>
+      <text x="190" y="85" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Training</text>
+      <text x="240" y="85" font-family="Plus Jakarta Sans" font-size="14" fill="#9CA3AF" text-anchor="middle">&#8594;</text>
+      <rect x="250" y="65" width="80" height="32" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="290" y="85" font-family="Plus Jakarta Sans" font-size="10" fill="#2451FF" text-anchor="middle">First Value</text>
+      <text x="175" y="115" font-family="Plus Jakarta Sans" font-size="10" fill="#DC2626" text-anchor="middle" font-weight="600">TTV: Day 28 -- high churn risk window</text>
+      <text x="175" y="145" font-family="Plus Jakarta Sans" font-size="11" fill="#059669" text-anchor="middle" font-weight="600">Value-first approach</text>
+      <rect x="40" y="155" width="80" height="32" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+      <text x="80" y="175" font-family="Plus Jakarta Sans" font-size="10" fill="#059669" text-anchor="middle" font-weight="600">First Value</text>
+      <text x="130" y="175" font-family="Plus Jakarta Sans" font-size="14" fill="#9CA3AF" text-anchor="middle">&#8594;</text>
+      <rect x="150" y="155" width="80" height="32" rx="6" fill="#E5E7EB"/>
+      <text x="190" y="175" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Setup</text>
+      <text x="240" y="175" font-family="Plus Jakarta Sans" font-size="14" fill="#9CA3AF" text-anchor="middle">&#8594;</text>
+      <rect x="250" y="155" width="80" height="32" rx="6" fill="#E5E7EB"/>
+      <text x="290" y="175" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Training</text>
+      <text x="175" y="205" font-family="Plus Jakarta Sans" font-size="10" fill="#059669" text-anchor="middle" font-weight="600">TTV: Day 5 -- customer committed early</text>
+      <line x1="350" y1="40" x2="350" y2="210" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 3"/>
+      <text x="540" y="80" font-family="Plus Jakarta Sans" font-size="12" fill="#DC2626" text-anchor="middle" font-weight="700">28-day churn window</text>
+      <text x="540" y="100" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle">Customer has paid for 4 weeks</text>
+      <text x="540" y="116" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle">before getting value</text>
+      <text x="540" y="165" font-family="Plus Jakarta Sans" font-size="12" fill="#059669" text-anchor="middle" font-weight="700">Customer committed by day 5</text>
+      <text x="540" y="185" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563" text-anchor="middle">Rest of onboarding has momentum</text>
+    </svg>
+    <figcaption>Reordering the onboarding to deliver first value earlier changes the customer's commitment to completing everything that follows.</figcaption>
+  </div>
+
+  <h2 id="measuring-ttv">How to Measure Time to Value</h2>
+  <p>Measuring TTV requires defining the value moment in advance and then tracking when each customer reaches it. In your onboarding plan, mark one specific task as the "first value milestone." This task should represent the moment the customer first uses the product in the way you designed it to be used. Track the date this task is completed relative to contract signing. That is your TTV for that account.</p>
+  <p>Aggregate this across all accounts to get your average TTV. Segment by customer type, deal size, or acquisition channel to find where TTV is longest and why.</p>
+
+  <h2 id="reducing-ttv">How to Reduce Time to Value</h2>
+  <p><strong>Front-load the value milestone.</strong> Restructure your onboarding plan so the first value milestone comes before the bulk of setup and configuration. If the customer can achieve a meaningful outcome in the first session, they are committed to completing the rest.</p>
+  <p><strong>Remove dependencies from the path to first value.</strong> Look at every task that sits between contract signing and first value. Are any waiting on IT approvals? Third-party integrations? Find a way to deliver first value that does not require those dependencies to be resolved first.</p>
+  <p><strong>Assign a dedicated resource for the first 48 hours.</strong> The first two days after signing are the highest-risk period for silent drop-off. A CSM available for immediate questions during this window can dramatically compress TTV for customers ready to move fast.</p>
+
+  <h2 id="ttv-and-churn">The Connection Between TTV and Long-Term Retention</h2>
+  <p>The research on TTV and retention is consistent: customers who reach first value quickly are more likely to complete onboarding, more likely to expand their usage, and significantly more likely to renew. This makes TTV a leading indicator — it predicts future retention outcomes before you have enough data to measure them directly.</p>
+  <p>For CS teams deciding where to invest limited time, TTV optimisation typically has the highest return. Every other intervention — QBRs, executive sponsorship, health score monitoring — is more effective when the customer has already experienced value. Without that foundation, even the best CS motion cannot fully compensate.</p>
+  <p>For the broader set of metrics that connect to retention, our guide on <a href="/blog/customer-success-metrics-track/">CS metrics every team should track</a> covers TTV alongside the other leading indicators. And for the onboarding structure that delivers fast TTV, see our <a href="/blog/customer-onboarding-checklist-saas/">complete onboarding checklist</a>.</p>
 
   <div class="post-cta">
-    <h3>Ready to put this into practice?</h3>
-    <p>Lyniro is the client onboarding software built for CS teams who want structured plans, email-first tasks, and at-risk detection — all in one place.</p>
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Join the Waitlist — Free Early Access</p>
     <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
   </div>
 </div>
-
 <div class="related">
   <div class="related-inner">
-    <h3>Related guides:</h3>
-    <div class="related-links">
-      <a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Reduce SaaS churn in 90 days</a><a href="/blog/saas-onboarding-best-practices/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding best practices</a><a href="/blog/why-saas-customers-churn-during-onboarding/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Why customers churn during onboarding</a><a href="/blog/customer-onboarding-checklist-saas/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding checklist</a>
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/why-saas-customers-churn-during-onboarding/" class="related-card">
+      <div class="related-card-tag">Churn Analysis</div>
+      <div class="related-card-title">Why SaaS Customers Churn During Onboarding</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/customer-success-metrics-track/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">8 CS Metrics Every Team Should Track</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/saas-onboarding-best-practices/" class="related-card">
+      <div class="related-card-tag">Best Practices</div>
+      <div class="related-card-title">SaaS Onboarding Best Practices for 2026</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/how-to-reduce-saas-churn-first-90-days/" class="related-card">
+      <div class="related-card-tag">Churn Reduction</div>
+      <div class="related-card-title">How to Reduce SaaS Churn in the First 90 Days</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Lyniro</div>
@@ -124,7 +271,7 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/">Home</a>
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/blog/">All guides</a>
+      <a href="/blog/">Blog</a>
     </div>
     <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
   </div>

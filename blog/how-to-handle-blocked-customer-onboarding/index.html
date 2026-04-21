@@ -3,62 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Handle Blocked Tasks in Customer Onboarding | Lyniro</title>
-<meta name="description" content="Blocked onboarding tasks are the #1 silent churn trigger. Here's the 6-step framework for resolving them fast — before they kill the renewal.">
+<title>How to Handle Blocked Tasks in Customer Onboarding -- Before They Kill the Deal | Lyniro</title>
+<meta name="description" content="Blocked tasks are one of the most predictable causes of onboarding failure. Here are the 5 root causes, the 48-hour rule, and specific response protocols for each block type.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/blog/how-to-handle-blocked-customer-onboarding/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to Handle Blocked Tasks in Customer Onboarding Before They Become Churn","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"March 18, 2026","description":"Blocked onboarding tasks are the #1 silent churn trigger. Here's the 6-step framework for resolving them fast — before they kill the renewal."}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Handle Blocked Tasks in Customer Onboarding","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-06","dateModified":"2026-04-21"}</script>
 <style>
-:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--r:14px;}
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
 .nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
-.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
 .btn-blue:hover{background:var(--blue-dim);}
+
+/* Post layout */
 .post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
 .post-inner{max-width:760px;margin:0 auto;}
-.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;}
-.tag-red{background:var(--blue-pale);color:var(--blue);}
-.post-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px;}
-.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-meta span{display:flex;align-items:center;gap:4px;}
 .post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:"Lora",serif;font-style:italic;}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+
+/* Body */
 .post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
-.post-body p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:20px;}
-.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;}
-.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:28px 0 10px;}
-.post-body ul,.post-body ol{padding-left:24px;margin-bottom:20px;}
-.post-body li{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:6px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
 .post-body strong{color:var(--ink);font-weight:700;}
-.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);}
-.post-cta{background:linear-gradient(135deg,var(--ink),#152054);border-radius:20px;padding:48px;text-align:center;margin:48px 0;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+
+/* Stat/callout boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+
+/* Image/diagram container */
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+
+/* Table */
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+
+/* CTA */
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
 .post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
-.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;}
-.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* Related */
 .related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
 .related-inner{max-width:760px;margin:0 auto;}
-.related-inner h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.related-links{display:flex;flex-wrap:wrap;gap:10px;}
-footer{background:var(--ink);padding:32px 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-size:18px;font-weight:800;color:white;}
-.footer-links{display:flex;gap:20px;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
-@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .post-cta{padding:32px 20px;}
+  .stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -72,50 +141,136 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
     </div>
-    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+    <a href="/#waitlist" class="btn-blue">Join Waitlist →</a>
   </div>
 </nav>
-
 <div class="post-hero">
   <div class="post-inner">
-    <span class="post-tag tag-red">Onboarding Problems</span>
-    <h1>How to Handle Blocked Tasks in Customer Onboarding Before They Become Churn</h1>
-    <div class="post-meta">
-      <span>Lyniro Team</span>
-      <span>·</span>
-      <span>March 18, 2026</span>
-      <span>·</span>
-      <span>5 min read</span>
-    </div>
-    <p class="post-intro">A blocked task is not a normal status update. It is a customer telling you they are stuck. Every hour it sits unresolved is an hour of onboarding momentum lost — and momentum, once lost, is very hard to rebuild.</p>
+    <span class="post-tag tag-amber">CS Operations</span>
+    <h1>How to Handle Blocked Tasks in Customer Onboarding — Before They Kill the Deal</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>·</span> <span>April 2026</span> <span>·</span> <span>9 min read</span></div>
+    <p class="post-intro">A single blocked task, left unresolved for five days, is one of the strongest predictors of eventual churn. Not because the block is insurmountable -- because of the momentum lost while waiting for it to clear.</p>
   </div>
 </div>
-
 <div class="post-body">
-  <h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Why blocked tasks are a churn signal</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">When customers stop making progress, engagement drops. When engagement drops, they start questioning whether the investment is worth the effort. The average blocked task in email-based onboarding sits unresolved for 3+ days. In that window, the customer's internal champion loses confidence, other priorities crowd in, and your go-live date quietly slips.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The most common types of blockers</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Technical blockers: IT approvals, API access, security reviews. Process blockers: a required stakeholder is unavailable. Documentation blockers: the instructions are unclear or assume knowledge the client does not have. Decision blockers: the client cannot get internal sign-off on something. Knowing the type of blocker determines the fastest path to resolution.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The 6-step blocker response framework</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Step 1: Acknowledge within 1 business hour — not 24, not 'end of day'. Step 2: Diagnose before suggesting solutions — ask one clarifying question if needed. Step 3: Give a timeline with a specific next action on your side. Step 4: Update every 24 hours even if there is no new information. Step 5: Confirm resolution directly with the person who flagged it. Step 6: Assess go-live date impact and communicate proactively.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The same-business-day SLA</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Every CS team should have a formal blocker response SLA. Same business day is the right target. Track it. Make it visible in team metrics. The teams with the best retention treat blockers with the same urgency as P1 support tickets — because they are.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">How to prevent the most common blockers</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">The best blocker is the one that never happens. Before the kick-off call, send a pre-kick-off questionnaire that identifies required stakeholders, likely IT dependencies, and data requirements. Flag the three tasks most likely to hit friction before the client encounters them. A 10-minute conversation before the call prevents 5 days of delay during onboarding.</p>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#five-root-causes">Why tasks get blocked -- the five root causes</a></li>
+<li><a href="#the-48-hour-rule">The 48-hour rule</a></li>
+<li><a href="#response-protocols">Block response protocols by type</a></li>
+<li><a href="#preventing-blocks">Preventing blocks before they happen</a></li></ol>
+  </div>
+
+  <p>A blocked task is one of the most predictable causes of onboarding failure — and one of the most manageable, if you catch it early and have a clear protocol for handling it. Left unresolved, a single blocked task can stall an entire onboarding for days. Two or more blocked tasks simultaneously is almost always a churn precursor.</p>
+  <p>This guide covers why tasks get blocked, how to catch blocks before they stall the onboarding, and the specific response protocols that get accounts moving again.</p>
+
+  <h2 id="five-root-causes">Why Tasks Get Blocked — The Five Root Causes</h2>
+  <p>Understanding why a task is blocked determines how to unblock it. Most blocks fall into five categories.</p>
+
+  <h3>1. IT Dependency</h3>
+  <p>Integration setup, SSO configuration, API access, firewall rules — anything requiring IT involvement creates a dependency the CS team cannot resolve directly. IT teams operate on their own priorities and timelines. An integration that "should take a day" can sit in an IT queue for two weeks.</p>
+  <p><strong>Prevention:</strong> identify all IT dependencies before the kickoff call and get the IT contact into the onboarding plan as a named owner for those specific tasks. Do not let IT be an anonymous gatekeeper — make them a visible participant.</p>
+
+  <h3>2. Missing Stakeholder</h3>
+  <p>A task requires sign-off from someone who was not in the kickoff call. The CSM sends a request to the project lead. The project lead forwards it to the stakeholder. The stakeholder has a different priority. The request sits unread for a week.</p>
+  <p><strong>Prevention:</strong> during the kickoff call, identify every stakeholder who will need to approve or input anything during onboarding. Get their name and contact in the MAP before the call ends.</p>
+
+  <h3>3. Data or Content Dependency</h3>
+  <p>The customer needs to provide a data export, brand assets, content, or historical records before the next stage can proceed. The CSM asks for it once. The client means to send it. Life intervenes. Always provide a data template in the pre-kickoff stage to reduce the back-and-forth when the actual request arrives.</p>
+
+  <h3>4. Vendor or Third-Party Dependency</h3>
+  <p>A task depends on something outside both parties' control — a third-party integration, a vendor API that is down, a compliance certification that takes time. These blocks are genuinely outside the team's hands, but they still need to be tracked and communicated to the client clearly.</p>
+
+  <h3>5. Unclear Task Definition</h3>
+  <p>The client does not understand what they are supposed to do, does not know why the task matters, or is unclear what "done" looks like. Rather than asking and appearing incompetent, they simply do not start it. This is the fastest block to resolve — it just needs a better explanation or a 15-minute call.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="200" fill="#F9FAFB"/>
+      <text x="350" y="24" font-family="Plus Jakarta Sans" font-size="12" fill="#0A0F1E" text-anchor="middle" font-weight="700">Block severity by type -- average days unresolved</text>
+      <rect x="60" y="50" width="90" height="80" rx="6" fill="#FEE2E2"/>
+      <text x="105" y="44" font-family="Plus Jakarta Sans" font-size="11" fill="#DC2626" text-anchor="middle" font-weight="700">18 days</text>
+      <text x="105" y="148" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">IT deps</text>
+      <rect x="180" y="80" width="90" height="50" rx="6" fill="#FEF3C7"/>
+      <text x="225" y="74" font-family="Plus Jakarta Sans" font-size="11" fill="#D97706" text-anchor="middle" font-weight="700">11 days</text>
+      <text x="225" y="148" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Missing stakeholder</text>
+      <rect x="300" y="95" width="90" height="35" rx="6" fill="#FEF3C7"/>
+      <text x="345" y="89" font-family="Plus Jakarta Sans" font-size="11" fill="#D97706" text-anchor="middle" font-weight="700">8 days</text>
+      <text x="345" y="148" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Data deps</text>
+      <rect x="420" y="90" width="90" height="40" rx="6" fill="#FEF3C7"/>
+      <text x="465" y="84" font-family="Plus Jakarta Sans" font-size="11" fill="#D97706" text-anchor="middle" font-weight="700">10 days</text>
+      <text x="465" y="148" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Vendor deps</text>
+      <rect x="540" y="115" width="90" height="15" rx="6" fill="#DCFCE7"/>
+      <text x="585" y="109" font-family="Plus Jakarta Sans" font-size="11" fill="#059669" text-anchor="middle" font-weight="700">3 days</text>
+      <text x="585" y="148" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Unclear task</text>
+      <text x="350" y="178" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF" text-anchor="middle">IT dependencies resolve slowest. Unclear tasks resolve fastest -- they just need a better explanation.</text>
+    </svg>
+    <figcaption>Not all blocks are equal. IT dependencies average 18 days unresolved. Unclear task definitions average 3 days -- they just need a conversation.</figcaption>
+  </div>
+
+  <h2 id="the-48-hour-rule">The 48-Hour Rule</h2>
+  <p>The most important single rule for block management: any task that has been blocked for more than 48 hours requires an active intervention, not just a follow-up email.</p>
+  <p>Research from CS teams tracking this metric shows a clear pattern: blocks resolved within 48 hours have minimal impact on overall onboarding completion rates. Blocks that remain unresolved for 5+ days are strongly correlated with eventual churn — not because of the block itself, but because of the momentum lost while waiting for it to resolve.</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">&#9201;</div>
+    <div class="callout-text"><strong>The 48-hour clock starts when the block is flagged</strong>Not when the CSM notices it. Not when it appears on the weekly review. When the client or the system reports the task is blocked. Build your alert system around this -- blocked tasks should surface immediately, not in the next scheduled team review.</div>
+  </div>
+
+  <h2 id="response-protocols">Block Response Protocols by Type</h2>
+
+  <h3>IT Dependency Protocol</h3>
+  <p>Escalate to the client's IT contact directly (not through the project lead) within 24 hours. Provide a one-paragraph technical brief of exactly what is needed, the security considerations, and a link to relevant documentation. If the IT contact does not respond within 48 hours, contact the project lead and ask them to schedule a 20-minute IT call.</p>
+  <p><strong>Parallel track:</strong> while the IT block is being resolved, move the onboarding forward on the tasks that do not depend on it. Never let a single IT block halt the entire plan.</p>
+
+  <h3>Missing Stakeholder Protocol</h3>
+  <p>Send the request directly to the stakeholder, CC the project lead, and give a specific deadline with a brief explanation of what is blocked downstream. "We need your approval on [item] by [date]. Without it, the [stage] will be delayed by approximately [time]." Specific consequences, specific dates — not a general nudge.</p>
+
+  <h3>Data Dependency Protocol</h3>
+  <p>Break the dependency wherever possible. Can the onboarding proceed with sample data? Can the CSM create a placeholder and the client replace it later? Every time you decouple a data dependency from the critical path, you preserve momentum.</p>
+
+  <h3>Unclear Task Protocol</h3>
+  <p>Get on a 15-minute call (not an email thread) and walk through exactly what is needed and why it matters. After the call, send a brief written summary of what was discussed and what "done" looks like. Unclear tasks resolved by conversation stay resolved. Unclear tasks resolved by email often re-block.</p>
+
+  <h2 id="preventing-blocks">Preventing Blocks Before They Happen</h2>
+  <p>The best block management is prevention. Before the kickoff call, identify every task in the onboarding plan that has an external dependency — IT, stakeholder, vendor, data. For each one, assign a named owner and a due date that is several days before the task is actually on the critical path. Build buffer into the plan for dependencies that are most likely to be slow.</p>
+  <p>For the broader onboarding structure that makes block prevention easier, our <a href="/blog/customer-onboarding-checklist-saas/">complete onboarding checklist</a> covers how to structure the plan to minimise dependency bottlenecks. For the metrics that help you catch blocks early, our guide on <a href="/blog/customer-success-metrics-track/">CS metrics every team should track</a> includes blocked task resolution time as a key indicator. And if you are building a mutual action plan to establish escalation paths upfront, see our <a href="/blog/mutual-action-plan-for-cs-teams/">MAP template</a>.</p>
 
   <div class="post-cta">
-    <h3>Ready to put this into practice?</h3>
-    <p>Lyniro is the client onboarding software built for CS teams who want structured plans, email-first tasks, and at-risk detection — all in one place.</p>
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Join the Waitlist — Free Early Access</p>
     <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
   </div>
 </div>
-
 <div class="related">
   <div class="related-inner">
-    <h3>Related guides:</h3>
-    <div class="related-links">
-      <a href="/blog/why-saas-customers-churn-during-onboarding/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Why customers churn during onboarding</a><a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Reduce SaaS churn in 90 days</a><a href="/blog/customer-success-metrics-track/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer success metrics to track</a><a href="/blog/saas-onboarding-best-practices/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding best practices</a>
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/why-saas-customers-churn-during-onboarding/" class="related-card">
+      <div class="related-card-tag">Churn Analysis</div>
+      <div class="related-card-title">Why SaaS Customers Churn During Onboarding</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/customer-onboarding-checklist-saas/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">The Complete SaaS Customer Onboarding Checklist</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/mutual-action-plan-for-cs-teams/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">Mutual Action Plan Template for CS Teams</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/customer-success-metrics-track/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">8 CS Metrics Every Team Should Track</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Lyniro</div>
@@ -123,7 +278,7 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/">Home</a>
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/blog/">All guides</a>
+      <a href="/blog/">Blog</a>
     </div>
     <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
   </div>

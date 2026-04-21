@@ -3,62 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaaS Customer Onboarding Best Practices for CS Teams 2026 | Lyniro</title>
-<meta name="description" content="8 customer onboarding best practices from the highest-performing CS teams. Increase task completion, reduce time to value, and cut early churn.">
+<title>SaaS Customer Onboarding Best Practices for CS Teams in 2026 | Lyniro</title>
+<meta name="description" content="The SaaS onboarding best practices that top CS teams actually use: outcome-first planning, email-first task delivery, health signal monitoring, and client verification.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/blog/saas-onboarding-best-practices/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"SaaS Customer Onboarding Best Practices — What the Top 10% of CS Teams Do Differently","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"March 20, 2026","description":"8 customer onboarding best practices from the highest-performing CS teams. Increase task completion, reduce time to value, and cut early churn."}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SaaS Customer Onboarding Best Practices for CS Teams in 2026","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-06","dateModified":"2026-04-21"}</script>
 <style>
-:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--r:14px;}
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
 .nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
-.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
 .btn-blue:hover{background:var(--blue-dim);}
+
+/* Post layout */
 .post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
 .post-inner{max-width:760px;margin:0 auto;}
-.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
 .tag-blue{background:var(--blue-pale);color:var(--blue);}
-.post-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px;}
-.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-meta span{display:flex;align-items:center;gap:4px;}
 .post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:"Lora",serif;font-style:italic;}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+
+/* Body */
 .post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
-.post-body p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:20px;}
-.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;}
-.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:28px 0 10px;}
-.post-body ul,.post-body ol{padding-left:24px;margin-bottom:20px;}
-.post-body li{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:6px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
 .post-body strong{color:var(--ink);font-weight:700;}
-.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);}
-.post-cta{background:linear-gradient(135deg,var(--ink),#152054);border-radius:20px;padding:48px;text-align:center;margin:48px 0;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+
+/* Stat/callout boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+
+/* Image/diagram container */
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+
+/* Table */
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+
+/* CTA */
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
 .post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
-.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;}
-.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* Related */
 .related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
 .related-inner{max-width:760px;margin:0 auto;}
-.related-inner h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.related-links{display:flex;flex-wrap:wrap;gap:10px;}
-footer{background:var(--ink);padding:32px 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-size:18px;font-weight:800;color:white;}
-.footer-links{display:flex;gap:20px;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
-@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .post-cta{padding:32px 20px;}
+  .stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -72,53 +141,130 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
     </div>
-    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+    <a href="/#waitlist" class="btn-blue">Join Waitlist →</a>
   </div>
 </nav>
-
 <div class="post-hero">
   <div class="post-inner">
-    <span class="post-tag tag-blue">CS Strategy</span>
-    <h1>SaaS Customer Onboarding Best Practices — What the Top 10% of CS Teams Do Differently</h1>
-    <div class="post-meta">
-      <span>Lyniro Team</span>
-      <span>·</span>
-      <span>March 20, 2026</span>
-      <span>·</span>
-      <span>7 min read</span>
-    </div>
-    <p class="post-intro">Most CS teams have an onboarding process. The top 10% have a system. The difference is not headcount or budget — it is a specific set of repeatable practices that anyone can implement.</p>
+    <span class="post-tag tag-teal">Best Practices</span>
+    <h1>SaaS Customer Onboarding Best Practices for CS Teams in 2026</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>·</span> <span>April 2026</span> <span>·</span> <span>10 min read</span></div>
+    <p class="post-intro">Most onboarding best practices guides tell you to communicate clearly and set expectations. This one tells you the specific practices that separate teams with 85%+ completion rates from everyone else.</p>
   </div>
 </div>
-
 <div class="post-body">
-  <h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 1 — Start onboarding before the contract is signed</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">The moment a deal closes, momentum is at its peak. Use it. Send the welcome email the same day. Schedule the kick-off call before countersigning if possible. Every day of delay after signing is a day the customer loses enthusiasm and the internal champion loses attention from their own team.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 2 — Define success in the customer's own words</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Before the kick-off call, send a short questionnaire. Ask: what does a successful onboarding look like for you in 30 days? What would make you tell a colleague to use us? The answers define your success criteria — and they are the foundation of the renewal narrative.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 3 — End every meeting with one client action</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Every onboarding call should end with a single, specific action the client commits to completing before the next touchpoint. Not a list. One action, one owner, one date. Vague next steps are where momentum dies.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 4 — Make client tasks frictionless</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">The easier it is for clients to complete a task, the faster they complete it. Email-first task completion — where clients click once from their inbox and the task is marked done — consistently produces same-day completion rates. Portal-dependent tasks average 3–5 days.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 5 — Track leading indicators, not just renewal rate</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Renewal rate is a lagging indicator. By the time it moves, the decision was made weeks earlier. Track task completion rate, days since last client activity, and number of blocked tasks. These tell you what is happening now, not what happened last quarter.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 6 — Celebrate stage completions explicitly</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">When a client completes Stage 2, tell them. Send a personalised note. Acknowledge the progress. Clients who feel recognised for their effort complete the next stage faster. Progress acknowledgement is one of the cheapest retention tools available.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 7 — Run a 30-day business review without exception</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">The 30-day review is not optional. It is where you document wins, measure against success criteria, and begin the renewal narrative 11 months before renewal. CS teams that skip it have systematically worse renewal rates.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Best practice 8 — Build the renewal story during onboarding</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Every piece of evidence you gather during onboarding — tasks completed, integrations built, time saved — is a data point in the renewal conversation. Document it. The best CS teams enter the renewal period with a file full of proof. Most teams start from scratch.</p>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#start-with-outcomes">Start with customer outcomes, not product features</a></li>
+<li><a href="#make-plans-visible">Make the onboarding plan visible to clients</a></li>
+<li><a href="#verify-completion">Verify completion — don't just report it</a></li>
+<li><a href="#email-first-tasks">Use email-first task delivery for client tasks</a></li>
+<li><a href="#monitor-health-signals">Monitor health signals, not just status</a></li>
+<li><a href="#involve-executive-sponsor">Involve the executive sponsor throughout</a></li>
+<li><a href="#structured-handoff">Create a structured post-onboarding handoff</a></li></ol>
+  </div>
+
+  <p>Best practices guides tend to be long on advice and short on the specifics that make the advice actionable. This one is different. Everything here is drawn from patterns observed in CS teams that consistently achieve 85%+ onboarding completion rates — what they do differently, why it works, and how to apply it regardless of your product or customer base.</p>
+
+  <h2 id="start-with-outcomes">Start With Customer Outcomes, Not Product Features</h2>
+  <p>The single biggest mistake in SaaS onboarding is leading with the product. The kickoff call becomes a feature tour. Training sessions cover every capability in the platform. Documentation explains every setting. None of this tells the customer how the product makes their life better.</p>
+  <p>Top-performing CS teams invert this. They start with the outcome the customer said they wanted to achieve and work backwards to the product features that deliver that outcome. Every task in the onboarding plan connects to a benefit, not a feature.</p>
+  <p>The practical implication: before your next kickoff, write a one-sentence success statement for this customer in their language. Not "implement the platform." Something like: "Help the CS team reduce time spent chasing clients for task completion from 3 hours per week to under 30 minutes." Then build every onboarding task around that outcome.</p>
+
+  <h2 id="make-plans-visible">Make the Onboarding Plan Visible to Clients</h2>
+  <p>The majority of CS teams manage their onboarding plan internally. The client is told what to do via email, follows up via Slack, and has no idea where they stand in the overall process. From the client's perspective, onboarding is an endless series of requests with no clear finish line.</p>
+  <p>Giving clients a shared view of the onboarding plan changes the dynamic. They can see which stages are complete, which tasks are pending, and exactly how far they are from go-live. This visibility creates accountability — it is much harder to let a task sit for two weeks when you can see it counting against your overall progress percentage.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="200" fill="#F9FAFB"/>
+      <rect x="40" y="30" width="620" height="12" rx="6" fill="#E5E7EB"/>
+      <rect x="40" y="30" width="400" height="12" rx="6" fill="#2451FF"/>
+      <text x="40" y="22" font-family="Plus Jakarta Sans" font-size="12" fill="#0A0F1E" font-weight="700">InnovateTech Onboarding</text>
+      <text x="660" y="22" font-family="Plus Jakarta Sans" font-size="12" fill="#2451FF" text-anchor="end" font-weight="700">64%</text>
+      <circle cx="150" cy="90" r="22" fill="#059669"/>
+      <text x="150" y="95" font-family="Plus Jakarta Sans" font-size="13" fill="white" text-anchor="middle" font-weight="700">&#10003;</text>
+      <text x="150" y="130" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Kickoff</text>
+      <line x1="172" y1="90" x2="258" y2="90" stroke="#059669" stroke-width="2"/>
+      <circle cx="280" cy="90" r="22" fill="#059669"/>
+      <text x="280" y="95" font-family="Plus Jakarta Sans" font-size="13" fill="white" text-anchor="middle" font-weight="700">&#10003;</text>
+      <text x="280" y="130" font-family="Plus Jakarta Sans" font-size="10" fill="#4B5563" text-anchor="middle">Setup</text>
+      <line x1="302" y1="90" x2="388" y2="90" stroke="#2451FF" stroke-width="2" stroke-dasharray="4 3"/>
+      <circle cx="410" cy="90" r="22" fill="#2451FF"/>
+      <text x="410" y="95" font-family="Plus Jakarta Sans" font-size="12" fill="white" text-anchor="middle" font-weight="700">3</text>
+      <text x="410" y="130" font-family="Plus Jakarta Sans" font-size="10" fill="#2451FF" text-anchor="middle" font-weight="600">Training</text>
+      <line x1="432" y1="90" x2="518" y2="90" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="4 3"/>
+      <circle cx="540" cy="90" r="22" fill="#E5E7EB"/>
+      <text x="540" y="95" font-family="Plus Jakarta Sans" font-size="12" fill="#9CA3AF" text-anchor="middle" font-weight="700">4</text>
+      <text x="540" y="130" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF" text-anchor="middle">Go-Live</text>
+      <text x="350" y="170" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle">Go-live date: May 15 · 18 days remaining · Verified by client</text>
+    </svg>
+    <figcaption>A client-visible onboarding plan creates accountability. The client knows exactly where they are and how far they have to go.</figcaption>
+  </div>
+
+  <h2 id="verify-completion">Verify Completion — Don't Just Report It</h2>
+  <p>This is the best practice that most CS teams skip because it feels like extra work. It is not. It is the practice that catches the most preventable churn.</p>
+  <p>When a CSM marks a task complete, send a verification request to the client: "Your CSM has marked [task] as complete. Does this match your experience?" One click to confirm, one click to flag a problem. If the client confirms, the task is genuinely complete. If they flag a discrepancy, the task reopens and the CSM is notified immediately.</p>
+  <p>This mechanism does three things. First, it catches completions that were optimistic — the CSM marked training complete after sending a recording the client never watched. Second, it surfaces problems early when they are still solvable. Third, it creates a verified record of completion that is useful at renewal. For more on why verification matters, see our guide on <a href="/blog/why-saas-customers-churn-during-onboarding/">why SaaS customers churn during onboarding</a>.</p>
+
+  <h2 id="email-first-tasks">Use Email-First Task Delivery for Client Tasks</h2>
+  <p>Any task that requires the client to log into a portal carries inherent friction. The client has to remember the URL, the password, navigate to the task, and complete it — requiring a full context switch from whatever they were doing.</p>
+  <p>Email-first task delivery eliminates this. The task arrives in the client's inbox as an email with a single-click action. Click "Mark as Complete." No login. No navigation. The system records the completion and notifies the CSM. CS teams that have switched to email-first task delivery consistently report 40-60% higher client task completion rates for the same tasks.</p>
+
+  <h2 id="monitor-health-signals">Monitor Health Signals, Not Just Status</h2>
+  <p>Status reporting tells you where an account is. Health monitoring tells you where it is going. The difference determines whether you catch problems before they become churn.</p>
+  <p>The three signals that matter most are completion velocity (is the customer on track to hit their go-live date?), client engagement (when did the client last complete a task or send a message?), and blocked task count (how many tasks are currently stalled?). An account with 60% completion that has had no client activity in 12 days is in much worse shape than an account with 50% completion where the client completed three tasks yesterday.</p>
+  <p>For a complete framework on health signals and what each one predicts, see our guide on <a href="/blog/how-to-reduce-saas-churn-first-90-days/">reducing SaaS churn in the first 90 days</a>.</p>
+
+  <h2 id="involve-executive-sponsor">Involve the Executive Sponsor Throughout</h2>
+  <p>The person who approved the purchase loses visibility the moment onboarding starts. They signed the contract, handed it off to their team, and will not hear about it again until the renewal conversation.</p>
+  <p>Monthly executive summaries change this. A brief email covering what was achieved this month, what is coming next, and one specific value outcome. Not a detailed report — three paragraphs. The economic buyer stays informed, feels the value accumulating, and arrives at the renewal conversation already sold rather than needing to be re-convinced.</p>
+
+  <h2 id="structured-handoff">Create a Structured Post-Onboarding Handoff</h2>
+  <p>If your CS team separates onboarding CSMs from account CSMs, the handoff between them is a high-risk moment. The account CSM does not know what was promised, what was completed, or what is still outstanding. The client has to re-explain context to a new person. The relationship resets.</p>
+  <p>A structured handoff document prevents this: what the customer's success outcomes were, what was completed and when, what is still outstanding, what risks exist, and what the relationship tone is. The account CSM reads this before their first call with the client.</p>
+  <p>For the specific metrics that should be included in this handoff, see our post on <a href="/blog/customer-success-metrics-track/">CS metrics every team should track</a>. And for the full onboarding structure that makes this handoff clean, the <a href="/blog/customer-success-onboarding-template/">customer success onboarding template</a> walks through each stage with task-level detail.</p>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">&#10003;</div>
+    <div class="callout-text"><strong>The most important shift</strong>Move from "did we do this?" to "did the client do this?" Those are different questions. The first measures effort. The second measures outcome. Only the second predicts retention.</div>
+  </div>
 
   <div class="post-cta">
-    <h3>Ready to put this into practice?</h3>
-    <p>Lyniro is the client onboarding software built for CS teams who want structured plans, email-first tasks, and at-risk detection — all in one place.</p>
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Join the Waitlist — Free Early Access</p>
     <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
   </div>
 </div>
-
 <div class="related">
   <div class="related-inner">
-    <h3>Related guides:</h3>
-    <div class="related-links">
-      <a href="/blog/customer-onboarding-checklist-saas/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding checklist template</a><a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Reduce SaaS churn in 90 days</a><a href="/blog/time-to-value-saas-metric/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Time to value in SaaS onboarding</a><a href="/blog/mutual-action-plan-for-cs-teams/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Mutual action plan for CS teams</a>
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/why-saas-customers-churn-during-onboarding/" class="related-card">
+      <div class="related-card-tag">Churn Analysis</div>
+      <div class="related-card-title">Why SaaS Customers Churn During Onboarding</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/customer-onboarding-checklist-saas/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">The Complete SaaS Customer Onboarding Checklist</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/mutual-action-plan-for-cs-teams/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">Mutual Action Plan Template for CS Teams</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/how-to-reduce-saas-churn-first-90-days/" class="related-card">
+      <div class="related-card-tag">Churn Reduction</div>
+      <div class="related-card-title">How to Reduce SaaS Churn in the First 90 Days</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Lyniro</div>
@@ -126,7 +272,7 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/">Home</a>
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/blog/">All guides</a>
+      <a href="/blog/">Blog</a>
     </div>
     <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
   </div>

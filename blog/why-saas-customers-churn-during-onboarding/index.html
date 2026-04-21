@@ -3,62 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why SaaS Customers Churn During Onboarding (And How to Stop It) | Lyniro</title>
-<meta name="description" content="68% of SaaS churn happens in the first 90 days. Here are the customer onboarding best practices that prevent early churn — backed by data.">
+<title>Why SaaS Customers Churn During Onboarding — And How to Stop It | Lyniro</title>
+<meta name="description" content="60-70% of SaaS churn happens in the first 90 days. Here is what actually causes it — the three failure modes — and what top CS teams do to prevent it.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/blog/why-saas-customers-churn-during-onboarding/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Why SaaS Customers Churn During Onboarding — And How to Stop It","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"April 6, 2026","description":"68% of SaaS churn happens in the first 90 days. Here are the customer onboarding best practices that prevent early churn — backed by data."}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why SaaS Customers Churn During Onboarding — And How to Stop It","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-06","dateModified":"2026-04-21","description":"60-70% of SaaS churn happens in the first 90 days. Here is what actually causes it and what top CS teams do to prevent it."}</script>
 <style>
-:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--r:14px;}
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
 .nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
-.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
 .btn-blue:hover{background:var(--blue-dim);}
+
+/* Post layout */
 .post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
 .post-inner{max-width:760px;margin:0 auto;}
-.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
 .tag-blue{background:var(--blue-pale);color:var(--blue);}
-.post-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px;}
-.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-meta span{display:flex;align-items:center;gap:4px;}
 .post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:"Lora",serif;font-style:italic;}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+
+/* Body */
 .post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
-.post-body p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:20px;}
-.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;}
-.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:28px 0 10px;}
-.post-body ul,.post-body ol{padding-left:24px;margin-bottom:20px;}
-.post-body li{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:6px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
 .post-body strong{color:var(--ink);font-weight:700;}
-.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);}
-.post-cta{background:linear-gradient(135deg,var(--ink),#152054);border-radius:20px;padding:48px;text-align:center;margin:48px 0;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+
+/* Stat/callout boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+
+/* Image/diagram container */
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+
+/* Table */
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+
+/* CTA */
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
 .post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
-.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;}
-.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* Related */
 .related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
 .related-inner{max-width:760px;margin:0 auto;}
-.related-inner h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.related-links{display:flex;flex-wrap:wrap;gap:10px;}
-footer{background:var(--ink);padding:32px 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-size:18px;font-weight:800;color:white;}
-.footer-links{display:flex;gap:20px;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
-@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .post-cta{padding:32px 20px;}
+  .stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -72,50 +141,217 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
     </div>
-    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+    <a href="/#waitlist" class="btn-blue">Join Waitlist →</a>
   </div>
 </nav>
-
 <div class="post-hero">
   <div class="post-inner">
     <span class="post-tag tag-blue">Customer Onboarding</span>
     <h1>Why SaaS Customers Churn During Onboarding — And How to Stop It</h1>
-    <div class="post-meta">
-      <span>Lyniro Team</span>
-      <span>·</span>
-      <span>April 6, 2026</span>
-      <span>·</span>
-      <span>8 min read</span>
-    </div>
-    <p class="post-intro">Most SaaS companies blame churn on pricing, competition, or product gaps. The data tells a different story: 68% of churn happens in the first 90 days, before customers have even properly started.</p>
+    <div class="post-meta"><span>Lyniro Team</span> <span>·</span> <span>April 2026</span> <span>·</span> <span>10 min read</span></div>
+    <p class="post-intro">Most SaaS companies blame churn on pricing, competition, or product gaps. The data tells a different story: 60-70% of all churn happens in the first 90 days, before customers have even properly started using what they paid for.</p>
   </div>
 </div>
-
 <div class="post-body">
-  <h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Why onboarding is your biggest churn lever</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Customers who complete onboarding are 4× more likely to renew. Customers who don't complete it are 3× more likely to cancel in year one. The onboarding period is the highest-leverage window you have — and most CS teams are managing it with a mix of spreadsheets, Slack messages, and follow-up emails that clients ignore.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The three failure modes</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Almost every onboarding failure falls into one of three categories. First, clients go quiet — they receive the welcome email, intend to act, and never come back. Second, tasks get blocked — something requires IT approval or a missing stakeholder, and nobody notices for five days. Third, clients feel lost — they don't know what to do next, so they do nothing.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">What top-performing CS teams do differently</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">The CS teams with 90%+ onboarding completion rates share a set of specific practices. They define a clear go-live date on the kick-off call and hold every stage accountable to it. They remove login friction from client tasks — clients complete steps from their email inbox, not by logging into a portal they barely remember signing up for. And they monitor at-risk signals automatically rather than waiting for clients to raise their hand.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The cost of a failed onboarding</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">If your average contract value is $500/month and you lose 5 customers per quarter during onboarding, that's $30,000 in lost ARR annually — from onboarding failure alone. The number grows quickly with higher ACV. This is why onboarding is not a customer success problem. It is a revenue problem.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">How to fix it</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Start with a structured, stage-locked onboarding plan that both your team and the client can see. Assign every task to a named owner with a due date. Set up automatic alerts for blocked or stalled accounts. And use email-first task completion so clients can act from their inbox without creating a new account.</p>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#why-onboarding-churn-happens">Why onboarding churn happens</a></li>
+<li><a href="#three-failure-modes">The three failure modes</a></li>
+<li><a href="#what-data-tells-us">What the data actually tells us</a></li>
+<li><a href="#what-top-cs-teams-do">What top-performing CS teams do differently</a></li>
+<li><a href="#early-warning-signals">Early warning signals you can track today</a></li>
+<li><a href="#fixing-your-onboarding">A practical fix for each failure mode</a></li>
+<li><a href="#conclusion">The bottom line</a></li></ol>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box"><span class="stat-number">60-70%</span><span class="stat-label">of annual SaaS churn happens in the first 90 days</span></div>
+    <div class="stat-box"><span class="stat-number">62%</span><span class="stat-label">of CS leaders have no real-time onboarding visibility</span></div>
+    <div class="stat-box"><span class="stat-number">41%</span><span class="stat-label">drop in product usage in the quarter before cancellation</span></div>
+  </div>
+
+  <p>These numbers come from independent research published in 2025 and 2026 — not from a vendor trying to sell you something. The pattern they reveal is uncomfortable: most SaaS churn is not about the product. It is about what happens in the first twelve weeks after someone signs the contract.</p>
+
+  <h2 id="why-onboarding-churn-happens">Why Onboarding Churn Happens</h2>
+
+  <p>When a customer cancels six months into their contract, the reason they give is rarely the real one. They say the product was not a good fit. They say it was too complicated. They say the timing was not right. But when you trace it back, the same pattern appears repeatedly: <strong>onboarding was never properly completed</strong>.</p>
+
+  <p>Not because the customer did not want to complete it. Because nobody made it easy enough, visible enough, or urgent enough. The customer signed the contract with genuine intention to implement. Then life got in the way. Their internal champion left. A higher-priority project absorbed the team. The IT approval for the integration took longer than expected. And the CSM, managing twelve other accounts, did not notice until the account went quiet.</p>
+
+  <p>By the time the renewal conversation happens, the customer has spent six to twelve months paying for a product they barely touched. They feel like they wasted money. And they are right.</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">⚠️</div>
+    <div class="callout-text"><strong>The core problem</strong>Product usage declines by an average of 41% in the quarter before cancellation (Focus Digital, 2025). The signals are always there. They just go unnoticed.</div>
+  </div>
+
+  <h2 id="three-failure-modes">The Three Onboarding Failure Modes</h2>
+
+  <p>After studying customer success teams across B2B SaaS companies, three distinct failure patterns emerge. Understanding which one affects your accounts is the first step to fixing it.</p>
+
+  <h3>Failure Mode 1: The Silent Drop-Off</h3>
+
+  <p>The customer attends the kickoff call, agrees to the onboarding plan, and then goes quiet. They respond to one follow-up email, miss the next two, and eventually stop responding entirely. The CSM marks the account as "in progress" on the CRM because technically onboarding has started. It has not, in any meaningful sense.</p>
+
+  <p>Silent drop-offs happen for two reasons. First, the client never felt genuine ownership of the process — it felt like something being done to them, not with them. Second, there was no friction-free way for them to engage. Every task required logging into a portal they had not bookmarked, remembering a password they never set properly, and navigating a tool they barely understood.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="280" fill="#F9FAFB"/>
+      <!-- Timeline -->
+      <line x1="60" y1="140" x2="640" y2="140" stroke="#E5E7EB" stroke-width="2"/>
+      <!-- Stages -->
+      <circle cx="130" cy="140" r="20" fill="#2451FF"/>
+      <text x="130" y="145" font-family="Plus Jakarta Sans" font-size="11" fill="white" text-anchor="middle" font-weight="700">1</text>
+      <text x="130" y="180" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563" text-anchor="middle">Kickoff</text>
+      <text x="130" y="195" font-family="Plus Jakarta Sans" font-size="10" fill="#059669" text-anchor="middle" font-weight="600">✓ Complete</text>
+
+      <circle cx="270" cy="140" r="20" fill="#F59E0B"/>
+      <text x="270" y="145" font-family="Plus Jakarta Sans" font-size="11" fill="white" text-anchor="middle" font-weight="700">2</text>
+      <text x="270" y="180" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563" text-anchor="middle">Setup</text>
+      <text x="270" y="195" font-family="Plus Jakarta Sans" font-size="10" fill="#D97706" text-anchor="middle" font-weight="600">Stalled 12d</text>
+
+      <circle cx="410" cy="140" r="20" fill="#E5E7EB"/>
+      <text x="410" y="145" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle" font-weight="700">3</text>
+      <text x="410" y="180" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle">Training</text>
+      <text x="410" y="195" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF" text-anchor="middle">Not started</text>
+
+      <circle cx="550" cy="140" r="20" fill="#E5E7EB"/>
+      <text x="550" y="145" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle" font-weight="700">4</text>
+      <text x="550" y="180" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle">Go-Live</text>
+      <text x="550" y="195" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF" text-anchor="middle">Not started</text>
+
+      <!-- Lines between circles -->
+      <line x1="150" y1="140" x2="250" y2="140" stroke="#2451FF" stroke-width="2" stroke-dasharray="4 3"/>
+      <line x1="290" y1="140" x2="390" y2="140" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="4 3"/>
+      <line x1="430" y1="140" x2="530" y2="140" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="4 3"/>
+
+      <!-- Risk alert -->
+      <rect x="220" y="60" width="100" height="36" rx="8" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
+      <text x="270" y="81" font-family="Plus Jakarta Sans" font-size="11" fill="#D97706" text-anchor="middle" font-weight="700">⚠ At Risk</text>
+      <line x1="270" y1="96" x2="270" y2="120" stroke="#D97706" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <text x="350" y="34" font-family="Plus Jakarta Sans" font-size="13" fill="#0A0F1E" text-anchor="middle" font-weight="700">Typical silent drop-off pattern</text>
+    </svg>
+    <figcaption>A plan that looked fine on the kickoff call. Twelve days later, nobody noticed it stalled at stage 2.</figcaption>
+  </div>
+
+  <h3>Failure Mode 2: The Blocked Task Spiral</h3>
+
+  <p>One task gets blocked — usually something that requires IT involvement, a third-party vendor, or a decision from someone senior who was not in the kickoff call. The client reports the block to the CSM. The CSM acknowledges it. And then nothing happens for days, because the CSM is waiting on the client, the client is waiting on IT, and IT has no idea the whole onboarding is on hold.</p>
+
+  <p>A single blocked task typically delays onboarding completion by an average of 8 to 14 days. When two tasks are blocked simultaneously, the probability of full onboarding completion drops sharply. The client starts to feel like the product is more trouble than it's worth — even though the block has nothing to do with the product itself.</p>
+
+  <h3>Failure Mode 3: The Fake Completion</h3>
+
+  <p>This is the most dangerous failure mode, and the least discussed. The CSM marks tasks as complete based on their own assessment — they sent the training video, so training is marked done. But the client never watched it. They provisioned the account, so setup is marked complete. But the client never logged in.</p>
+
+  <p>From the dashboard, this account looks healthy. Progress: 85%. Risk: Low. In reality, the client has done almost nothing and has no idea what value they are supposed to be getting. This account will churn at renewal. The CSM will be surprised. Leadership will have no explanation. <a href="/blog/why-saas-customers-churn-during-onboarding/">The root cause was always the same</a> — nobody was checking whether clients were actually completing tasks, or whether the CSM was simply marking them complete.</p>
+
+  <blockquote><p>"The CSMs on my team marked twelve accounts as fully onboarded in Q3. When I actually checked, seven of those clients had never logged in after the kickoff call."<br>— VP of Customer Success, Series B SaaS company</p></blockquote>
+
+  <h2 id="what-data-tells-us">What the Data Actually Tells Us</h2>
+
+  <p>The 2026 State of Onboarding Report from OnRamp surveyed 161 CS leaders and found that 62% lack real-time visibility into what is happening in their accounts. They rely on what their team tells them, which is subject to all the optimism bias and CRM-updating shortcuts that make internal reporting unreliable.</p>
+
+  <p>A separate analysis from ProfitWell found that 60-70% of annual churn happens in the first 90 days. Which means that if you could fix onboarding, you could eliminate the majority of your churn without changing a single line of product code.</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">📊</div>
+    <div class="callout-text"><strong>The revenue math</strong>If your average contract is $500/month and you lose 5 accounts per quarter during onboarding, that is $30,000 in lost ARR annually — from onboarding failure alone. For a $2,000/month ACV, the same number of failures costs $120,000 per year.</div>
+  </div>
+
+  <h2 id="what-top-cs-teams-do">What Top-Performing CS Teams Do Differently</h2>
+
+  <p>CS teams with 90%+ onboarding completion rates share a specific set of practices. None of them are complicated. Most of them are about removing friction and improving visibility.</p>
+
+  <h3>They define a go-live date on the kickoff call</h3>
+
+  <p>Not a vague "we expect to be live in about a month." A specific date. A commitment. This creates urgency for the client and a clear accountability anchor for the CSM. When the go-live date is established upfront, clients take onboarding tasks more seriously because they understand there is a timeline.</p>
+
+  <h3>They make client tasks frictionless</h3>
+
+  <p>The best CS teams do not ask clients to log into a portal to complete tasks. They send the task directly to the client's inbox with a single-click action. The client receives an email, clicks "Mark as Complete," and the system updates automatically. No login. No password. No navigation. The completion rate on email-first tasks is dramatically higher than portal-based tasks.</p>
+
+  <h3>They monitor signals, not just status</h3>
+
+  <p>A CSM looking at a CRM note that says "onboarding in progress" learns nothing useful. A CS leader looking at a health score based on completion velocity, days since last client activity, and blocked task count can tell immediately which accounts need intervention. The difference is the difference between reactive and proactive customer success.</p>
+
+  <h3>They verify completion independently</h3>
+
+  <p>When a CSM marks a task complete, the system sends a quick confirmation to the client. The client clicks confirm or flags a dispute. If disputed, the task reopens automatically. This single mechanism eliminates the fake completion problem entirely and gives leadership an honest picture of where accounts actually are. You can learn more about this approach in our guide to <a href="/blog/saas-onboarding-best-practices/">SaaS onboarding best practices for CS teams</a>.</p>
+
+  <h2 id="early-warning-signals">Early Warning Signals You Can Track Today</h2>
+
+  <p>Even without sophisticated tooling, there are observable signals that predict churn weeks before it happens. The challenge is building a process to monitor them consistently across all accounts.</p>
+
+  <table class="post-table">
+    <tr><th>Signal</th><th>What it means</th><th>Action to take</th></tr>
+    <tr><td>No client login in 10+ days</td><td>Client has disengaged from onboarding</td><td>Direct call from senior CSM or executive sponsor</td></tr>
+    <tr><td>2+ blocked tasks simultaneously</td><td>Onboarding is functionally halted</td><td>Escalate to client's manager, offer alternative path</td></tr>
+    <tr><td>Completion below 40% at day 30</td><td>Go-live date is at serious risk</td><td>Rebase the plan, identify specific blockers</td></tr>
+    <tr><td>No messages from client in 2 weeks</td><td>Silent disengagement beginning</td><td>Proactive outreach with specific value question</td></tr>
+    <tr><td>Champion goes quiet</td><td>Potential internal champion loss</td><td>Identify backup stakeholder immediately</td></tr>
+  </table>
+
+  <h2 id="fixing-your-onboarding">A Practical Fix for Each Failure Mode</h2>
+
+  <p>Understanding the failure modes is useful. Having a concrete fix for each one is what actually reduces churn.</p>
+
+  <p><strong>For silent drop-offs:</strong> Switch from portal-based task management to email-first completion. Send tasks to the client's inbox with one-click actions. Remove the login requirement wherever possible. Track the date of last client action as a primary metric, not just overall completion percentage.</p>
+
+  <p><strong>For blocked task spirals:</strong> Set up automatic escalation when a task has been blocked for more than 48 hours. Notify the CSM's manager, not just the CSM. Create a standard "unblock" protocol that does not require the client to do anything — route the blockage internally until someone can resolve it.</p>
+
+  <p><strong>For fake completions:</strong> Add client verification to every CSM-marked task. This does not need to be burdensome — a single confirmation email is enough. When the client confirms, the task is genuinely complete. When they dispute it, you catch the gap before it becomes a churn risk. See our <a href="/blog/customer-onboarding-checklist-saas/">complete onboarding checklist template</a> for a structured approach to this.</p>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">✅</div>
+    <div class="callout-text"><strong>The most important shift</strong>Stop measuring onboarding success by what your CSMs report. Start measuring it by what your clients actually complete. Those two numbers are often very different.</div>
+  </div>
+
+  <h2 id="conclusion">The Bottom Line</h2>
+
+  <p>SaaS churn is not primarily a product problem. It is an onboarding visibility problem. The customers who churn in the first 90 days almost always showed warning signs weeks earlier — signs that went unnoticed because nobody was watching them.</p>
+
+  <p>The CS teams that protect their revenue are not necessarily better at building relationships. They are better at monitoring signals, removing friction, and verifying that completion means what it says. Those are process and tooling problems, which means they are solvable.</p>
+
+  <p>If you want to go deeper on how to structure your onboarding process, our guide on <a href="/blog/how-to-reduce-saas-churn-first-90-days/">reducing SaaS churn in the first 90 days</a> covers the specific tactics that make the biggest difference. And if you are looking at how other teams handle the specific challenge of blocked tasks, read our piece on <a href="/blog/how-to-handle-blocked-customer-onboarding/">how to handle blocked tasks in customer onboarding</a>.</p>
 
   <div class="post-cta">
-    <h3>Ready to put this into practice?</h3>
-    <p>Lyniro is the client onboarding software built for CS teams who want structured plans, email-first tasks, and at-risk detection — all in one place.</p>
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Lyniro gives CS leaders real-time visibility into every account — with completion verified by the client, not your team.</p>
     <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
   </div>
 </div>
-
 <div class="related">
   <div class="related-inner">
-    <h3>Related guides:</h3>
-    <div class="related-links">
-      <a href="/blog/customer-onboarding-checklist-saas/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding checklist template</a><a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Reduce SaaS churn in 90 days</a><a href="/blog/saas-onboarding-best-practices/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Onboarding best practices</a><a href="/blog/time-to-value-saas-metric/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Time to value in SaaS</a>
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/how-to-reduce-saas-churn-first-90-days/" class="related-card">
+      <div class="related-card-tag">Churn Reduction</div>
+      <div class="related-card-title">How to Reduce SaaS Churn in the First 90 Days — 8 Proven Tactics</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/saas-onboarding-best-practices/" class="related-card">
+      <div class="related-card-tag">Best Practices</div>
+      <div class="related-card-title">SaaS Customer Onboarding Best Practices for CS Teams in 2026</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/customer-onboarding-checklist-saas/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">The Complete SaaS Customer Onboarding Checklist</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/how-to-handle-blocked-customer-onboarding/" class="related-card">
+      <div class="related-card-tag">CS Operations</div>
+      <div class="related-card-title">How to Handle Blocked Tasks Before They Kill the Onboarding</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Lyniro</div>
@@ -123,7 +359,7 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/">Home</a>
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/blog/">All guides</a>
+      <a href="/blog/">Blog</a>
     </div>
     <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
   </div>

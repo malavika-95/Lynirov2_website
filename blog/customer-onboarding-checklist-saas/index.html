@@ -3,62 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaaS Customer Onboarding Checklist 2026 — Free Template | Lyniro</title>
-<meta name="description" content="Free SaaS client onboarding checklist covering kick-off to go-live. Stage-by-stage template for CS teams. Copy and adapt in minutes.">
+<title>The Complete SaaS Customer Onboarding Checklist — Stages, Tasks, and Owners | Lyniro</title>
+<meta name="description" content="A complete SaaS customer onboarding checklist covering pre-kickoff through go-live. Every stage, every task, and who owns it — CSM or client.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/blog/customer-onboarding-checklist-saas/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The Ultimate SaaS Customer Onboarding Checklist for 2026 (Free Template)","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"April 2, 2026","description":"Free SaaS client onboarding checklist covering kick-off to go-live. Stage-by-stage template for CS teams. Copy and adapt in minutes."}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Complete SaaS Customer Onboarding Checklist","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-06","dateModified":"2026-04-21"}</script>
 <style>
-:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--r:14px;}
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
 .nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
-.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
 .btn-blue:hover{background:var(--blue-dim);}
+
+/* Post layout */
 .post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
 .post-inner{max-width:760px;margin:0 auto;}
-.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;}
-.tag-green{background:var(--blue-pale);color:var(--blue);}
-.post-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px;}
-.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-meta span{display:flex;align-items:center;gap:4px;}
 .post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:"Lora",serif;font-style:italic;}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+
+/* Body */
 .post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
-.post-body p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:20px;}
-.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;}
-.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:28px 0 10px;}
-.post-body ul,.post-body ol{padding-left:24px;margin-bottom:20px;}
-.post-body li{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:6px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
 .post-body strong{color:var(--ink);font-weight:700;}
-.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);}
-.post-cta{background:linear-gradient(135deg,var(--ink),#152054);border-radius:20px;padding:48px;text-align:center;margin:48px 0;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+
+/* Stat/callout boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+
+/* Image/diagram container */
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+
+/* Table */
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+
+/* CTA */
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
 .post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
-.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;}
-.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* Related */
 .related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
 .related-inner{max-width:760px;margin:0 auto;}
-.related-inner h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.related-links{display:flex;flex-wrap:wrap;gap:10px;}
-footer{background:var(--ink);padding:32px 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-size:18px;font-weight:800;color:white;}
-.footer-links{display:flex;gap:20px;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
-@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .post-cta{padding:32px 20px;}
+  .stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -72,51 +141,186 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
     </div>
-    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+    <a href="/#waitlist" class="btn-blue">Join Waitlist →</a>
   </div>
 </nav>
-
 <div class="post-hero">
   <div class="post-inner">
-    <span class="post-tag tag-green">Free Template</span>
-    <h1>The Ultimate SaaS Customer Onboarding Checklist for 2026 (Free Template)</h1>
-    <div class="post-meta">
-      <span>Lyniro Team</span>
-      <span>·</span>
-      <span>April 2, 2026</span>
-      <span>·</span>
-      <span>6 min read</span>
-    </div>
-    <p class="post-intro">73% of CS teams say their onboarding process is inconsistent across customers. This checklist gives you the structure to fix that — whether you have 5 clients or 500.</p>
+    <span class="post-tag tag-green">Templates</span>
+    <h1>The Complete SaaS Customer Onboarding Checklist — Stages, Tasks, and Owners</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>·</span> <span>April 2026</span> <span>·</span> <span>10 min read</span></div>
+    <p class="post-intro">Most onboarding checklists track what the CSM does. The best ones track what the client does — because client completion is the only completion that actually predicts retention.</p>
   </div>
 </div>
-
 <div class="post-body">
-  <h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Before the kick-off call (Days 0–2)</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Send the welcome email within 24 hours of contract signing. Schedule the kick-off call within 3 business days — not after. Share a pre-kick-off questionnaire covering integrations needed, key stakeholders, and the customer's definition of success. Create the onboarding plan in your CS tool before the call, not after.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The kick-off call (Day 3)</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Walk through every stage and task in the onboarding plan. Confirm the go-live date and work backwards. Assign every client-facing task to a named person on their side with a real deadline. Explain what happens when something gets blocked — make it easy to flag, not embarrassing. End the call with one immediate action the client commits to completing today.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Stage 1 — Access and setup (Days 3–8)</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Account provisioned and login credentials sent. All integrations configured and tested. User permissions set correctly. CSM confirms everything is working before moving to Stage 2. This stage is where most onboardings stall — have a blocker SLA of 24 hours.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Stage 2 — Configuration (Days 8–18)</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Product configured to match the customer's workflow. Data imported and validated. Custom fields, templates, or workflows created. CSM review and sign-off before advancing. Assign configuration tasks to the client with email-first completion so they act from their inbox.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Stage 3 — Training and go-live (Days 18–30)</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Admin training completed. End-user training completed for all primary users. First real use case completed live with CSM present. All questions answered and documented. Go-live confirmed in writing. Schedule the 30-day business review before the call ends.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Post go-live (Ongoing)</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">7-day check-in: is everything working? Are there any blockers? 30-day business review: document wins, measure against success criteria. 90-day QBR: expansion conversation, NPS, renewal narrative begins.</p>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#before-kickoff">Pre-kickoff: set the foundation</a></li>
+<li><a href="#stage-1">Stage 1: Kickoff</a></li>
+<li><a href="#stage-2">Stage 2: Setup and integration</a></li>
+<li><a href="#stage-3">Stage 3: Training</a></li>
+<li><a href="#stage-4">Stage 4: Go-live</a></li>
+<li><a href="#post-onboarding">Post-onboarding: the account health phase</a></li></ol>
+  </div>
+
+  <p>A customer onboarding checklist is only as useful as the process behind it. Most CS teams have some version of a checklist — usually a spreadsheet, a Notion doc, or a project template. The problem is not the checklist itself. The problem is that the checklist lives with the CSM and the client never sees it, never feels ownership of it, and never understands why each step matters.</p>
+  <p>This template is built differently. Every stage has a clear purpose, every task has a defined owner (CSM or client), and every milestone connects to a business outcome the customer cares about. Use it as a starting point and adapt it to your specific product and customer profile.</p>
+
+  <h2 id="before-kickoff">Pre-Kickoff: Set the Foundation</h2>
+  <p>The work that happens before the kickoff call determines the quality of everything that follows. Most onboarding failures are seeded in the pre-kickoff phase — when expectations are unclear, stakeholders are not aligned, or the customer is not prepared to be an active participant.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="220" fill="#F9FAFB"/>
+      <rect x="40" y="30" width="140" height="160" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+      <text x="110" y="56" font-family="Plus Jakarta Sans" font-size="11" fill="#2451FF" text-anchor="middle" font-weight="700">PRE-KICKOFF</text>
+      <text x="55" y="78" font-family="Plus Jakarta Sans" font-size="10" fill="#059669">&#10003; Welcome email sent</text>
+      <text x="55" y="96" font-family="Plus Jakarta Sans" font-size="10" fill="#059669">&#10003; Intake form completed</text>
+      <text x="55" y="114" font-family="Plus Jakarta Sans" font-size="10" fill="#059669">&#10003; Stakeholders mapped</text>
+      <text x="55" y="132" font-family="Plus Jakarta Sans" font-size="10" fill="#059669">&#10003; Access provisioned</text>
+      <text x="55" y="150" font-family="Plus Jakarta Sans" font-size="10" fill="#D97706">&#9203; Success defined</text>
+      <text x="55" y="168" font-family="Plus Jakarta Sans" font-size="10" fill="#D97706">&#9203; Go-live date set</text>
+      <rect x="210" y="30" width="140" height="160" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+      <text x="280" y="56" font-family="Plus Jakarta Sans" font-size="11" fill="#2451FF" text-anchor="middle" font-weight="700">SETUP</text>
+      <text x="225" y="78" font-family="Plus Jakarta Sans" font-size="10" fill="#059669">&#10003; Admin accounts live</text>
+      <text x="225" y="96" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Integrations connected</text>
+      <text x="225" y="114" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Data imported</text>
+      <text x="225" y="132" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Team seats added</text>
+      <text x="225" y="150" font-family="Plus Jakarta Sans" font-size="10" fill="#DC2626">&#9940; SSO blocked by IT</text>
+      <rect x="380" y="30" width="140" height="160" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+      <text x="450" y="56" font-family="Plus Jakarta Sans" font-size="11" fill="#2451FF" text-anchor="middle" font-weight="700">TRAINING</text>
+      <text x="395" y="78" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Admin training done</text>
+      <text x="395" y="96" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; End user training</text>
+      <text x="395" y="114" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Playbook shared</text>
+      <rect x="550" y="30" width="110" height="160" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <text x="605" y="56" font-family="Plus Jakarta Sans" font-size="11" fill="#2451FF" text-anchor="middle" font-weight="700">GO-LIVE</text>
+      <text x="565" y="90" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Live sign-off</text>
+      <text x="565" y="108" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Handoff to CSM</text>
+      <text x="565" y="126" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF">&#9675; Success review</text>
+      <text x="350" y="210" font-family="Plus Jakarta Sans" font-size="11" fill="#9CA3AF" text-anchor="middle">Overall progress: 38% -- Health: Monitor</text>
+    </svg>
+    <figcaption>A real onboarding plan mid-flight — two stages complete, one task blocked by IT, training and go-live not yet started.</figcaption>
+  </div>
+
+  <p><strong>CSM tasks before kickoff:</strong></p>
+  <ul>
+    <li>Send the welcome email within 24 hours of contract signing — include the kickoff calendar invite, a brief agenda, and a link to the intake form</li>
+    <li>Complete an internal handoff with the sales team — understand the promises made during the sales process and the primary pain points the customer expressed</li>
+    <li>Map the stakeholders — identify the economic buyer, the project lead, the technical contact, and any integration owners</li>
+    <li>Provision access to the product before the kickoff call — the kickoff is not the time to create accounts</li>
+  </ul>
+
+  <p><strong>Client tasks before kickoff:</strong></p>
+  <ul>
+    <li>Complete the intake form — success outcomes, internal champion, technical environment, known blockers</li>
+    <li>Confirm attendees for the kickoff call</li>
+    <li>Identify the IT contact for any integration or SSO requirements</li>
+  </ul>
+
+  <h2 id="stage-1">Stage 1: Kickoff — Align on Outcomes and Timeline</h2>
+  <p>The kickoff call sets the tone for the entire onboarding. Its job is not to demo the product — the customer already bought it. Its job is to align on what success looks like, who is responsible for what, and when the customer will be live.</p>
+
+  <p><strong>Kickoff agenda (60 minutes):</strong></p>
+  <ul>
+    <li>10 min: Introductions and relationship building</li>
+    <li>15 min: Review the customer success outcomes from the intake form</li>
+    <li>20 min: Walk through the onboarding plan stage by stage</li>
+    <li>10 min: Lock the go-live date and assign a task owner for every client-side task</li>
+    <li>5 min: Agree on communication cadence</li>
+  </ul>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">&#128161;</div>
+    <div class="callout-text"><strong>The go-live date rule</strong>Never leave the kickoff without a go-live date. A specific date -- even if it later moves -- creates urgency that a vague timeline never does.</div>
+  </div>
+
+  <h2 id="stage-2">Stage 2: Setup and Integration</h2>
+  <p>Setup is the technical foundation of onboarding. It is also where most blocked tasks occur — usually because IT approval is required for SSO, integrations need third-party vendor coordination, or data migration takes longer than expected.</p>
+
+  <p><strong>Setup tasks (CSM-owned):</strong></p>
+  <ul>
+    <li>Admin user accounts provisioned and tested</li>
+    <li>Product configured to customer specifications from intake form</li>
+    <li>Integration requirements documented and handed off to technical contact</li>
+  </ul>
+
+  <p><strong>Setup tasks (client-owned):</strong></p>
+  <ul>
+    <li>IT contact approves SSO configuration</li>
+    <li>Historical data exported from previous system if applicable</li>
+    <li>Integration credentials shared with CSM</li>
+    <li>Team seat invitations accepted by all required users</li>
+  </ul>
+
+  <p>For setup tasks that are client-owned, use <a href="/blog/why-saas-customers-churn-during-onboarding/">email-first task delivery</a> — send the task directly to the client's inbox with a single-click action rather than expecting them to log into the portal. Completion rates are dramatically higher with this approach.</p>
+
+  <h2 id="stage-3">Stage 3: Training</h2>
+  <p>Training is where most CS teams over-deliver and under-verify. Better training follows the principle of progressive disclosure: start with the one workflow that delivers immediate value, and train on everything else as the client encounters it.</p>
+
+  <p><strong>Training tasks:</strong></p>
+  <ul>
+    <li>Admin training covering user management, permissions, billing — owner: CSM, verified by admin user</li>
+    <li>Core workflow training for primary use case — owner: CSM, verified by project lead</li>
+    <li>Self-serve resources shared and acknowledged — owner: CSM, verified by client</li>
+    <li>Q&amp;A session completed with key users — owner: CSM</li>
+  </ul>
+
+  <h2 id="stage-4">Stage 4: Go-Live</h2>
+  <p>Go-live is the milestone that marks the end of onboarding and the beginning of the ongoing customer relationship. It should feel like an event, not just the last item on a checklist.</p>
+
+  <p><strong>Go-live tasks:</strong></p>
+  <ul>
+    <li>Final technical check — all integrations live, all users provisioned, all workflows tested</li>
+    <li>Go-live sign-off from the client project lead and the CSM</li>
+    <li>First-week success metric established — what will you measure to confirm the product is working?</li>
+    <li>30-day check-in scheduled before the go-live call ends</li>
+    <li>Internal handoff from onboarding CSM to account CSM if they are different people</li>
+  </ul>
+
+  <h2 id="post-onboarding">Post-Onboarding: The Account Health Phase</h2>
+  <p>Most onboarding checklists end at go-live. The first 30 days after go-live are critical — this is when product adoption patterns are established, when early frustrations surface, and when the economic buyer is still paying attention.</p>
+  <p>For the metrics you should be tracking through this phase, see our guide on <a href="/blog/customer-success-metrics-track/">customer success metrics every CS team should track</a>. And for the specific signals that predict whether an account will renew, our <a href="/blog/time-to-value-saas-metric/">time-to-value guide</a> covers the early indicators in detail.</p>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">&#10003;</div>
+    <div class="callout-text"><strong>The completion verification rule</strong>For every task in this checklist, record who completed it and whether the completion was verified by the client. CSM-marked complete and client-confirmed complete are two different things. Only the latter is reliable.</div>
+  </div>
 
   <div class="post-cta">
-    <h3>Ready to put this into practice?</h3>
-    <p>Lyniro is the client onboarding software built for CS teams who want structured plans, email-first tasks, and at-risk detection — all in one place.</p>
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Join the Waitlist — Free Early Access</p>
     <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
   </div>
 </div>
-
 <div class="related">
   <div class="related-inner">
-    <h3>Related guides:</h3>
-    <div class="related-links">
-      <a href="/blog/why-saas-customers-churn-during-onboarding/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Why customers churn during onboarding</a><a href="/blog/saas-onboarding-best-practices/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding best practices</a><a href="/blog/customer-success-onboarding-template/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer success onboarding template</a><a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Reduce SaaS churn in 90 days</a>
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/saas-onboarding-best-practices/" class="related-card">
+      <div class="related-card-tag">Best Practices</div>
+      <div class="related-card-title">SaaS Onboarding Best Practices for CS Teams in 2026</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/mutual-action-plan-for-cs-teams/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">Mutual Action Plan Template for Customer Success Teams</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/time-to-value-saas-metric/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">Time to Value in SaaS -- The Metric That Predicts Retention</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/how-to-reduce-saas-churn-first-90-days/" class="related-card">
+      <div class="related-card-tag">Churn Reduction</div>
+      <div class="related-card-title">How to Reduce SaaS Churn in the First 90 Days</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Lyniro</div>
@@ -124,7 +328,7 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/">Home</a>
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/blog/">All guides</a>
+      <a href="/blog/">Blog</a>
     </div>
     <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
   </div>

@@ -4,61 +4,130 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mutual Action Plan Template for Customer Success Teams | Lyniro</title>
-<meta name="description" content="How the best CS teams use mutual action plans to onboard faster and retain more clients. Free template included.">
+<meta name="description" content="A practical mutual action plan (MAP) template for B2B SaaS CS teams -- covering success outcomes, go-live dates, task ownership, escalation paths, and completion criteria.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/blog/mutual-action-plan-for-cs-teams/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"The Mutual Action Plan: How Top CS Teams Use Shared Onboarding Workspaces","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"April 3, 2026","description":"How the best CS teams use mutual action plans to onboard faster and retain more clients. Free template included."}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Mutual Action Plan Template for Customer Success Teams","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-06","dateModified":"2026-04-21"}</script>
 <style>
-:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--r:14px;}
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
 a{text-decoration:none;color:inherit;}
+img{max-width:100%;height:auto;}
+
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
 .nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
-.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
 .btn-blue:hover{background:var(--blue-dim);}
+
+/* Post layout */
 .post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
 .post-inner{max-width:760px;margin:0 auto;}
-.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
 .tag-blue{background:var(--blue-pale);color:var(--blue);}
-.post-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:16px;}
-.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-meta span{display:flex;align-items:center;gap:4px;}
 .post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:"Lora",serif;font-style:italic;}
+
+/* TOC */
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+
+/* Body */
 .post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
-.post-body p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:20px;}
-.post-body h2{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;}
-.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:28px 0 10px;}
-.post-body ul,.post-body ol{padding-left:24px;margin-bottom:20px;}
-.post-body li{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:6px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
 .post-body strong{color:var(--ink);font-weight:700;}
-.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);}
-.post-cta{background:linear-gradient(135deg,var(--ink),#152054);border-radius:20px;padding:48px;text-align:center;margin:48px 0;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+
+/* Stat/callout boxes */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+
+/* Image/diagram container */
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+
+/* Table */
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+
+/* CTA */
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
 .post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
-.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;}
-.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* Related */
 .related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
 .related-inner{max-width:760px;margin:0 auto;}
-.related-inner h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:16px;}
-.related-links{display:flex;flex-wrap:wrap;gap:10px;}
-footer{background:var(--ink);padding:32px 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-size:18px;font-weight:800;color:white;}
-.footer-links{display:flex;gap:20px;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
 .footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
-@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}}
+
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .post-cta{padding:32px 20px;}
+  .stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -72,50 +141,135 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
     </div>
-    <a href="/#waitlist" class="btn-blue">Join the Waitlist →</a>
+    <a href="/#waitlist" class="btn-blue">Join Waitlist →</a>
   </div>
 </nav>
-
 <div class="post-hero">
   <div class="post-inner">
-    <span class="post-tag tag-blue">Client Collaboration</span>
-    <h1>The Mutual Action Plan: How Top CS Teams Use Shared Onboarding Workspaces</h1>
-    <div class="post-meta">
-      <span>Lyniro Team</span>
-      <span>·</span>
-      <span>April 3, 2026</span>
-      <span>·</span>
-      <span>6 min read</span>
-    </div>
-    <p class="post-intro">A mutual action plan is a shared document where both your team and your client can see what needs to happen, who owns it, and when. Used in sales for years — it is now one of the most effective tools in customer success.</p>
+    <span class="post-tag tag-green">Templates</span>
+    <h1>Mutual Action Plan Template for Customer Success Teams</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>·</span> <span>April 2026</span> <span>·</span> <span>9 min read</span></div>
+    <p class="post-intro">A mutual action plan is what separates CSMs who chase clients for task completion from CSMs who never have to. When both sides build the plan together, both sides feel accountable to it.</p>
   </div>
 </div>
-
 <div class="post-body">
-  <h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">What a mutual action plan is</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">A mutual action plan (MAP) is a structured, shared task list with named owners on both sides, due dates, and stage milestones. Unlike a standard onboarding plan your team manages internally, a MAP is visible to the client. Both sides see the same view of what has been done and what is outstanding.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">Why most onboarding plans fail</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Most CS teams have an internal onboarding checklist. Clients never see it. When a task requires client action, the CSM emails a request. The client responds when they get around to it. Nobody has visibility into the overall picture. This is how go-live dates slip by weeks — not because anyone is being difficult, but because there is no shared frame of reference.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">What makes a MAP work</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Three things make a mutual action plan effective. First, both sides can see it — the client can view their own progress without asking. Second, tasks have named owners — not 'client team' but 'Sarah Chen, IT lead'. Third, stages are locked — clients cannot skip ahead and get confused about prerequisites.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">How to run your first mutual action plan</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">Create the plan before the kick-off call, not after. Walk through every stage together on the call and get explicit agreement on owners and dates. Send the first task via email immediately after the call — the faster the first task is completed, the faster all subsequent tasks follow.</p><h2 style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin:40px 0 12px;">The difference between a MAP and a project plan</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;">A project plan is something your team maintains. A MAP is something both teams own. The psychological difference is significant. Clients who have signed off on a shared plan feel accountable to it. Clients who are sent instructions from a CSM feel like they are being managed.</p>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#why-maps-work">Why mutual action plans reduce churn</a></li>
+<li><a href="#map-template">The mutual action plan template (6 sections)</a></li>
+<li><a href="#running-the-map">How to run the MAP in practice</a></li>
+<li><a href="#map-vs-plan">MAP vs onboarding plan: what is the difference?</a></li></ol>
+  </div>
+
+  <p>A mutual action plan (MAP) is a shared document that defines exactly what needs to happen, who is responsible for each item, and by when — agreed upon by both the CS team and the customer. The word "mutual" is the important part. This is not a project plan the CSM creates and sends. It is a plan both sides build and own together.</p>
+  <p>MAPs originated in B2B sales — used during the final stages of a deal to align on implementation timelines. Their use has expanded to customer success, where they serve as the foundation of structured onboarding and the anchor for every conversation about progress and accountability.</p>
+
+  <h2 id="why-maps-work">Why Mutual Action Plans Reduce Churn</h2>
+  <p>The core mechanism is shared ownership. When a customer helps build the plan — when they see their name next to specific tasks with specific dates — they feel responsible for following through. A plan that arrives from the CSM as a polished document creates no such ownership. The customer is a recipient, not a participant.</p>
+  <p>MAPs also create a natural escalation mechanism. When a task is overdue, the CSM does not need to chase the client awkwardly. They simply reference the plan: "We agreed that [task] would be complete by [date]. We are now three days past that. What has blocked progress?" The plan does the accountability work.</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">&#128203;</div>
+    <div class="callout-text"><strong>The research backing</strong>CS teams that use structured MAPs report 30-40% higher onboarding completion rates compared to teams using ad-hoc project tracking. The shared ownership effect is real and measurable.</div>
+  </div>
+
+  <h2 id="map-template">The Mutual Action Plan Template</h2>
+  <p>A good MAP for B2B SaaS onboarding covers six sections. Here is the template with guidance on what to include in each.</p>
+
+  <h3>Section 1: Success Outcomes</h3>
+  <p>This captures what the customer is trying to achieve — in their own words, agreed in the kickoff. Not product features. Business outcomes. Example format:</p>
+  <ul>
+    <li>Primary outcome: Reduce time CSMs spend chasing clients from 3 hours/week to under 30 minutes</li>
+    <li>Secondary outcome: Give CS leadership real-time visibility into account health without relying on team reports</li>
+    <li>Success metric: Onboarding completion rate above 85% within 60 days of go-live</li>
+  </ul>
+
+  <h3>Section 2: Go-Live Date and Milestones</h3>
+  <p>The go-live date is the anchor. Everything else is backwards from it. Include: contract signing date, target go-live date (agreed on kickoff call), key milestones between signing and go-live, and the first value milestone date.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="180" fill="#F9FAFB"/>
+      <text x="350" y="24" font-family="Plus Jakarta Sans" font-size="12" fill="#0A0F1E" text-anchor="middle" font-weight="700">Mutual Action Plan -- Timeline View</text>
+      <line x1="40" y1="80" x2="660" y2="80" stroke="#E5E7EB" stroke-width="2"/>
+      <circle cx="80" cy="80" r="8" fill="#059669"/>
+      <text x="80" y="60" font-family="Plus Jakarta Sans" font-size="9" fill="#059669" text-anchor="middle" font-weight="700">Day 0</text>
+      <text x="80" y="105" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">Signed</text>
+      <circle cx="200" cy="80" r="8" fill="#2451FF"/>
+      <text x="200" y="60" font-family="Plus Jakarta Sans" font-size="9" fill="#2451FF" text-anchor="middle" font-weight="700">Day 3</text>
+      <text x="200" y="105" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">Kickoff</text>
+      <circle cx="320" cy="80" r="8" fill="#059669"/>
+      <text x="320" y="60" font-family="Plus Jakarta Sans" font-size="9" fill="#059669" text-anchor="middle" font-weight="700">Day 7</text>
+      <text x="320" y="105" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">First Value</text>
+      <rect x="292" y="118" width="56" height="18" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+      <text x="320" y="131" font-family="Plus Jakarta Sans" font-size="8" fill="#059669" text-anchor="middle" font-weight="600">TTV Goal</text>
+      <circle cx="440" cy="80" r="8" fill="#D97706"/>
+      <text x="440" y="60" font-family="Plus Jakarta Sans" font-size="9" fill="#D97706" text-anchor="middle" font-weight="700">Day 21</text>
+      <text x="440" y="105" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">Setup Done</text>
+      <circle cx="580" cy="80" r="10" fill="#2451FF" stroke="white" stroke-width="2"/>
+      <text x="580" y="60" font-family="Plus Jakarta Sans" font-size="9" fill="#2451FF" text-anchor="middle" font-weight="700">Day 30</text>
+      <text x="580" y="105" font-family="Plus Jakarta Sans" font-size="9" fill="#0A0F1E" text-anchor="middle" font-weight="700">GO-LIVE</text>
+      <rect x="546" y="118" width="68" height="18" rx="4" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+      <text x="580" y="131" font-family="Plus Jakarta Sans" font-size="8" fill="#2451FF" text-anchor="middle" font-weight="600">Target Date</text>
+    </svg>
+    <figcaption>A MAP timeline makes the go-live date visible and gives every milestone a specific date both sides have agreed to.</figcaption>
+  </div>
+
+  <h3>Section 3: Task Table</h3>
+  <p>The heart of the MAP. A clear table with task description, owner (a specific person — not just "client"), due date, status, and blocker notes if applicable.</p>
+
+  <h3>Section 4: Escalation Path</h3>
+  <p>Agreed in advance — who to contact if a task is blocked for more than 48 hours. On the vendor side: CSM to CS Manager to VP CS. On the client side: project lead to IT contact to executive sponsor. Having this agreed upfront means escalation happens without awkwardness.</p>
+
+  <h3>Section 5: Communication Cadence</h3>
+  <p>How will you communicate during onboarding? Weekly check-in call? Async updates only? What constitutes an emergency that warrants a same-day response? Agreed upfront, documented in the MAP.</p>
+
+  <h3>Section 6: Completion Criteria</h3>
+  <p>How will both sides know when onboarding is complete? Define the specific conditions: all tasks marked complete and client-verified, go-live date reached, first value milestone achieved, and 30-day review scheduled. When all conditions are met, both sides sign off on onboarding completion.</p>
+
+  <h2 id="running-the-map">How to Run the MAP in Practice</h2>
+  <p>A MAP is only useful if it is a living document — updated regularly and referenced in every customer conversation. Review it at every touchpoint. Walk through the status of each item, update completion, note any new blockers. When tasks are overdue, reference the plan by date: "We had agreed this would be complete by the 15th. We are now on the 19th. Can we talk about what has blocked this?"</p>
+  <p>The MAP does the accountability work — the CSM is simply reading from it. For the broader onboarding structure that the MAP lives inside, see our <a href="/blog/customer-onboarding-checklist-saas/">complete SaaS onboarding checklist</a>. And for the practices that make MAP execution most effective, our <a href="/blog/saas-onboarding-best-practices/">onboarding best practices guide</a> covers the full picture.</p>
+
+  <h2 id="map-vs-plan">MAP vs Onboarding Plan: What Is the Difference?</h2>
+  <p>An onboarding plan is typically CSM-owned — it represents what the CS team is going to do for the customer. A mutual action plan is jointly owned — it represents what both sides have committed to do together. The difference is not just semantic. Jointly owned plans have higher completion rates because both parties feel accountable to something they helped create.</p>
+  <p>In practice, many CS teams merge the two: they have an internal onboarding plan with detailed task logic, and a client-facing MAP that shows what both sides own. For handling the blocked tasks that often appear inside MAPs, read our specific guide on <a href="/blog/how-to-handle-blocked-customer-onboarding/">how to handle blocked tasks in customer onboarding</a>.</p>
 
   <div class="post-cta">
-    <h3>Ready to put this into practice?</h3>
-    <p>Lyniro is the client onboarding software built for CS teams who want structured plans, email-first tasks, and at-risk detection — all in one place.</p>
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Join the Waitlist — Free Early Access</p>
     <a href="/#waitlist" class="btn-white">Join the Waitlist — Free Early Access</a>
   </div>
 </div>
-
 <div class="related">
   <div class="related-inner">
-    <h3>Related guides:</h3>
-    <div class="related-links">
-      <a href="/blog/saas-onboarding-best-practices/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding best practices</a><a href="/blog/customer-onboarding-checklist-saas/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer onboarding checklist template</a><a href="/blog/customer-success-onboarding-template/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Customer success onboarding template</a><a href="/blog/how-to-reduce-saas-churn-first-90-days/" style="font-size:14px;color:var(--blue);font-weight:600;background:var(--blue-pale);padding:6px 16px;border-radius:100px;text-decoration:none;">Reduce SaaS churn in 90 days</a>
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/customer-onboarding-checklist-saas/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">The Complete SaaS Customer Onboarding Checklist</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/saas-onboarding-best-practices/" class="related-card">
+      <div class="related-card-tag">Best Practices</div>
+      <div class="related-card-title">SaaS Onboarding Best Practices for 2026</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/how-to-handle-blocked-customer-onboarding/" class="related-card">
+      <div class="related-card-tag">CS Operations</div>
+      <div class="related-card-title">How to Handle Blocked Tasks in Customer Onboarding</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
+<a href="/blog/time-to-value-saas-metric/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">Time to Value in SaaS -- The Metric That Predicts Retention</div>
+      <span class="related-card-read">Read article →</span>
+    </a>
     </div>
   </div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Lyniro</div>
@@ -123,7 +277,7 @@ footer{background:var(--ink);padding:32px 28px;}
       <a href="/">Home</a>
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/blog/">All guides</a>
+      <a href="/blog/">Blog</a>
     </div>
     <span class="footer-copy">© 2026 Lyniro. All rights reserved.</span>
   </div>
