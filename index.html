@@ -429,26 +429,15 @@ footer{background:#0A0F1E;padding:52px 28px 28px;}
 }
 
 /* Mobile hamburger */
-#mob-menu-btn{
-  display:none;
-  background:none;
-  border:1.5px solid var(--border);
-  border-radius:8px;
-  padding:7px 10px;
-  cursor:pointer;
-  color:var(--ink);
-  font-size:20px;
-  line-height:1;
-  margin-left:8px;
-}
+
 @media(max-width:580px){
   .nav-links{display:none!important;}
   .btn-blue{display:none!important;}
-  #mob-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;}
+  
 }
 /* was already patched */
   .btn-blue{display:none;}
-  #mob-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;}
+  
 
   /* Pricing — single col on mobile */
   .pricing-grid{grid-template-columns:1fr;}
@@ -458,29 +447,37 @@ footer{background:#0A0F1E;padding:52px 28px 28px;}
   .footer-bot{flex-direction:column;align-items:flex-start;gap:8px;}
   footer{padding:36px 16px 24px;}
 }
-.mob-nav-overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  background:white;
-  z-index:99999;
-  display:none;
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-  padding:24px 20px;
-  flex-direction:column;
-  gap:0;
-  box-sizing:border-box;
+
+
+
+
+
+
+
+
+
+/* ── Mobile nav ───────────────────────────────────────────── */
+.mob-chk{display:none;}
+.mob-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;
+  width:42px;height:42px;border:1.5px solid #E5E7EB;border-radius:8px;
+  background:white;align-items:center;justify-content:center;box-sizing:border-box;flex-shrink:0;}
+.mob-ham span{display:block;width:18px;height:2px;background:#0A0F1E;border-radius:2px;
+  transition:transform .22s,opacity .22s;}
+.mob-chk:checked + .mob-ham span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.mob-chk:checked + .mob-ham span:nth-child(2){opacity:0;}
+.mob-chk:checked + .mob-ham span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob-drop{display:none;background:white;border-top:1px solid #E5E7EB;
+  box-shadow:0 8px 24px rgba(10,15,30,.12);}
+.mob-lnk{display:block;font-size:16px;font-weight:600;color:#0A0F1E;
+  padding:15px 20px;border-bottom:1px solid #E5E7EB;text-decoration:none;}
+.mob-lnk:active{background:#F9FAFB;}
+.mob-cta{display:block;font-size:16px;font-weight:700;color:white;
+  background:#2451FF;padding:18px 20px;text-decoration:none;text-align:center;}
+@media(max-width:768px){
+  .nav-links,.desk-cta{display:none!important;}
+  .mob-ham{display:flex!important;}
+  .mob-chk:checked ~ .mob-drop{display:block;}
 }
-.mob-nav-overlay.open{display:flex;flex-direction:column;}
-.mob-nav-close{align-self:flex-end;background:none;border:none;font-size:24px;cursor:pointer;padding:4px;color:var(--ink);}
-.mob-nav-link{font-size:18px;font-weight:700;color:var(--ink);padding:16px 0;border-bottom:1px solid var(--border);text-decoration:none;display:block;}
-.mob-nav-cta{margin-top:24px;background:var(--blue);color:white;font-size:17px;font-weight:700;padding:15px 28px;border-radius:11px;text-align:center;display:block;}
-
-
-body.mob-menu-open{overflow:hidden;height:100vh;position:fixed;width:100%;}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lyniro","item":"https://lyniro.com/"},{"@type":"ListItem","position":2,"name":"Customer Onboarding Software","item":"https://lyniro.com/customer-onboarding-software/"}]}</script>
 </head>
@@ -505,8 +502,19 @@ body.mob-menu-open{overflow:hidden;height:100vh;position:fixed;width:100%;}
       <a href="/blog/">Blog</a>
       <a href="#compare">Compare</a>
     </div>
-    <a href="#early-access" class="btn-blue">Become a Founding Design Partner</a>
-    <button id="mob-menu-btn" onclick="toggleMobMenu()" aria-label="Open menu">&#9776;</button>
+    <a href="#early-access" class="btn-blue desk-cta">Become a Founding Design Partner</a>
+    <input type="checkbox" id="mob-toggle" class="mob-chk">
+    <label for="mob-toggle" class="mob-ham" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+  <div class="mob-drop">
+    <a href="#features" class="mob-lnk">Features</a>
+    <a href="#how-it-works" class="mob-lnk">How it works</a>
+    <a href="#roadmap" class="mob-lnk">Roadmap</a>
+    <a href="/blog/" class="mob-lnk">Blog</a>
+    <a href="#compare" class="mob-lnk">Compare</a>
+    <a href="#early-access" class="mob-cta">Become a Founding Design Partner &rarr;</a>
   </div>
 </nav>
 
@@ -1077,21 +1085,9 @@ body.mob-menu-open{overflow:hidden;height:100vh;position:fixed;width:100%;}
 </footer>
 
 
-<div class="mob-nav-overlay" id="mob-overlay">
-  <button class="mob-nav-close" onclick="toggleMobMenu()">&#10005;</button>
-  <a href="/#features" class="mob-nav-link" onclick="toggleMobMenu()">Features</a>
-  <a href="/#how-it-works" class="mob-nav-link" onclick="toggleMobMenu()">How it works</a>
-  <a href="/#roadmap" class="mob-nav-link" onclick="toggleMobMenu()">Roadmap</a>
-  <a href="/#compare" class="mob-nav-link" onclick="toggleMobMenu()">Compare</a>
-  <a href="/blog/" class="mob-nav-link" onclick="toggleMobMenu()">Blog</a>
-  <a href="/#early-access" class="mob-nav-cta" onclick="toggleMobMenu()">Become a Founding Design Partner &rarr;</a>
-</div>
+
 <script>
-function toggleMobMenu(){
-  var ov = document.getElementById('mob-overlay');
-  ov.classList.toggle('open');
-  document.body.classList.toggle('mob-menu-open');
-}
+
 </script>
 <script>
 function handleWaitlist(e) {
@@ -1113,5 +1109,10 @@ function showOk() {
 }
 </script>
 
+<script>
+document.querySelectorAll('.mob-lnk,.mob-cta').forEach(function(a){
+  a.addEventListener('click',function(){ document.getElementById('mob-toggle').checked=false; });
+});
+</script>
 </body>
 </html>
