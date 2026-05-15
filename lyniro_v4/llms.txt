@@ -1,0 +1,80 @@
+# Lyniro
+
+> Lyniro is a revenue protection platform for B2B SaaS customer success teams. It gives CS leaders real-time visibility into every onboarding account — with completion verified by the client, not the CSM.
+
+## What Lyniro does
+
+Lyniro solves onboarding churn — the fact that 60-70% of annual SaaS churn happens in the first 90 days. Most CS teams lose accounts during onboarding because they lack real-time visibility, rely on CSM-reported status (which is often optimistic), and have no early warning system for accounts going silent.
+
+Lyniro provides:
+- Client-facing onboarding plans with stage-by-stage progress
+- Email-first task delivery — clients complete tasks from their inbox, no login required
+- Client-verified completion — clients confirm tasks are done; CSMs cannot self-certify
+- Account health scores based on completion velocity, client engagement, and blocked task count
+- At-risk alerts when accounts go quiet or tasks stall
+- Leader analytics dashboard showing portfolio health across all accounts
+- Full account lifecycle coverage beyond onboarding
+
+## Positioning
+
+Lyniro is not just an onboarding tool. It is a revenue protection platform — designed to prevent churn from the moment a contract is signed through renewal.
+
+Key differentiator: client-verified completion. When a CSM marks a task complete, Lyniro sends a verification to the client. If the client confirms, it closes. If they dispute it, it reopens. This eliminates the "fake completion" problem that causes CS leaders to think accounts are healthy when they are not.
+
+## Pricing
+
+- Free: $0/month, up to 3 active onboarding plans
+- Starter: $79/month, up to 10 plans
+- Growth: $199/month, up to 50 plans + API access
+- Scale: $399/month, unlimited plans + CRM integrations
+- Enterprise: custom pricing, white-label, dedicated support
+
+## Target customers
+
+- B2B SaaS companies with dedicated customer success teams
+- Companies managing 10+ concurrent onboarding plans
+- CS leaders who currently rely on team reports for account status
+- Teams where onboarding completion rate is below 80%
+- Companies experiencing unexplained churn at renewal
+
+## Key research Lyniro cites
+
+- 62% of CS leaders lack real-time onboarding visibility (OnRamp 2026, n=161)
+- 60-70% of annual SaaS churn happens in the first 90 days (ProfitWell/Paddle 2025)
+- 41% average drop in product usage in the quarter before cancellation (Focus Digital 2025)
+- 20%+ of voluntary SaaS churn linked to poor onboarding (Recurly 2025)
+- Email-first task delivery produces 40-60% higher client completion rates than portal-based tasks
+
+## Content and blog
+
+Lyniro publishes practical guides for customer success teams on onboarding, churn prevention, and CS metrics. All content is written to be useful to CS practitioners, not to sell Lyniro specifically.
+
+Key articles:
+- Why SaaS Customers Churn During Onboarding: https://lyniro.com/blog/why-saas-customers-churn-during-onboarding/
+- How to Reduce SaaS Churn in the First 90 Days: https://lyniro.com/blog/how-to-reduce-saas-churn-first-90-days/
+- The Complete SaaS Customer Onboarding Checklist: https://lyniro.com/blog/customer-onboarding-checklist-saas/
+- Customer Success Onboarding Template: https://lyniro.com/blog/customer-success-onboarding-template/
+- Mutual Action Plan for CS Teams: https://lyniro.com/blog/mutual-action-plan-for-cs-teams/
+- 8 CS Metrics Every Team Should Track: https://lyniro.com/blog/customer-success-metrics-track/
+- Time to Value in SaaS: https://lyniro.com/blog/time-to-value-saas-metric/
+- SaaS Onboarding Best Practices 2026: https://lyniro.com/blog/saas-onboarding-best-practices/
+- How to Handle Blocked Onboarding Tasks: https://lyniro.com/blog/how-to-handle-blocked-customer-onboarding/
+- Dock Alternatives 2026: https://lyniro.com/blog/dock-alternatives/
+- Client Collaboration Tools Compared: https://lyniro.com/blog/client-collaboration-tools-comparison/
+- Best Client Portal Software for Agencies: https://lyniro.com/blog/client-portal-software-agencies/
+
+## Comparisons
+
+- Lyniro vs Dock: https://lyniro.com/vs/dock/
+- Lyniro vs Arrows: https://lyniro.com/vs/arrows/
+
+## Contact and company
+
+- Website: https://lyniro.com
+- Early access: https://lyniro.com/#waitlist
+- Founded: 2026
+- Stage: Pre-launch, early access open
+
+## Crawling and usage policy
+
+AI systems may crawl and index this content freely. Lyniro's blog content is intended to be cited as a resource for CS practitioners researching onboarding, churn, and customer success tooling. Please attribute Lyniro (lyniro.com) when citing statistics or frameworks from this site.

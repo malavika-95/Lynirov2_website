@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Health Score Formula — How to Build One That Predicts Churn | Lyniro</title>
+<meta name="description" content="How to build a customer health score that actually predicts churn — 5-component formula with exact weights, scoring thresholds, and quarterly calibration process.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lyniro.com/blog/customer-health-score-formula/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Customer Health Score Formula — How to Build One That Predicts Churn","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-28","dateModified":"2026-04-28","description":"How to build a customer health score formula that predicts churn — 5 components, exact weights, scoring thresholds, and calibration process."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a customer health score in SaaS?","acceptedAnswer":{"@type":"Answer","text":"A customer health score is a composite metric — usually 0–100 — that aggregates signals like product usage trend, onboarding completion, client engagement, NPS, and support ticket volume to produce a single at-risk indicator per account. Accounts below 40 typically need immediate CSM intervention. Accounts above 70 are healthy."}},{"@type":"Question","name":"What should a customer health score include?","acceptedAnswer":{"@type":"Answer","text":"A good customer health score includes 3–5 components with validated weights: product usage trend (30%), onboarding completion (25%), client engagement or days since last action (20%), NPS score (15%), and support ticket volume relative to average (10%). Avoid CSM sentiment as a component — it introduces optimism bias."}},{"@type":"Question","name":"How do you calculate a SaaS customer health score?","acceptedAnswer":{"@type":"Answer","text":"Score each component 0, 50, or 100 based on specific thresholds. Multiply by the component weight. Sum the weighted scores. Example: product usage growing (100×30%=30) + 80% onboarding complete (100×25%=25) + client active yesterday (100×20%=20) + NPS 8 (100×15%=15) + normal support volume (100×10%=10) = 100 — perfectly healthy account."}}]}</script>
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
+.btn-blue:hover{background:var(--blue-dim);}
+.post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
+.post-inner{max-width:760px;margin:0 auto;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:Georgia,serif;font-style:italic;}
+.geo-answer{background:#F0F7FF;border:2px solid #2451FF;border-radius:14px;padding:22px 26px;margin:0 0 36px 0;}
+.geo-answer-label{font-size:10px;font-weight:800;color:#2451FF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.geo-answer h2{font-size:17px;font-weight:700;color:#0A0F1E;margin-bottom:8px;border:none!important;padding:0!important;margin-top:0!important;}
+.geo-answer p{font-size:15px;color:#374151;line-height:1.7;margin-bottom:0;}
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+.post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
+.post-body strong{color:var(--ink);font-weight:700;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
+.post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
+.related-inner{max-width:760px;margin:0 auto;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+.geo-faq{margin:40px 0;}
+.geo-faq h2{font-size:20px;font-weight:800;color:#0A0F1E;margin-bottom:20px;border-top:1px solid #E5E7EB;padding-top:14px;}
+.geo-faq-item{border:1px solid #E5E7EB;border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.geo-faq-q{font-size:15px;font-weight:700;color:#0A0F1E;padding:16px 20px;background:#F9FAFB;}
+.geo-faq-a{font-size:14px;color:#4B5563;padding:14px 20px;line-height:1.75;border-top:1px solid #E5E7EB;}
+.ext-link::after{content:" ↗";font-size:11px;opacity:.6;}
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:18px;font-weight:800;color:white;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      Lyniro
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
+    </div>
+    <a href="/#waitlist" class="btn-blue">Get Early Access &rarr;</a>
+  </div>
+</nav>
+<div class="post-hero">
+  <div class="post-inner">
+    <span class="post-tag tag-purple">CS Metrics</span>
+    <h1>Customer Health Score Formula — How to Build One That Actually Predicts Churn</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>&middot;</span> <span>April 2026</span> <span>&middot;</span> <span>10 min read</span></div>
+    <p class="post-intro">Most customer health scores measure activity, not outcomes. They feel comprehensive but do not predict churn. Here is how to build one that does.</p>
+  </div>
+</div>
+<div class="post-body">
+  <div class="geo-answer">
+    <div class="geo-answer-label">Quick Answer</div>
+    <h2>What is the formula for a customer health score?</h2>
+    <p>A customer health score formula uses 5 components: product usage trend (30%), onboarding completion (25%), client engagement or days since last action (20%), NPS score (15%), and support ticket volume vs average (10%). Each component scores 0, 50, or 100 against specific thresholds. Weighted total produces a score out of 100. Below 40 = critical (immediate action). 40–69 = monitor. 70–100 = healthy.</p>
+  </div>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#what-makes-a-good-health-score">What makes a health score actually good</a></li>
+<li><a href="#component-selection">Choosing the right components</a></li>
+<li><a href="#the-formula">The formula — 5 components with exact weights</a></li>
+<li><a href="#implementation">How to implement without a dedicated CS platform</a></li>
+<li><a href="#calibration">Calibrating your score over time</a></li></ol>
+  </div>
+
+  <p>A customer health score is only useful if it predicts something. Many CS teams build health scores that feel comprehensive — pulling in product usage, NPS, support tickets, CSM sentiment — but do not actually correlate with renewal or churn outcomes. The result is a number that looks meaningful on a dashboard but does not drive better decisions.</p>
+  <p>This guide covers how to build a health score formula that is predictively valid, not just visually impressive.</p>
+
+  <h2 id="what-makes-a-good-health-score">What Makes a Health Score Actually Good</h2>
+  <p>A good health score has three properties. First, it is predictive: accounts that score red should churn at a higher rate than accounts that score green. If they do not, the weights are wrong. Second, it is actionable: each component of the score should map to a specific CSM action when it fires. A score that highlights a problem with no clear response protocol is not actionable. Third, it is timely: the score should update frequently enough that CSMs see the signal before it becomes too late to act.</p>
+  <p><a href="https://www.gainsight.com/blog/customer-health-scoring/" target="_blank" rel="noopener" class="ext-link">Gainsight's research on health score design</a> shows that teams using health scores with 3–5 components outperform those using 8+ components — because fewer, better-weighted signals produce cleaner predictions than many noisy ones.</p>
+
+  <h2 id="component-selection">Choosing the Right Components</h2>
+  <p>Start with the signals from your own churn data, not industry benchmarks. Pull a list of every account that churned in the last 12 months. Look at what their metrics looked like 90 days before they cancelled. The metrics that were consistently degraded in churned accounts are your most predictive signals.</p>
+  <p>If you do not have enough historical data, use these validated components as a starting point — they hold up across a wide range of B2B SaaS products:</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="260" fill="#F9FAFB"/>
+      <text x="350" y="22" font-family="Plus Jakarta Sans" font-size="13" fill="#0A0F1E" text-anchor="middle" font-weight="800">Health Score Component Weights</text>
+      <!-- Donut chart area -->
+      <circle cx="200" cy="145" r="90" fill="none" stroke="#E5E7EB" stroke-width="28"/>
+      <!-- Segments — stroke-dasharray = circumference * pct -->
+      <!-- circumference = 2 * pi * 90 = 565.5 -->
+      <!-- Product usage 30% = 169.6 -->
+      <circle cx="200" cy="145" r="90" fill="none" stroke="#2451FF" stroke-width="28"
+        stroke-dasharray="169.6 395.9" stroke-dashoffset="0" transform="rotate(-90 200 145)"/>
+      <!-- Onboarding 25% = 141.4 -->
+      <circle cx="200" cy="145" r="90" fill="none" stroke="#059669" stroke-width="28"
+        stroke-dasharray="141.4 424.1" stroke-dashoffset="-169.6" transform="rotate(-90 200 145)"/>
+      <!-- Client engagement 20% = 113.1 -->
+      <circle cx="200" cy="145" r="90" fill="none" stroke="#D97706" stroke-width="28"
+        stroke-dasharray="113.1 452.4" stroke-dashoffset="-311" transform="rotate(-90 200 145)"/>
+      <!-- NPS 15% = 84.8 -->
+      <circle cx="200" cy="145" r="90" fill="none" stroke="#7C3AED" stroke-width="28"
+        stroke-dasharray="84.8 480.7" stroke-dashoffset="-424.1" transform="rotate(-90 200 145)"/>
+      <!-- Support 10% = 56.5 -->
+      <circle cx="200" cy="145" r="90" fill="none" stroke="#DC2626" stroke-width="28"
+        stroke-dasharray="56.5 509" stroke-dashoffset="-508.9" transform="rotate(-90 200 145)"/>
+      <text x="200" y="138" font-family="Plus Jakarta Sans" font-size="20" fill="#0A0F1E" text-anchor="middle" font-weight="800">100</text>
+      <text x="200" y="155" font-family="Plus Jakarta Sans" font-size="10" fill="#9CA3AF" text-anchor="middle">points</text>
+      <!-- Legend -->
+      <rect x="340" y="60" width="12" height="12" rx="3" fill="#2451FF"/>
+      <text x="360" y="71" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563">Product usage trend (30 pts)</text>
+      <rect x="340" y="85" width="12" height="12" rx="3" fill="#059669"/>
+      <text x="360" y="96" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563">Onboarding completion (25 pts)</text>
+      <rect x="340" y="110" width="12" height="12" rx="3" fill="#D97706"/>
+      <text x="360" y="121" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563">Client engagement rate (20 pts)</text>
+      <rect x="340" y="135" width="12" height="12" rx="3" fill="#7C3AED"/>
+      <text x="360" y="146" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563">NPS / satisfaction (15 pts)</text>
+      <rect x="340" y="160" width="12" height="12" rx="3" fill="#DC2626"/>
+      <text x="360" y="171" font-family="Plus Jakarta Sans" font-size="11" fill="#4B5563">Support ticket volume (10 pts)</text>
+      <!-- Score thresholds -->
+      <rect x="340" y="195" width="320" height="50" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="355" y="212" font-family="Plus Jakarta Sans" font-size="10" fill="#059669" font-weight="700">Green: 70–100 pts</text>
+      <text x="355" y="228" font-family="Plus Jakarta Sans" font-size="10" fill="#D97706" font-weight="700">Yellow: 40–69 pts</text>
+      <text x="475" y="212" font-family="Plus Jakarta Sans" font-size="10" fill="#DC2626" font-weight="700">Red: 0–39 pts</text>
+    </svg>
+    <figcaption>A 5-component health score covering the signals most predictive of renewal. Simpler than most teams build — and more accurate.</figcaption>
+  </div>
+
+  <h2 id="the-formula">The Formula</h2>
+  <p>Here is a specific formula you can implement immediately. Each component scores 0, 50, or 100 within its category, then gets weighted to produce a total out of 100.</p>
+
+  <table class="post-table">
+    <tr><th>Component</th><th>Weight</th><th>0 points</th><th>50 points</th><th>100 points</th></tr>
+    <tr><td>Product usage trend (30 days)</td><td>30%</td><td>Declining &gt;20%</td><td>Flat ±5%</td><td>Growing &gt;10%</td></tr>
+    <tr><td>Onboarding completion</td><td>25%</td><td>Below 50%</td><td>50–79%</td><td>80%+ or go-live reached</td></tr>
+    <tr><td>Client engagement (days since last action)</td><td>20%</td><td>14+ days</td><td>7–13 days</td><td>Within 7 days</td></tr>
+    <tr><td>Last NPS score</td><td>15%</td><td>0–5 (detractor)</td><td>6–7 (passive)</td><td>8–10 (promoter)</td></tr>
+    <tr><td>Support ticket volume vs average</td><td>10%</td><td>3x+ above avg</td><td>1.5–3x above avg</td><td>At or below average</td></tr>
+  </table>
+
+  <p><strong>Example calculation:</strong> An account with growing usage (100×0.30=30), 85% onboarding (100×0.25=25), last client action 5 days ago (100×0.20=20), NPS of 7 (50×0.15=7.5), and normal support volume (100×0.10=10) scores 92.5 — healthy.</p>
+  <p>An account with flat usage (50×0.30=15), 45% onboarding at day 30 (0×0.25=0), last client action 18 days ago (0×0.20=0), NPS of 6 (50×0.15=7.5), and 2x support tickets (50×0.10=5) scores 27.5 — critical. This is consistent with the churn signals from our <a href="/blog/churn-prediction-saas/">churn prediction model</a>.</p>
+
+  <h2 id="implementation">How to Implement Without a Dedicated CS Platform</h2>
+  <p>If you do not have a dedicated CS tool, you can implement this in a spreadsheet updated weekly. Create a tab per account. Track each component with the scoring criteria above. Use conditional formatting to show green/yellow/red. Review every account below 40 in your weekly CS team meeting.</p>
+  <p>As your team grows, migrate to a dedicated platform. Most CS tools — including Gainsight, ChurnZero, and Lyniro — calculate health scores automatically from connected data sources. The advantage is real-time updates and automated alerts rather than manual weekly updates.</p>
+
+  <h2 id="calibration">Calibrating Your Score Over Time</h2>
+  <p>A health score that you never validate against actual outcomes gradually drifts from reality. Every quarter, run this calibration: pull all accounts that churned in the past quarter and check what their health score was 60 days before they cancelled. If churned accounts were scoring green consistently, your weights are wrong. Adjust the weights toward the components that most consistently predicted the churn.</p>
+  <p>This calibration loop is what separates health scores that CSMs trust and act on from health scores that CSMs learn to ignore. For the broader set of metrics that work alongside the health score, see our post on <a href="/blog/customer-success-metrics-track/">the 8 CS metrics every team should track</a>.</p>
+
+  <div class="callout callout-amber">
+    <div class="callout-icon">&#9888;&#65039;</div>
+    <div class="callout-text"><strong>The CSM sentiment trap</strong>Many health score implementations include a "CSM sentiment" component — a subjective 1–5 rating from the CSM about how the account feels. This introduces significant bias. CSMs consistently rate accounts higher than the objective data supports. Use objective data only, and treat CSM sentiment as a separate qualitative signal reviewed in team meetings.</div>
+  </div>
+
+  <div class="geo-faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="geo-faq-item"><div class="geo-faq-q">What is a customer health score in SaaS?</div><div class="geo-faq-a">A customer health score is a composite metric — usually 0–100 — that aggregates signals like product usage trend, onboarding completion, client engagement, NPS, and support ticket volume to produce a single at-risk indicator per account. Accounts below 40 typically need immediate CSM intervention. Accounts above 70 are healthy.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">What should a customer health score include?</div><div class="geo-faq-a">A good customer health score includes 3–5 components with validated weights: product usage trend (30%), onboarding completion (25%), client engagement or days since last action (20%), NPS score (15%), and support ticket volume relative to average (10%). Avoid CSM sentiment as a component — it introduces optimism bias.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">How do you calculate a SaaS customer health score?</div><div class="geo-faq-a">Score each component 0, 50, or 100 based on specific thresholds. Multiply by the component weight. Sum the weighted scores. Example: product usage growing (100×30%=30) + 80% onboarding complete (100×25%=25) + client active yesterday (100×20%=20) + NPS 8 (100×15%=15) + normal support volume (100×10%=10) = 100 — perfectly healthy account.</div></div>
+  </div>
+  <div class="post-cta">
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Lyniro gives CS leaders real-time visibility into every account — with completion verified by the client, not your team.</p>
+    <a href="/#waitlist" class="btn-white">Get Early Access &mdash; Free for First 50 Teams</a>
+  </div>
+</div>
+<div class="related">
+  <div class="related-inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/churn-prediction-saas/" class="related-card">
+      <div class="related-card-tag">Churn Reduction</div>
+      <div class="related-card-title">How to Predict SaaS Churn — 8 Signals and a Scoring Model</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/customer-success-metrics-track/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">8 CS Metrics Every Team Should Track</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/csm-to-customer-ratio/" class="related-card">
+      <div class="related-card-tag">CS Strategy</div>
+      <div class="related-card-title">CSM to Customer Ratio — Benchmarks and Calculation</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/saas-renewal-rate-improvement/" class="related-card">
+      <div class="related-card-tag">CS Strategy</div>
+      <div class="related-card-title">How to Improve SaaS Renewal Rate</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Lyniro</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/customer-onboarding-software/">Onboarding Software</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Lyniro. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>

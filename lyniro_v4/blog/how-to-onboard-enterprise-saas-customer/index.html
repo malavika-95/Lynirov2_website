@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Onboard Enterprise SaaS Customers — A Complete Implementation Guide | Lyniro</title>
+<meta name="description" content="Enterprise SaaS onboarding requires a different approach. Stakeholder mapping, split kickoffs, parallel IT tracks, executive communication, and phased go-live — complete guide.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lyniro.com/blog/how-to-onboard-enterprise-saas-customer/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Onboard Enterprise SaaS Customers — A Complete Implementation Guide","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-28","dateModified":"2026-04-28","description":"Enterprise SaaS onboarding guide covering stakeholder mapping, split kickoffs, IT tracks, executive communication, and phased go-live."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does enterprise SaaS onboarding take?","acceptedAnswer":{"@type":"Answer","text":"Enterprise SaaS onboarding typically takes 3–6 months from contract signing to full go-live, compared to 30–60 days for mid-market. The timeline is driven by IT dependencies (SSO, integrations, security review), the number of stakeholders requiring training, and the scope of data migration required."}},{"@type":"Question","name":"What is the difference between enterprise and mid-market SaaS onboarding?","acceptedAnswer":{"@type":"Answer","text":"Enterprise onboarding involves more stakeholders (8–15 vs 1–3), longer timelines (3–6 months vs 30 days), dedicated IT tracks running in parallel, phased rollouts across departments, and executive communication cadences separate from the project team. The go-live milestone is often a phased process rather than a single date."}},{"@type":"Question","name":"How do you manage multiple stakeholders in enterprise onboarding?","acceptedAnswer":{"@type":"Answer","text":"Map all stakeholders before kickoff: economic buyer, champion, IT contact, end users, and department heads. Run a split kickoff — executive session (30 min) and implementation session (90 min). Use a mutual action plan to keep all parties aligned on task ownership. Send monthly executive summaries to the economic buyer separate from project team updates."}}]}</script>
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
+.btn-blue:hover{background:var(--blue-dim);}
+.post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
+.post-inner{max-width:760px;margin:0 auto;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:Georgia,serif;font-style:italic;}
+.geo-answer{background:#F0F7FF;border:2px solid #2451FF;border-radius:14px;padding:22px 26px;margin:0 0 36px 0;}
+.geo-answer-label{font-size:10px;font-weight:800;color:#2451FF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.geo-answer h2{font-size:17px;font-weight:700;color:#0A0F1E;margin-bottom:8px;border:none!important;padding:0!important;margin-top:0!important;}
+.geo-answer p{font-size:15px;color:#374151;line-height:1.7;margin-bottom:0;}
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+.post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
+.post-body strong{color:var(--ink);font-weight:700;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
+.post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
+.related-inner{max-width:760px;margin:0 auto;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+.geo-faq{margin:40px 0;}
+.geo-faq h2{font-size:20px;font-weight:800;color:#0A0F1E;margin-bottom:20px;border-top:1px solid #E5E7EB;padding-top:14px;}
+.geo-faq-item{border:1px solid #E5E7EB;border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.geo-faq-q{font-size:15px;font-weight:700;color:#0A0F1E;padding:16px 20px;background:#F9FAFB;}
+.geo-faq-a{font-size:14px;color:#4B5563;padding:14px 20px;line-height:1.75;border-top:1px solid #E5E7EB;}
+.ext-link::after{content:" ↗";font-size:11px;opacity:.6;}
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:18px;font-weight:800;color:white;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      Lyniro
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
+    </div>
+    <a href="/#waitlist" class="btn-blue">Get Early Access &rarr;</a>
+  </div>
+</nav>
+<div class="post-hero">
+  <div class="post-inner">
+    <span class="post-tag tag-amber">CS Operations</span>
+    <h1>How to Onboard Enterprise SaaS Customers — A Complete Implementation Guide</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>&middot;</span> <span>April 2026</span> <span>&middot;</span> <span>12 min read</span></div>
+    <p class="post-intro">Enterprise onboarding is not mid-market onboarding with more people. It is a different category of engagement — more stakeholders, longer timelines, and a specific failure mode that does not exist at smaller scale.</p>
+  </div>
+</div>
+<div class="post-body">
+  <div class="geo-answer">
+    <div class="geo-answer-label">Quick Answer</div>
+    <h2>How do you onboard enterprise SaaS customers?</h2>
+    <p>Enterprise SaaS onboarding has 5 phases: (1) Pre-kickoff stakeholder mapping (5–10 days) — economic buyer, champion, IT contact, end users, (2) Split kickoff — 30-min executive session and 90-min implementation session, (3) Parallel IT track starting Day 1 — SSO, integrations, security review, (4) Monthly executive communication separate from project team updates, and (5) Phased go-live — pilot team first, then department rollout, then company-wide. Timeline: 3–6 months typical.</p>
+  </div>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#enterprise-vs-midmarket">How enterprise onboarding differs from mid-market</a></li>
+<li><a href="#pre-kickoff">Phase 1: Pre-kickoff — map before you move</a></li>
+<li><a href="#kickoff">Phase 2: The enterprise kickoff</a></li>
+<li><a href="#it-and-security">Phase 3: IT and security track</a></li>
+<li><a href="#executive-comms">Phase 4: Executive communication throughout</a></li>
+<li><a href="#go-live">Phase 5: Phased go-live</a></li></ol>
+  </div>
+
+  <p>Enterprise onboarding is categorically different from mid-market onboarding. More stakeholders, longer timelines, higher stakes, more complex integrations, more internal politics — and much higher revenue at risk if it goes wrong. A mid-market onboarding failure costs you one account. An enterprise onboarding failure costs you the account, the reference, and often the relationship with a strategic partner.</p>
+  <p>This guide covers the specific practices that separate successful enterprise onboarding from the kind that ends in a year-one churn that nobody can explain.</p>
+
+  <h2 id="enterprise-vs-midmarket">How Enterprise Onboarding Differs From Mid-Market</h2>
+  <p>The fundamental difference is not complexity — it is the number of stakeholders with the power to derail the project. A mid-market onboarding typically has one to three people who matter: the champion, maybe a technical contact, and the budget holder. An enterprise onboarding might involve fifteen people across five departments, with the actual end users having almost no overlap with the people who approved the purchase.</p>
+  <p>This creates a specific failure mode unique to enterprise: the implementation team struggles while the executive sponsor, who approved the budget, has zero visibility into the struggle. By the time the struggle reaches executive level, it has already been going on for months.</p>
+
+  <div class="stat-row stat-row-2">
+    <div class="stat-box"><span class="stat-number">3–6 months</span><span class="stat-label">Typical enterprise SaaS onboarding timeline vs 30 days for mid-market</span></div>
+    <div class="stat-box"><span class="stat-number">8–15</span><span class="stat-label">Average number of stakeholders involved in enterprise implementation</span></div>
+  </div>
+
+  <h2 id="pre-kickoff">Phase 1: Pre-Kickoff — Map Before You Move</h2>
+  <p>Enterprise onboarding starts before the contract is signed. The best enterprise CS teams request a stakeholder map as part of the late-stage sales process — not as an afterthought after the ink is dry. You need to know: who approved the purchase, who will implement it, who will use it daily, who has the power to kill it at renewal, and who the IT gatekeeper is for integrations.</p>
+  <p>The pre-kickoff phase for enterprise should take 5–10 business days and include:</p>
+  <ul>
+    <li><strong>Internal sales-to-CS handoff.</strong> A structured 60-minute call covering: what was promised during sales, the political dynamics at the account, any concerns that surfaced during evaluation, and the specific outcomes the economic buyer is expecting. See our <a href="/blog/post-sales-handoff-process/">post-sales handoff process guide</a> for the exact structure.</li>
+    <li><strong>Stakeholder discovery call.</strong> A 30-minute call with the project lead — before the formal kickoff — to understand the internal landscape. Who are the champions? Who are the skeptics? Which departments need to be involved and which just need to be informed?</li>
+    <li><strong>Technical pre-assessment.</strong> A call with the IT contact to map out integration requirements, data migration needs, SSO setup, and security review timeline. These dependencies define the minimum onboarding duration — no point setting a go-live date that IT cannot support.</li>
+    <li><strong>Executive sponsor alignment.</strong> A brief (15-minute) call or email exchange with the economic buyer to confirm: what success looks like in their language, what they expect to see in 90 days, and how they prefer to be updated throughout the implementation.</li>
+  </ul>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="220" fill="#F9FAFB"/>
+      <text x="350" y="20" font-family="Plus Jakarta Sans" font-size="13" fill="#0A0F1E" text-anchor="middle" font-weight="800">Enterprise Stakeholder Map</text>
+      <!-- Economic buyer -->
+      <rect x="290" y="35" width="120" height="44" rx="10" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="2"/>
+      <text x="350" y="55" font-family="Plus Jakarta Sans" font-size="9" fill="#2451FF" text-anchor="middle" font-weight="700">ECONOMIC BUYER</text>
+      <text x="350" y="70" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF" text-anchor="middle">VP / Director</text>
+      <!-- Arrows down -->
+      <line x1="350" y1="79" x2="350" y2="100" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="350" y1="100" x2="160" y2="100" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="350" y1="100" x2="540" y2="100" stroke="#E5E7EB" stroke-width="1.5"/>
+      <!-- Champion -->
+      <rect x="70" y="108" width="110" height="44" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="2"/>
+      <text x="125" y="128" font-family="Plus Jakarta Sans" font-size="9" fill="#059669" text-anchor="middle" font-weight="700">CHAMPION</text>
+      <text x="125" y="143" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF" text-anchor="middle">Project lead</text>
+      <!-- IT Contact -->
+      <rect x="248" y="108" width="110" height="44" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+      <text x="303" y="128" font-family="Plus Jakarta Sans" font-size="9" fill="#D97706" text-anchor="middle" font-weight="700">IT CONTACT</text>
+      <text x="303" y="143" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF" text-anchor="middle">Integrations / SSO</text>
+      <!-- End users -->
+      <rect x="420" y="108" width="110" height="44" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="2"/>
+      <text x="475" y="128" font-family="Plus Jakarta Sans" font-size="9" fill="#7C3AED" text-anchor="middle" font-weight="700">END USERS</text>
+      <text x="475" y="143" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF" text-anchor="middle">Daily operators</text>
+      <!-- Lines down -->
+      <line x1="160" y1="100" x2="125" y2="108" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="303" y1="100" x2="303" y2="108" stroke="#E5E7EB" stroke-width="1.5"/>
+      <line x1="475" y1="100" x2="475" y2="108" stroke="#E5E7EB" stroke-width="1.5"/>
+      <!-- CSM -->
+      <rect x="290" y="175" width="120" height="35" rx="10" fill="#0A0F1E"/>
+      <text x="350" y="197" font-family="Plus Jakarta Sans" font-size="10" fill="white" text-anchor="middle" font-weight="700">CSM (Lyniro)</text>
+      <line x1="350" y1="175" x2="350" y2="152" stroke="#E5E7EB" stroke-width="1.5"/>
+    </svg>
+    <figcaption>Map every stakeholder before kickoff — not just the project lead. The IT contact and end users are frequently the ones who determine whether onboarding completes on time.</figcaption>
+  </div>
+
+  <h2 id="kickoff">Phase 2: The Enterprise Kickoff</h2>
+  <p>Enterprise kickoff calls need a different structure than mid-market. A standard 60-minute kickoff is not sufficient when 12 people are in the room with different agendas and different levels of context about the product. Consider a 2-hour kickoff split into two parts: an executive session (first 30 minutes, economic buyer and champion only) and an implementation session (remaining 90 minutes, full project team).</p>
+  <p>The executive session covers: confirmed success outcomes, go-live date, how the executive sponsor will be kept informed, and what escalation looks like. The implementation session covers: detailed onboarding plan, task ownership by person, IT dependencies and timeline, and communication cadence.</p>
+  <p>The go-live date for enterprise is rarely 30 days. A realistic enterprise go-live might be 90–180 days. That is fine — but it must be agreed and locked on the kickoff call. Vague enterprise implementations drift indefinitely. The <a href="/blog/mutual-action-plan-for-cs-teams/">mutual action plan framework</a> is particularly important at enterprise level — the MAP is what keeps 15 stakeholders aligned over a 6-month implementation.</p>
+
+  <h2 id="it-and-security">Phase 3: IT and Security Track (Run in Parallel)</h2>
+  <p>In enterprise onboarding, the IT and security track runs in parallel with the business onboarding — not after it. Every day spent waiting for IT approval is a day the go-live date slips. Start the IT track on Day 1, not after the business onboarding is set up.</p>
+  <p>Assign a dedicated technical point of contact from your team — not the account CSM — to manage the IT relationship. This person speaks the IT team's language, manages the security review, and handles integration configuration without consuming the CSM's capacity for relationship management.</p>
+  <p>Common IT dependencies in enterprise onboarding and their typical timelines: SSO/SAML setup (1–2 weeks), data migration (2–6 weeks depending on volume), CRM integration (1–3 weeks), security review and pen test review (2–4 weeks). Map these dependencies before kickoff and build them into the go-live timeline with buffer.</p>
+
+  <h2 id="executive-comms">Phase 4: Executive Communication Throughout</h2>
+  <p>The economic buyer is your most important stakeholder for renewal. They are also typically the least informed about implementation progress. Fix this with a structured executive communication cadence:</p>
+  <ul>
+    <li><strong>Monthly executive summary</strong> — three paragraphs: milestones reached, what is coming next, one specific value outcome in their language</li>
+    <li><strong>Milestone alerts</strong> — a brief note when a significant milestone is reached (go-live for a department, first integration live, first training completed)</li>
+    <li><strong>Escalation protocol</strong> — if the implementation falls more than 2 weeks behind the agreed timeline, the CSM's manager contacts the economic buyer's manager directly</li>
+  </ul>
+
+  <h2 id="go-live">Phase 5: Phased Go-Live</h2>
+  <p>Enterprise products rarely go live for an entire organisation at once. A phased rollout — starting with one department, team, or use case — reduces risk and creates early proof points that build momentum for the broader rollout.</p>
+  <p>Structure the phased go-live as: pilot team (weeks 1–2), feedback and adjustment (weeks 3–4), department rollout (month 2–3), company-wide (month 4+). Each phase should have its own completion criteria and a brief success review before the next phase begins.</p>
+  <p>For the metrics that tell you whether each phase is succeeding, see our guide on <a href="/blog/customer-onboarding-kpis/">customer onboarding KPIs</a>. And for the post-onboarding structure that protects the revenue once the implementation is complete, our <a href="/blog/customer-success-playbook/">complete CS playbook</a> covers the full lifecycle.</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">&#128161;</div>
+    <div class="callout-text"><strong>The enterprise churn insight</strong>Most enterprise churn is not caused by product failure. It is caused by implementation failure — the product was never fully deployed, the IT integration never worked properly, or the end users never received adequate training. Fixing those three things, with adequate CS and technical resources, prevents the majority of enterprise churn before year two.</div>
+  </div>
+
+  <div class="geo-faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="geo-faq-item"><div class="geo-faq-q">How long does enterprise SaaS onboarding take?</div><div class="geo-faq-a">Enterprise SaaS onboarding typically takes 3–6 months from contract signing to full go-live, compared to 30–60 days for mid-market. The timeline is driven by IT dependencies (SSO, integrations, security review), the number of stakeholders requiring training, and the scope of data migration required.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">What is the difference between enterprise and mid-market SaaS onboarding?</div><div class="geo-faq-a">Enterprise onboarding involves more stakeholders (8–15 vs 1–3), longer timelines (3–6 months vs 30 days), dedicated IT tracks running in parallel, phased rollouts across departments, and executive communication cadences separate from the project team. The go-live milestone is often a phased process rather than a single date.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">How do you manage multiple stakeholders in enterprise onboarding?</div><div class="geo-faq-a">Map all stakeholders before kickoff: economic buyer, champion, IT contact, end users, and department heads. Run a split kickoff — executive session (30 min) and implementation session (90 min). Use a mutual action plan to keep all parties aligned on task ownership. Send monthly executive summaries to the economic buyer separate from project team updates.</div></div>
+  </div>
+  <div class="post-cta">
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Lyniro gives CS leaders real-time visibility into every account — with completion verified by the client, not your team.</p>
+    <a href="/#waitlist" class="btn-white">Get Early Access &mdash; Free for First 50 Teams</a>
+  </div>
+</div>
+<div class="related">
+  <div class="related-inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/post-sales-handoff-process/" class="related-card">
+      <div class="related-card-tag">CS Operations</div>
+      <div class="related-card-title">Post-Sales Handoff Process — How to Set Up CS for Success</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/mutual-action-plan-for-cs-teams/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">Mutual Action Plan Template for CS Teams</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/customer-onboarding-kpis/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">Customer Onboarding KPIs — What to Track and Why</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/customer-success-playbook/" class="related-card">
+      <div class="related-card-tag">CS Strategy</div>
+      <div class="related-card-title">The Customer Success Playbook — 15 Plays</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Lyniro</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/customer-onboarding-software/">Onboarding Software</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Lyniro. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>

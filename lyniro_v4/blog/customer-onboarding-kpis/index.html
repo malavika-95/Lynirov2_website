@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Onboarding KPIs — 6 Metrics That Actually Predict Retention | Lyniro</title>
+<meta name="description" content="The 6 customer onboarding KPIs that predict retention: completion rate, time to value, go-live rate, client engagement rate, block resolution time, and 30-day health score.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lyniro.com/blog/customer-onboarding-kpis/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Customer Onboarding KPIs — 6 Metrics That Actually Predict Retention","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-28","dateModified":"2026-04-28","description":"The 6 customer onboarding KPIs that predict retention — with targets, measurement approach, and reporting cadence."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What KPIs should you track for customer onboarding?","acceptedAnswer":{"@type":"Answer","text":"The 6 most important customer onboarding KPIs are: (1) Onboarding completion rate — client-verified, target 85%+, (2) Time to first value — target under 30 days, (3) Go-live rate on target date — target 75%+, (4) Client task engagement rate — target 70%+, (5) Blocked task resolution time — target under 3–7 days, (6) 30-day post-go-live health score — target average above 70."}},{"@type":"Question","name":"What is a good onboarding completion rate for SaaS?","acceptedAnswer":{"@type":"Answer","text":"A good SaaS onboarding completion rate is 85%+ when measured by client-verified completion. Below 75% requires process intervention. Note that CSM-reported completion rates are typically 15–25% higher than client-verified rates — make sure you are measuring the right number."}},{"@type":"Question","name":"How do you measure onboarding success?","acceptedAnswer":{"@type":"Answer","text":"Measure onboarding success with outcome KPIs — not activity KPIs. The three most important: time to first value (did the client experience a meaningful outcome within 30 days?), go-live rate on target date (did the account go live when both sides agreed it would?), and 30-day post-go-live health score (is the client actively using the product a month after onboarding?)."}}]}</script>
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
+.btn-blue:hover{background:var(--blue-dim);}
+.post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
+.post-inner{max-width:760px;margin:0 auto;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:Georgia,serif;font-style:italic;}
+.geo-answer{background:#F0F7FF;border:2px solid #2451FF;border-radius:14px;padding:22px 26px;margin:0 0 36px 0;}
+.geo-answer-label{font-size:10px;font-weight:800;color:#2451FF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.geo-answer h2{font-size:17px;font-weight:700;color:#0A0F1E;margin-bottom:8px;border:none!important;padding:0!important;margin-top:0!important;}
+.geo-answer p{font-size:15px;color:#374151;line-height:1.7;margin-bottom:0;}
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+.post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
+.post-body strong{color:var(--ink);font-weight:700;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
+.post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
+.related-inner{max-width:760px;margin:0 auto;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+.geo-faq{margin:40px 0;}
+.geo-faq h2{font-size:20px;font-weight:800;color:#0A0F1E;margin-bottom:20px;border-top:1px solid #E5E7EB;padding-top:14px;}
+.geo-faq-item{border:1px solid #E5E7EB;border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.geo-faq-q{font-size:15px;font-weight:700;color:#0A0F1E;padding:16px 20px;background:#F9FAFB;}
+.geo-faq-a{font-size:14px;color:#4B5563;padding:14px 20px;line-height:1.75;border-top:1px solid #E5E7EB;}
+.ext-link::after{content:" ↗";font-size:11px;opacity:.6;}
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:18px;font-weight:800;color:white;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      Lyniro
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
+    </div>
+    <a href="/#waitlist" class="btn-blue">Get Early Access &rarr;</a>
+  </div>
+</nav>
+<div class="post-hero">
+  <div class="post-inner">
+    <span class="post-tag tag-purple">CS Metrics</span>
+    <h1>Customer Onboarding KPIs — 6 Metrics That Actually Predict Retention</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>&middot;</span> <span>April 2026</span> <span>&middot;</span> <span>9 min read</span></div>
+    <p class="post-intro">Most onboarding KPIs measure what CS teams do. The KPIs that actually predict whether onboarding succeeds measure what customers do — and those are two very different numbers.</p>
+  </div>
+</div>
+<div class="post-body">
+  <div class="geo-answer">
+    <div class="geo-answer-label">Quick Answer</div>
+    <h2>What are the most important customer onboarding KPIs?</h2>
+    <p>The 6 most important customer onboarding KPIs are: (1) Onboarding completion rate — client-verified, target 85%+. (2) Time to first value — average days to first meaningful outcome, target under 30 days. (3) Go-live rate on target date — target 75%+. (4) Client task engagement rate — % of tasks completed by the client, target 70%+. (5) Blocked task resolution time — target under 7 days. (6) 30-day post-go-live health score — target average above 70.</p>
+  </div>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#the-right-framework">The right framework: outcome vs activity KPIs</a></li>
+<li><a href="#kpi-1">KPI 1: Onboarding completion rate (client-verified)</a></li>
+<li><a href="#kpi-2">KPI 2: Time to first value</a></li>
+<li><a href="#kpi-3">KPI 3: Go-live rate on target date</a></li>
+<li><a href="#kpi-4">KPI 4: Client task engagement rate</a></li>
+<li><a href="#kpi-5">KPI 5: Blocked task resolution time</a></li>
+<li><a href="#kpi-6">KPI 6: 30-day post-go-live health score</a></li>
+<li><a href="#reporting-cadence">Recommended reporting cadence</a></li></ol>
+  </div>
+
+  <p>Most onboarding KPIs measure what CS teams do — emails sent, calls made, tasks created. The KPIs that actually predict whether onboarding succeeded measure what customers do. This is the distinction that separates CS teams with 90%+ completion rates from teams that are perpetually confused about why customers churn despite "all the right activities."</p>
+
+  <h2 id="the-right-framework">The Right Framework: Outcome vs Activity KPIs</h2>
+  <p>Activity KPIs are easy to track and easy to game. A CSM can send 20 emails and make 10 calls while an account silently drifts toward churn. Outcome KPIs measure whether the customer is actually progressing — whether they are completing tasks, reaching milestones, and experiencing value from the product.</p>
+  <p>Build your KPI framework with a minimum of 3 outcome KPIs for every 1 activity KPI. If your current dashboard is the reverse, you are measuring effort — not results.</p>
+
+  <h2 id="kpi-1">KPI 1: Onboarding Completion Rate (Client-Verified)</h2>
+  <p><strong>Definition:</strong> The percentage of customers who complete all onboarding stages by the agreed go-live date, with completion verified by the client — not just marked complete by the CSM.</p>
+  <p><strong>Target:</strong> 85%+ for most B2B SaaS products. Under 75% is a serious problem requiring process intervention.</p>
+  <p><strong>Why client-verified matters:</strong> CSM-reported completion rates are typically 15–25% higher than client-verified rates for the same accounts. The gap is not lying — it is optimism bias and the well-intentioned practice of marking tasks complete before the client has genuinely finished them. The client-verified number is the honest one.</p>
+
+  <h2 id="kpi-2">KPI 2: Time to First Value (TTV)</h2>
+  <p><strong>Definition:</strong> The average number of days from contract signing to a customer completing their first meaningful outcome — the "first value milestone" task in the onboarding plan.</p>
+  <p><strong>Target:</strong> Under 14 days for simple SaaS products. Under 30 days for mid-complexity. Flag any account over target as high priority. See our full guide on <a href="/blog/time-to-value-saas-metric/">time to value in SaaS</a> for how to define and measure this for your product.</p>
+  <p><strong>Why it predicts retention:</strong> Customers who reach first value within 30 days renew at dramatically higher rates. TTV is the single most predictive leading indicator of long-term retention.</p>
+
+  <h2 id="kpi-3">KPI 3: Go-Live Rate on Target Date</h2>
+  <p><strong>Definition:</strong> The percentage of accounts that go live on or before the date agreed at kickoff.</p>
+  <p><strong>Target:</strong> 75%+ on original date. 95%+ within 2 weeks of original date.</p>
+  <p><strong>Why it matters:</strong> A missed go-live date is a trust event — it signals to the customer that the vendor cannot be relied on to deliver what they committed. Tracking this rate identifies whether go-live dates are being set realistically at kickoff or whether they are optimistic promises that consistently slip.</p>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="220" fill="#F9FAFB"/>
+      <text x="350" y="22" font-family="Plus Jakarta Sans" font-size="13" fill="#0A0F1E" text-anchor="middle" font-weight="800">Onboarding KPI Dashboard — Sample View</text>
+      <!-- KPI cards -->
+      <rect x="30" y="40" width="150" height="80" rx="10" fill="white" stroke="#A7F3D0" stroke-width="2"/>
+      <text x="105" y="65" font-family="Plus Jakarta Sans" font-size="24" fill="#059669" text-anchor="middle" font-weight="800">88%</text>
+      <text x="105" y="82" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">Completion Rate</text>
+      <text x="105" y="96" font-family="Plus Jakarta Sans" font-size="8" fill="#059669" text-anchor="middle">↑ 4% vs last month</text>
+      <rect x="195" y="40" width="150" height="80" rx="10" fill="white" stroke="#A7F3D0" stroke-width="2"/>
+      <text x="270" y="65" font-family="Plus Jakarta Sans" font-size="24" fill="#059669" text-anchor="middle" font-weight="800">11d</text>
+      <text x="270" y="82" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">Avg Time to Value</text>
+      <text x="270" y="96" font-family="Plus Jakarta Sans" font-size="8" fill="#059669" text-anchor="middle">↓ 3d vs last month</text>
+      <rect x="360" y="40" width="150" height="80" rx="10" fill="white" stroke="#FDE68A" stroke-width="2"/>
+      <text x="435" y="65" font-family="Plus Jakarta Sans" font-size="24" fill="#D97706" text-anchor="middle" font-weight="800">71%</text>
+      <text x="435" y="82" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">On-Date Go-Live</text>
+      <text x="435" y="96" font-family="Plus Jakarta Sans" font-size="8" fill="#D97706" text-anchor="middle">⚠ Below 75% target</text>
+      <rect x="525" y="40" width="150" height="80" rx="10" fill="white" stroke="#FCA5A5" stroke-width="2"/>
+      <text x="600" y="65" font-family="Plus Jakarta Sans" font-size="24" fill="#DC2626" text-anchor="middle" font-weight="800">3</text>
+      <text x="600" y="82" font-family="Plus Jakarta Sans" font-size="9" fill="#4B5563" text-anchor="middle">At-Risk Accounts</text>
+      <text x="600" y="96" font-family="Plus Jakarta Sans" font-size="8" fill="#DC2626" text-anchor="middle">Needs immediate action</text>
+      <!-- At-risk table -->
+      <rect x="30" y="138" width="640" height="68" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="50" y="158" font-family="Plus Jakarta Sans" font-size="9" fill="#0A0F1E" font-weight="700">At-Risk Accounts</text>
+      <text x="50" y="175" font-family="Plus Jakarta Sans" font-size="9" fill="#DC2626">⚠ Acme Corp</text>
+      <text x="200" y="175" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF">14 days silent</text>
+      <text x="350" y="175" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF">32% complete</text>
+      <text x="50" y="192" font-family="Plus Jakarta Sans" font-size="9" fill="#D97706">⚡ TechFlow Inc</text>
+      <text x="200" y="192" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF">SSO blocked 9d</text>
+      <text x="350" y="192" font-family="Plus Jakarta Sans" font-size="8" fill="#9CA3AF">58% complete</text>
+    </svg>
+    <figcaption>A healthy onboarding KPI dashboard flags at-risk accounts automatically — so CSMs act on data, not gut feel.</figcaption>
+  </div>
+
+  <h2 id="kpi-4">KPI 4: Client Task Engagement Rate</h2>
+  <p><strong>Definition:</strong> The percentage of client-assigned tasks actually completed by the client, versus tasks completed by the CSM on their behalf or never completed at all.</p>
+  <p><strong>Target:</strong> 70%+ client-completed rate. Below 50% indicates the client is not invested in the onboarding.</p>
+  <p><strong>Why it matters:</strong> A CSM completing tasks on behalf of clients produces a high completion percentage on paper but does not produce the adoption behaviours that lead to renewal. The client engagement rate exposes this gap.</p>
+
+  <h2 id="kpi-5">KPI 5: Blocked Task Resolution Time</h2>
+  <p><strong>Definition:</strong> The average number of days between a task being flagged as blocked and it being resolved and completed.</p>
+  <p><strong>Target:</strong> Under 3 days for unclear tasks. Under 7 days for IT dependencies. Any block exceeding 10 days should trigger a CS manager review.</p>
+  <p><strong>Why it matters:</strong> Blocks resolved within 48 hours have minimal impact on overall onboarding completion. Blocks that remain for 5+ days are strongly correlated with churn. For the full protocol, see our guide on <a href="/blog/how-to-handle-blocked-customer-onboarding/">how to handle blocked tasks</a>.</p>
+
+  <h2 id="kpi-6">KPI 6: 30-Day Post-Go-Live Health Score</h2>
+  <p><strong>Definition:</strong> The average account health score (using your <a href="/blog/customer-health-score-formula/">health score formula</a>) at 30 days after go-live across all recently onboarded accounts.</p>
+  <p><strong>Target:</strong> Average score above 70 (green). Any account below 40 at Day 30 post-go-live is at elevated churn risk and requires immediate intervention.</p>
+  <p><strong>Why it matters:</strong> The 30-day post-go-live health score is the earliest reliable predictor of whether the account will reach its first renewal. It captures whether the client is actually using the product post-onboarding or whether go-live was the peak of their engagement.</p>
+
+  <h2 id="reporting-cadence">Recommended Reporting Cadence</h2>
+  <table class="post-table">
+    <tr><th>KPI</th><th>Review cadence</th><th>Who reviews</th></tr>
+    <tr><td>Blocked task resolution time</td><td>Daily</td><td>CSM</td></tr>
+    <tr><td>Client task engagement rate</td><td>Weekly</td><td>CSM + CS Manager</td></tr>
+    <tr><td>At-risk accounts (health score &lt;40)</td><td>Weekly</td><td>CS Manager</td></tr>
+    <tr><td>Onboarding completion rate</td><td>Monthly</td><td>CS Manager + VP CS</td></tr>
+    <tr><td>Time to first value (TTV)</td><td>Monthly</td><td>CS Manager + VP CS</td></tr>
+    <tr><td>Go-live rate on target date</td><td>Monthly</td><td>VP CS</td></tr>
+    <tr><td>30-day post-go-live health score</td><td>Monthly</td><td>VP CS</td></tr>
+  </table>
+
+  <p>For the broader set of CS metrics beyond onboarding, see our post on <a href="/blog/customer-success-metrics-track/">8 CS metrics every team should track</a>. And for the process that drives these KPIs in the right direction, our <a href="/blog/customer-success-onboarding-template/">CS onboarding template</a> gives you the task-level framework.</p>
+
+  <div class="geo-faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="geo-faq-item"><div class="geo-faq-q">What KPIs should you track for customer onboarding?</div><div class="geo-faq-a">The 6 most important customer onboarding KPIs are: (1) Onboarding completion rate — client-verified, target 85%+, (2) Time to first value — target under 30 days, (3) Go-live rate on target date — target 75%+, (4) Client task engagement rate — target 70%+, (5) Blocked task resolution time — target under 3–7 days, (6) 30-day post-go-live health score — target average above 70.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">What is a good onboarding completion rate for SaaS?</div><div class="geo-faq-a">A good SaaS onboarding completion rate is 85%+ when measured by client-verified completion. Below 75% requires process intervention. Note that CSM-reported completion rates are typically 15–25% higher than client-verified rates — make sure you are measuring the right number.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">How do you measure onboarding success?</div><div class="geo-faq-a">Measure onboarding success with outcome KPIs — not activity KPIs. The three most important: time to first value (did the client experience a meaningful outcome within 30 days?), go-live rate on target date (did the account go live when both sides agreed it would?), and 30-day post-go-live health score (is the client actively using the product a month after onboarding?).</div></div>
+  </div>
+  <div class="post-cta">
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Lyniro gives CS leaders real-time visibility into every account — with completion verified by the client, not your team.</p>
+    <a href="/#waitlist" class="btn-white">Get Early Access &mdash; Free for First 50 Teams</a>
+  </div>
+</div>
+<div class="related">
+  <div class="related-inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/time-to-value-saas-metric/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">Time to Value in SaaS — The Metric That Predicts Retention</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/customer-health-score-formula/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">Customer Health Score Formula</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/customer-success-metrics-track/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">8 CS Metrics Every Team Should Track</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/how-to-handle-blocked-customer-onboarding/" class="related-card">
+      <div class="related-card-tag">CS Operations</div>
+      <div class="related-card-title">How to Handle Blocked Tasks in Customer Onboarding</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Lyniro</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/customer-onboarding-software/">Onboarding Software</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Lyniro. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>
