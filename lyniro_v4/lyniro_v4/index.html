@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Onboarding Software for VP of Customer Success | Lyniro</title>
+<meta name="description" content="Lyniro is customer onboarding software built for VP of Customer Success at B2B SaaS companies. Email-first tasks, client-verified completion, real-time health scores for CS leaders. Early access open.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://lyniro.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="Customer Onboarding Software for VP of Customer Success | Lyniro">
+<meta property="og:description" content="Email-first onboarding built for customer success teams. No portal login for clients. Real-time health scores for leaders. Early access now open.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lyniro.com/">
+<meta property="og:image" content="https://lyniro.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Customer Onboarding Software for VP of Customer Success | Lyniro">
+<meta name="twitter:description" content="Email-first onboarding for SaaS CS leaders. No login friction for clients. Real-time health scores across your portfolio. Early access open.">
+<meta name="twitter:image" content="https://lyniro.com/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com","logo":"https://lyniro.com/favicon.svg","description":"Customer onboarding software for SaaS customer success teams."},{"@type":"WebSite","name":"Lyniro","url":"https://lyniro.com"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--amber:#D97706;--amber-bg:#FEF3C7;--red:#DC2626;--teal:#0F6E56;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{line-height:1.15;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+
+/* NAV */
+.prelaunch-bar{background:linear-gradient(135deg,#0A0F1E,#1a2e6e);padding:12px 28px;text-align:center;}
+.prelaunch-bar p{font-size:13px;color:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
+.prelaunch-bar strong{color:white;}
+.prelaunch-bar a{color:#93C5FD;font-weight:600;text-decoration:underline;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-logo-text{font-size:20px;font-weight:800;color:var(--ink);}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-badge{font-size:10px;font-weight:700;background:var(--amber-bg);color:var(--amber);padding:2px 8px;border-radius:100px;margin-left:4px;vertical-align:middle;}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;transition:all .18s;display:inline-block;border:none;cursor:pointer;font-family:inherit;}
+.btn-blue:hover{background:var(--blue-dim);}
+
+/* HERO */
+.hero{padding:88px 28px 72px;background:var(--white);position:relative;overflow:hidden;}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.35;}
+.hero-glow{position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(36,81,255,.09) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-pale);border:1px solid var(--blue-mid);color:var(--blue);font-size:13px;font-weight:700;padding:6px 16px;border-radius:100px;margin-bottom:28px;letter-spacing:.2px;}
+.badge-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
+.hero h1{font-size:clamp(40px,6vw,72px);font-weight:800;letter-spacing:-3px;line-height:1.05;max-width:820px;margin-bottom:24px;}
+.hero h1 em{font-style:normal;color:var(--blue);}
+.hero-sub{font-size:19px;color:var(--mid);max-width:550px;line-height:1.72;margin-bottom:36px;}
+.hero-sub strong{color:var(--ink);font-weight:600;}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px;}
+.btn-hero{background:var(--blue);color:white;font-size:17px;font-weight:700;padding:15px 32px;border-radius:11px;transition:all .2s;display:inline-block;letter-spacing:-.2px;}
+.btn-hero:hover{background:var(--blue-dim);transform:translateY(-2px);box-shadow:0 8px 28px rgba(36,81,255,.3);}
+.btn-ghost{background:transparent;color:var(--ink);font-size:16px;font-weight:600;padding:14px 28px;border-radius:11px;border:2px solid var(--border);transition:all .2s;display:inline-block;}
+.btn-ghost:hover{border-color:var(--blue-mid);background:var(--blue-pale);}
+.hero-microcopy{font-size:13px;color:var(--muted);}
+.hero-microcopy span{color:var(--green);font-weight:600;}
+
+/* Founder strip */
+.founder-strip{display:inline-flex;align-items:center;gap:14px;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:14px 20px;margin-top:40px;}
+.founder-ava{width:44px;height:44px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:white;flex-shrink:0;}
+.founder-strip-text{font-size:13px;color:var(--mid);line-height:1.5;}
+.founder-strip-text strong{display:block;color:var(--ink);font-weight:700;font-size:14px;}
+
+/* PRODUCT PREVIEW */
+.hero-mockup{margin-top:64px;max-width:1020px;margin-left:auto;margin-right:auto;border-radius:16px;box-shadow:0 24px 72px rgba(10,15,30,.14),0 0 0 1px var(--border);overflow:hidden;background:var(--white);position:relative;}
+.mockup-preview-label{position:absolute;top:12px;right:16px;z-index:10;background:rgba(0,0,0,.65);color:white;font-size:10px;font-weight:700;padding:4px 12px;border-radius:100px;letter-spacing:.8px;text-transform:uppercase;}
+.mockup-bar{background:#F3F4F6;padding:12px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);}
+.dot{width:12px;height:12px;border-radius:50%;}.dot-r{background:#FF5F57;}.dot-y{background:#FEBC2E;}.dot-g{background:#28C840;}
+.mockup-url{flex:1;max-width:280px;margin:0 auto;background:white;border:1px solid var(--border);border-radius:6px;padding:4px 12px;font-size:11px;color:var(--muted);text-align:center;}
+.mockup-body{display:grid;grid-template-columns:200px 1fr;min-height:340px;}
+.mockup-sidebar{background:#F9FAFB;border-right:1px solid var(--border);padding:16px 12px;}
+.sidebar-logo{font-size:14px;font-weight:800;color:var(--blue);display:flex;align-items:center;gap:7px;margin-bottom:18px;}
+.sidebar-lm{width:22px;height:22px;background:var(--blue);border-radius:5px;display:flex;align-items:center;justify-content:center;}
+.mnav{padding:7px 10px;border-radius:7px;font-size:12px;color:var(--mid);display:flex;align-items:center;gap:7px;margin-bottom:2px;}
+.mnav.act{background:var(--blue-pale);color:var(--blue);font-weight:600;}
+.mockup-main{padding:20px;}
+.mm-toprow{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;}
+.mm-title{font-size:17px;font-weight:800;color:var(--ink);}
+.mm-sub{font-size:11px;color:var(--muted);}
+.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.kpi{background:white;border:1px solid var(--border);border-radius:10px;padding:12px;}
+.kpi-lbl{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;}
+.kpi-val{font-size:22px;font-weight:800;letter-spacing:-1px;}
+.kpi-val.blue{color:var(--blue);}.kpi-val.green{color:var(--green);}.kpi-val.red{color:var(--red);}
+.kpi-trend{font-size:10px;margin-top:2px;}
+.kpi-up{color:var(--green);}.kpi-dn{color:var(--red);}
+.atbl{border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.atbl-head{display:grid;grid-template-columns:2fr 1.2fr 1fr 1fr;padding:8px 12px;background:#F9FAFB;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);}
+.atbl-row{display:grid;grid-template-columns:2fr 1.2fr 1fr 1fr;padding:10px 12px;border-bottom:1px solid var(--border);align-items:center;font-size:12px;}
+.atbl-row:last-child{border-bottom:none;}
+.atbl-row:nth-child(even){background:#FAFAFA;}
+.at-name{font-weight:700;font-size:12px;color:var(--ink);}
+.at-note{font-size:10px;color:var(--muted);}
+.prog-w{display:flex;align-items:center;gap:6px;}
+.prog-b{width:52px;height:4px;background:#E5E7EB;border-radius:4px;overflow:hidden;}
+.prog-f{height:100%;border-radius:4px;}
+.pf-blue{background:var(--blue);}.pf-amber{background:var(--amber);}.pf-green{background:var(--green);}
+.bdg{padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;}
+.bdg-green{background:#DCFCE7;color:#16A34A;}.bdg-red{background:#FEE2E2;color:#DC2626;}.bdg-amber{background:#FEF3C7;color:#D97706;}.bdg-blue{background:var(--blue-pale);color:var(--blue);}
+.hdot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:3px;}
+.hd-g{background:var(--green);}.hd-a{background:var(--amber);}.hd-r{background:var(--red);}
+
+/* SECTIONS */
+section{padding:96px 28px;}
+.sec-bg{background:var(--bg);}
+.sec-dark{background:var(--ink);}
+.sec-inner{max-width:1200px;margin:0 auto;}
+.sec-title{font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-2px;margin-bottom:16px;}
+.sec-sub{font-size:18px;color:var(--mid);line-height:1.7;max-width:560px;}
+.sec-hdr{margin-bottom:60px;}
+.sec-hdr.ctr{text-align:center;}
+.sec-hdr.ctr .sec-sub{margin:0 auto;}
+
+/* STATS STRIP */
+.stats-strip{background:var(--bg);padding:32px 28px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+.stat-num{font-size:32px;font-weight:800;letter-spacing:-1px;margin-bottom:4px;}
+.stat-lbl{font-size:13px;color:var(--mid);line-height:1.5;}
+
+/* PROBLEM */
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.problem-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;position:relative;overflow:hidden;}
+.problem-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.pc-red::before{background:var(--red);}
+.pc-amber::before{background:var(--amber);}
+.pc-blue::before{background:var(--blue);}
+.problem-icon{font-size:28px;margin-bottom:14px;}
+.problem-card h3{font-size:17px;font-weight:800;margin-bottom:8px;letter-spacing:-.4px;}
+.problem-card p{font-size:14px;color:var(--mid);line-height:1.65;}
+.pstat{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;padding:4px 12px;border-radius:100px;}
+.pstat-r{background:#FEE2E2;color:var(--red);}
+.pstat-a{background:#FEF3C7;color:var(--amber);}
+.pstat-b{background:var(--blue-pale);color:var(--blue);}
+
+/* HOW IT WORKS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.step{text-align:center;}
+.step-num{width:48px;height:48px;background:var(--blue-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:20px;font-weight:800;color:var(--blue);}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px;letter-spacing:-.3px;}
+.step p{font-size:14px;color:var(--mid);line-height:1.65;}
+
+/* EMAIL FEATURE */
+.email-feat{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.email-feat h2{font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px;}
+.email-feat p{font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:14px;}
+.check-list{list-style:none;padding:0;}
+.check-list li{font-size:15px;color:var(--mid);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;}
+.check-list li:last-child{border-bottom:none;}
+.check-list li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px;}
+.email-mock{background:white;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 12px 40px rgba(10,15,30,.1);}
+.em-bar{background:#F3F4F6;padding:10px 16px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--border);}
+.em-body{padding:22px;}
+.em-from{font-size:12px;color:var(--muted);margin-bottom:4px;}
+.em-subj{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:14px;}
+.em-p{font-size:14px;color:var(--mid);line-height:1.65;margin-bottom:12px;}
+.em-task{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px;}
+.em-task-lbl{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
+.em-task-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.em-task-meta{font-size:11px;color:var(--muted);}
+.em-btns{display:flex;gap:10px;}
+.em-btn-p{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;flex:1;text-align:center;}
+.em-btn-s{background:white;color:var(--mid);font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;border:1px solid var(--border);flex:1;text-align:center;}
+.em-note{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;}
+.em-confirm{margin-top:14px;background:var(--green-bg);border:1px solid #A7F3D0;border-radius:10px;padding:12px 14px;font-size:13px;color:var(--teal);font-weight:600;line-height:1.5;}
+
+/* DIFFERENTIATORS */
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.diff-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;display:flex;gap:18px;align-items:flex-start;transition:all .2s;}
+.diff-card:hover{border-color:var(--blue-mid);box-shadow:0 8px 24px rgba(36,81,255,.08);}
+.diff-icon{width:46px;height:46px;border-radius:11px;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.diff-body h3{font-size:16px;font-weight:800;margin-bottom:6px;letter-spacing:-.3px;}
+.diff-body p{font-size:14px;color:var(--mid);line-height:1.65;}
+.diff-tag{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;background:var(--blue-pale);color:var(--blue);padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.5px;}
+
+/* COMPARISON */
+.comp-table{width:100%;border-collapse:collapse;}
+.comp-table th{padding:12px 16px;text-align:left;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);border-bottom:2px solid var(--border);}
+.comp-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--mid);}
+.comp-table td:first-child{font-weight:700;color:var(--ink);}
+.comp-table tr:last-child td{border-bottom:none;}
+.comp-table tr:hover td{background:var(--bg);}
+.comp-table th.lyn{background:var(--blue-pale);color:var(--blue);}
+.comp-table td.lyn{background:#FAFCFF;}
+.ck{color:var(--green);font-weight:800;font-size:15px;}
+.cx{color:var(--red);font-weight:800;font-size:15px;}
+.cp{color:var(--amber);font-weight:700;font-size:13px;}
+
+/* ROADMAP */
+.roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.rm{border:1px solid var(--border);border-radius:var(--r);padding:20px;background:white;}
+.rm.now{border-color:var(--blue-mid);background:var(--blue-pale);}
+.rm-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;display:inline-block;}
+.rmb-now{background:#DCFCE7;color:#16A34A;}
+.rmb-soon{background:var(--amber-bg);color:var(--amber);}
+.rmb-plan{background:var(--blue-pale);color:var(--blue);}
+.rmb-later{background:var(--bg);color:var(--muted);}
+.rm-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.rm-items{list-style:none;padding:0;}
+.rm-items li{font-size:12px;color:var(--mid);padding:3px 0;display:flex;align-items:center;gap:6px;}
+.rm-items li::before{content:"·";color:var(--muted);}
+.rm-done li::before{content:"✓";color:var(--green);}
+
+/* FOUNDER STORY */
+.founder-sec{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.founder-quote{font-size:21px;font-weight:700;color:var(--ink);line-height:1.5;letter-spacing:-.4px;margin-bottom:20px;font-style:italic;}
+.founder-quote::before{content:"\201C";font-size:48px;color:var(--blue-mid);display:block;line-height:1;margin-bottom:-8px;}
+.founder-sig{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--border);margin-top:20px;}
+.founder-ava2{width:50px;height:50px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;}
+.founder-details strong{display:block;font-size:15px;font-weight:700;color:var(--ink);}
+.founder-details span{font-size:13px;color:var(--muted);}
+.fstats{display:flex;flex-direction:column;gap:16px;}
+.fstat{background:white;border:1px solid var(--border);border-radius:var(--r);padding:20px;display:flex;gap:14px;align-items:flex-start;}
+.fstat-num{font-size:34px;font-weight:800;color:var(--blue);letter-spacing:-2px;line-height:1;}
+.fstat-body strong{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.fstat-body span{font-size:13px;color:var(--mid);line-height:1.5;}
+
+/* BETA */
+.beta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.beta-card{background:white;border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;}
+.beta-icon{font-size:26px;margin-bottom:12px;}
+.beta-card h3{font-size:16px;font-weight:800;margin-bottom:8px;letter-spacing:-.3px;}
+.beta-card p{font-size:14px;color:var(--mid);line-height:1.6;}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.price-card{border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;background:white;}
+.price-card.pop{border:2px solid var(--blue);background:var(--blue-pale);position:relative;}
+.price-pop-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:white;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;}
+.price-tier{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.price-tier.blue{color:var(--blue);}
+.price-num{font-size:36px;font-weight:800;letter-spacing:-1.5px;margin-bottom:2px;}
+.price-num.blue{color:var(--blue);}
+.price-note{font-size:12px;color:var(--muted);margin-bottom:18px;}
+.price-list{list-style:none;padding:0;}
+.price-list li{font-size:13px;color:var(--mid);padding:5px 0;border-bottom:1px solid var(--border);}
+.price-list li:last-child{border-bottom:none;}
+
+/* EARLY ACCESS CTA */
+.cta-wrap{padding:80px 28px;}
+.cta-box{background:linear-gradient(135deg,#0A0F1E 0%,#152054 100%);border-radius:24px;padding:72px 60px;text-align:center;max-width:1200px;margin:0 auto;}
+.cta-box h2{font-size:clamp(26px,4vw,44px);font-weight:800;color:white;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.15;}
+.cta-box p{font-size:17px;color:rgba(255,255,255,.6);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;}
+.cta-form{display:flex;gap:12px;max-width:460px;margin:0 auto 14px;}
+.cta-input{flex:1;padding:14px 18px;border:1.5px solid rgba(255,255,255,.15);border-radius:10px;font-size:15px;background:rgba(255,255,255,.08);color:white;font-family:inherit;outline:none;}
+.cta-input::placeholder{color:rgba(255,255,255,.4);}
+.cta-input:focus{border-color:rgba(255,255,255,.35);}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:14px 26px;border-radius:10px;border:none;cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.cta-trust{font-size:13px;color:rgba(255,255,255,.4);}
+.cta-ok{display:none;background:rgba(5,150,105,.15);border:1px solid rgba(5,150,105,.3);border-radius:10px;padding:14px;color:rgba(255,255,255,.9);font-weight:600;max-width:460px;margin:12px auto 0;}
+
+/* BLOG CLUSTER */
+.cluster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.cc{background:white;border:1px solid var(--border);border-radius:var(--r);padding:18px;transition:all .2s;}
+.cc:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.07);}
+.cc-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--blue);margin-bottom:6px;}
+.cc h4{font-size:13px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:5px;}
+.cc p{font-size:12px;color:var(--muted);line-height:1.5;}
+.cc-arrow{font-size:12px;color:var(--blue);font-weight:700;margin-top:8px;display:block;}
+
+/* FOOTER */
+footer{background:#0A0F1E;padding:52px 28px 28px;}
+.footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+.footer-brand-name{font-size:22px;font-weight:800;color:white;margin-bottom:10px;}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.65;max-width:260px;}
+.footer-col h4{font-size:11px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.5);margin-bottom:9px;transition:color .15s;}
+.footer-col a:hover{color:white;}
+.footer-bot{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+.footer-status{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.35);}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .nav-links{display:none;}
+  .email-feat,.founder-sec{grid-template-columns:1fr;gap:40px;}
+  .diff-grid,.steps,.problem-grid,.beta-grid,.pricing-grid{grid-template-columns:1fr;}
+  .roadmap-grid{grid-template-columns:1fr 1fr;}
+  .cta-box{padding:48px 28px;margin:0;}
+  .cta-form{flex-direction:column;}
+  .mockup-body{grid-template-columns:1fr;}
+  .mockup-sidebar{display:none;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:580px){
+  .hero h1{font-size:36px;letter-spacing:-2px;}
+  .hero-actions{flex-direction:column;align-items:flex-start;}
+  .cluster-grid{grid-template-columns:1fr;}
+  .roadmap-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lyniro","item":"https://lyniro.com/"},{"@type":"ListItem","position":2,"name":"Customer Onboarding Software","item":"https://lyniro.com/customer-onboarding-software/"}]}</script>
+</head>
+<body>
+
+<!-- PRE-LAUNCH BANNER -->
+<div class="prelaunch-bar">
+  <p>&#127381; <strong>Lyniro is in active development.</strong> Early access spots are limited while we onboard founding teams. <a href="#early-access">Apply for founding beta access &rarr;</a></p>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      <span class="nav-logo-text">Lyniro</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#roadmap">Roadmap<span class="nav-badge">Beta</span></a>
+      <a href="/blog/">Blog</a>
+      <a href="#compare">Compare</a>
+    </div>
+    <a href="#early-access" class="btn-blue">Become a Founding Design Partner</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+
+    <div class="hero-badge">
+      <div class="badge-dot"></div>
+      Early access open &mdash; first 50 teams get in free
+    </div>
+
+    <h1>Customer onboarding software for<br><em>VP of Customer Success</em><br>your clients will actually use</h1>
+
+    <p class="hero-sub">
+      Built specifically for <strong>VP of Customer Success and CS leaders at B2B SaaS companies.</strong> Email-first tasks clients complete from their inbox. Real-time health scores across your portfolio. Currently in active development.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#early-access" class="btn-hero">Become a Founding Design Partner &mdash; Free</a>
+      <a href="#how-it-works" class="btn-ghost">See how it works</a>
+    </div>
+    <p class="hero-microcopy"><span>50 founding spots.</span> Built for CS teams managing 10+ onboarding accounts monthly. No credit card.</p>
+
+    <div class="founder-strip">
+      <div class="founder-ava">M</div>
+      <div class="founder-strip-text">
+        <strong>Built from real CS experience</strong>
+        After watching 20+ accounts churn silently at my last CS job &mdash; I decided to build the visibility tool that would have prevented it.
+      </div>
+    </div>
+
+    <!-- PRODUCT PREVIEW -->
+    <div class="hero-mockup">
+      <div class="mockup-preview-label">&#128247; Beta UI Preview &mdash; Concept, In Development</div>
+      <div class="mockup-bar">
+        <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+        <div class="mockup-url">app.lyniro.com &mdash; beta preview</div>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-sidebar">
+          <div class="sidebar-logo">
+            <div class="sidebar-lm"><svg viewBox="0 0 14 14" fill="none" width="11" height="11"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+            Lyniro
+          </div>
+          <div class="mnav act">&#128202; Dashboard</div>
+          <div class="mnav">&#128203; Plans</div>
+          <div class="mnav">&#128209; Analytics</div>
+          <div class="mnav">&#128101; Team</div>
+          <div class="mnav">&#9881;&#65039; Settings</div>
+        </div>
+        <div class="mockup-main">
+          <div class="mm-toprow">
+            <div>
+              <div class="mm-title">CS Dashboard</div>
+              <div class="mm-sub">3 accounts need attention &middot; 12 plans active</div>
+            </div>
+            <span class="bdg bdg-amber">&#9888;&#65039; 3 at-risk</span>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi"><div class="kpi-lbl">Avg Health Score</div><div class="kpi-val blue">74</div><div class="kpi-trend kpi-up">&#8593; 6 pts this week</div></div>
+            <div class="kpi"><div class="kpi-lbl">Completion Rate</div><div class="kpi-val green">82%</div><div class="kpi-trend kpi-up">&#8593; 4% vs last month</div></div>
+            <div class="kpi"><div class="kpi-lbl">Avg TTV</div><div class="kpi-val red">18d</div><div class="kpi-trend kpi-dn">&#8595; target is 14d</div></div>
+          </div>
+          <div class="atbl">
+            <div class="atbl-head"><span>Account</span><span>Progress</span><span>Health</span><span>Status</span></div>
+            <div class="atbl-row">
+              <div><div class="at-name">Acme Corp</div><div class="at-note">14 days since last action</div></div>
+              <div class="prog-w"><div class="prog-b"><div class="prog-f pf-amber" style="width:32%"></div></div><span style="font-size:11px">32%</span></div>
+              <div><span class="hdot hd-r"></span><span style="font-size:11px;color:var(--red);font-weight:600;">23 &mdash; Critical</span></div>
+              <span class="bdg bdg-red">At risk</span>
+            </div>
+            <div class="atbl-row">
+              <div><div class="at-name">TechFlow Inc</div><div class="at-note">SSO blocked 9 days</div></div>
+              <div class="prog-w"><div class="prog-b"><div class="prog-f pf-amber" style="width:58%"></div></div><span style="font-size:11px">58%</span></div>
+              <div><span class="hdot hd-a"></span><span style="font-size:11px;color:var(--amber);font-weight:600;">51 &mdash; Monitor</span></div>
+              <span class="bdg bdg-amber">Blocked</span>
+            </div>
+            <div class="atbl-row">
+              <div><div class="at-name">Bright Systems</div><div class="at-note">On track &middot; go-live in 4 days</div></div>
+              <div class="prog-w"><div class="prog-b"><div class="prog-f pf-green" style="width:91%"></div></div><span style="font-size:11px">91%</span></div>
+              <div><span class="hdot hd-g"></span><span style="font-size:11px;color:var(--green);font-weight:600;">88 &mdash; Healthy</span></div>
+              <span class="bdg bdg-green">On track</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div><div class="stat-num" style="color:var(--blue);">62%</div><div class="stat-lbl">of CS leaders have no real-time onboarding visibility (OnRamp 2026)</div></div>
+    <div><div class="stat-num" style="color:var(--red);">60&ndash;70%</div><div class="stat-lbl">of annual SaaS churn is seeded in the first 90 days</div></div>
+    <div><div class="stat-num" style="color:var(--amber);">41%</div><div class="stat-lbl">average usage drop in the quarter before a customer cancels</div></div>
+    <div><div class="stat-num" style="color:var(--green);">40&ndash;60%</div><div class="stat-lbl">higher task completion with email-first delivery vs portal login</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="sec-bg">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">The onboarding problem nobody<br>is solving correctly</h2>
+      <p class="sec-sub">Most CS teams manage onboarding across spreadsheets, email threads, and optimistic CRM notes. The signals are there. Nobody is watching them.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card pc-red">
+        <div class="problem-icon">&#128274;</div>
+        <h3>Clients won't log into another portal</h3>
+        <p>Every onboarding tool asks clients to create an account, remember a password, and navigate something new. Most don't. Tasks pile up. Onboarding stalls silently.</p>
+        <span class="pstat pstat-r">Result: silent drop-off</span>
+      </div>
+      <div class="problem-card pc-amber">
+        <div class="problem-icon">&#128084;</div>
+        <h3>CS leaders can't see which accounts are at risk</h3>
+        <p>CSMs know their own accounts. Leaders rely on what their team reports — which is subject to optimism bias. Healthy-looking accounts churn at renewal without warning.</p>
+        <span class="pstat pstat-a">Result: surprise churn</span>
+      </div>
+      <div class="problem-card pc-blue">
+        <div class="problem-icon">&#9989;</div>
+        <h3>"Complete" doesn't mean complete</h3>
+        <p>When CSMs mark tasks done, nobody verifies it. The client never finished the training. The account looks 85% onboarded in the CRM. It isn't. Everyone finds out at renewal.</p>
+        <span class="pstat pstat-b">Result: fake completion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">How Lyniro is designed to work</h2>
+      <p class="sec-sub">Designed for <strong>VP of Customer Success</strong> who need portfolio visibility — and for the CSMs and clients they manage, who need a frictionless way to complete onboarding.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>CSM builds the onboarding plan</h3>
+        <p>Set up stages, tasks, and owners in minutes. Assign tasks to specific client contacts by name &mdash; not just "the client."</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Client completes tasks from their inbox</h3>
+        <p>Each task lands in the client's email. One click to complete, one click to flag as blocked. No login. No portal. No friction.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Leaders see health across all accounts</h3>
+        <p>Real-time health scores and at-risk alerts based on what clients actually did &mdash; not what CSMs reported.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL FEATURE -->
+<section class="sec-bg">
+  <div class="sec-inner">
+    <div class="email-feat">
+      <div>
+        <h2>Tasks that clients<br>actually complete</h2>
+        <p>The biggest reason onboarding stalls is login friction. Clients receive a task notification, click the link, hit a login screen they don't remember, and never return.</p>
+        <p>Lyniro is designed to send tasks directly to the client's inbox. One click to confirm. No account required.</p>
+        <ul class="check-list">
+          <li>Email-first task delivery &mdash; no portal login for clients</li>
+          <li>One-click complete or block from within the email</li>
+          <li>Client-verified completion &mdash; CSMs cannot self-certify</li>
+          <li>Instant CSM notification on every client action</li>
+          <li>Automated follow-up after 10 days of silence</li>
+        </ul>
+      </div>
+      <div>
+        <div class="email-mock">
+          <div class="em-bar">&#9993; New message from <strong style="margin-left:4px;color:var(--ink);">Lyniro</strong></div>
+          <div class="em-body">
+            <div class="em-from">From: Lyniro via your CSM &lt;hello@lyniro.com&gt;</div>
+            <div class="em-subj">Your next onboarding task is ready, Sarah</div>
+            <p class="em-p">Hi Sarah &mdash; you're 58% through your onboarding plan. Your next task is ready:</p>
+            <div class="em-task">
+              <div class="em-task-lbl">Task 4 of 7 &middot; Stage 2: Setup</div>
+              <div class="em-task-name">Confirm admin user configuration</div>
+              <div class="em-task-meta">Due: Friday &middot; Assigned by: Jamie (CSM)</div>
+            </div>
+            <div class="em-btns">
+              <div class="em-btn-p">&#10003; Mark as Complete</div>
+              <div class="em-btn-s">&#128690; Report Blocked</div>
+            </div>
+            <div class="em-note">No login required &middot; This action takes one click</div>
+          </div>
+        </div>
+        <div class="em-confirm">
+          &#10003; Client confirmed &mdash; task marked complete with timestamp.<br>
+          <span style="font-weight:400;color:var(--mid);font-size:13px;">Jamie (CSM) notified immediately. Plan progress: 72%.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section id="features">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">Three ways Lyniro is being<br>designed differently</h2>
+      <p class="sec-sub">These are the three design decisions that separate Lyniro from every other onboarding tool in this category.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-icon">&#128231;</div>
+        <div class="diff-body">
+          <h3>Email-first task delivery</h3>
+          <p>Tasks go to the client's inbox. Completed with one click — no login, no portal, no context switch. Teams using email-first delivery see 40–60% higher completion rates.</p>
+          <span class="diff-tag">Core differentiator</span>
+        </div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">&#9989;</div>
+        <div class="diff-body">
+          <h3>Client-verified completion</h3>
+          <p>When a CSM marks a task complete, Lyniro sends a verification to the client. If they confirm, it closes. If they dispute it, it reopens. CSMs cannot self-certify. Leaders see honest data.</p>
+          <span class="diff-tag">Core differentiator</span>
+        </div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">&#128202;</div>
+        <div class="diff-body">
+          <h3>Portfolio health scores for CS leaders</h3>
+          <p>Every account gets a health score based on completion velocity, client engagement, and blocked task count. Leaders see which accounts need intervention — automatically, before clients escalate.</p>
+          <span class="diff-tag">Core differentiator</span>
+        </div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">&#128274;</div>
+        <div class="diff-body">
+          <h3>Automatic blocked task escalation</h3>
+          <p>When a task is blocked for 48+ hours, Lyniro is designed to escalate it automatically. The right person gets notified. Blocks don't sit unresolved for two weeks while onboarding quietly fails.</p>
+          <span class="diff-tag">Built-in process</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="sec-bg" id="compare">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">How Lyniro compares</h2>
+      <p class="sec-sub">Most onboarding tools were built for the individual CSM. Lyniro is designed for the <strong>VP of Customer Success or Head of CS</strong> who needs to see what's actually happening across the entire portfolio &mdash; in real time, without relying on team reports.</p>
+    </div>
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="lyn">Lyniro <span style="font-size:10px;font-weight:400;">(planned)</span></th>
+          <th>Dock</th><th>Rocketlane</th><th>GuideCX</th><th>Arrows</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Client-facing onboarding portal</td><td class="lyn"><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Email-first task delivery (no login)</td><td class="lyn"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Client-verified task completion</td><td class="lyn"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Account health scores for leaders</td><td class="lyn"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cp">Partial</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>At-risk alerts across portfolio</td><td class="lyn"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Post-onboarding account management</td><td class="lyn"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Free founding tier</td><td class="lyn"><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+        <tr><td>Starting price</td><td class="lyn" style="color:var(--blue);font-weight:700;">$0 (founding)</td><td>$59/mo</td><td>$19/user</td><td>~$400/mo</td><td>$500+/mo</td></tr>
+      </tbody>
+    </table>
+    <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--muted);">
+      Planned features shown &mdash; in active development. &nbsp;&#183;&nbsp;
+      <a href="/blog/dock-alternatives/" style="color:var(--blue);font-weight:600;">Dock alternatives</a> &nbsp;&#183;&nbsp;
+      <a href="/blog/rocketlane-alternatives/" style="color:var(--blue);font-weight:600;">Rocketlane alternatives</a> &nbsp;&#183;&nbsp;
+      <a href="/blog/client-collaboration-tools-comparison/" style="color:var(--blue);font-weight:600;">Full tool comparison</a>
+    </p>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">What we're building</h2>
+      <p class="sec-sub">We're building in public. Here's exactly where we are and what's coming.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="rm now">
+        <span class="rm-badge rmb-now">&#9679; Building now</span>
+        <div class="rm-title">Core Platform</div>
+        <ul class="rm-items rm-done">
+          <li>Onboarding plan builder</li>
+          <li>Email-first task delivery</li>
+          <li>Client-verified completion</li>
+          <li>Account health scores</li>
+          <li>CS leader dashboard</li>
+        </ul>
+      </div>
+      <div class="rm">
+        <span class="rm-badge rmb-soon">Beta &mdash; Q3 2026</span>
+        <div class="rm-title">Beta Launch</div>
+        <ul class="rm-items">
+          <li>Onboarding founding teams</li>
+          <li>Team management</li>
+          <li>Stripe payments</li>
+          <li>Settings &amp; notifications</li>
+          <li>Feedback loop with users</li>
+        </ul>
+      </div>
+      <div class="rm">
+        <span class="rm-badge rmb-plan">Planned</span>
+        <div class="rm-title">Post-Beta</div>
+        <ul class="rm-items">
+          <li>HubSpot &amp; Zoho integrations</li>
+          <li>API access (Growth tier)</li>
+          <li>Custom email sending domain</li>
+          <li>Executive digest emails</li>
+          <li>Template marketplace</li>
+        </ul>
+      </div>
+      <div class="rm">
+        <span class="rm-badge rmb-later">Later</span>
+        <div class="rm-title">Scale</div>
+        <ul class="rm-items">
+          <li>Salesforce integration</li>
+          <li>White-label (enterprise)</li>
+          <li>Advanced analytics</li>
+          <li>Mobile client experience</li>
+          <li>AI-assisted risk detection</li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;font-size:14px;color:var(--muted);">
+      Founding beta members shape this roadmap directly. If you manage onboarding at a B2B SaaS company, <a href="#early-access" style="color:var(--blue);font-weight:600;">apply for founding access &rarr;</a>
+    </p>
+  </div>
+</section>
+
+<!-- FOUNDER STORY -->
+<section class="sec-bg">
+  <div class="sec-inner">
+    <div class="founder-sec">
+      <div>
+        <div style="display:inline-block;background:var(--amber-bg);border:1px solid #FDE68A;border-radius:8px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--amber);margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px;">Why Lyniro exists</div>
+        <div style="display:inline-block;background:var(--amber-bg);border:1px solid #FDE68A;border-radius:8px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--amber);margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px;">&#128161; Why Lyniro is being built</div>
+        <p class="founder-quote">I watched 20 accounts churn at my last company. Healthy in the CRM. CSMs logging touchpoints. Tasks marked complete. Nobody noticed the clients had stopped showing up weeks earlier.</p>
+        <p style="font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:16px;">We kept seeing CS teams manage onboarding across spreadsheets, email follow-ups, and disconnected tools. The signals were always there — nobody was watching them in real time.</p>
+        <p style="font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:16px;">The problem wasn't the product. It wasn't the CSMs. The tools tracked what <em>we</em> did — not what clients actually did. By the time the signal was visible, the renewal was already lost.</p>
+        <p style="font-size:16px;color:var(--mid);line-height:1.75;margin-bottom:24px;">Lyniro is being built to fix that. Tasks verified by clients, not CSMs. Health scores based on real client behaviour. Leaders who can see what's actually happening — before it becomes a renewal conversation they can't win.</p>
+        <div class="founder-sig">
+          <div class="founder-ava2">M</div>
+          <div class="founder-details">
+            <strong>Malu &mdash; Founder, Lyniro</strong>
+            <span>Senior AE, B2B SaaS &middot; Building from real CS experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="fstats">
+        <div class="fstat">
+          <div class="fstat-num">20+</div>
+          <div class="fstat-body"><strong>Accounts churned silently</strong><span>The direct reason Lyniro exists. Every one of them showed warning signals nobody was watching.</span></div>
+        </div>
+        <div class="fstat">
+          <div class="fstat-num">62%</div>
+          <div class="fstat-body"><strong>CS leaders lack real-time visibility</strong><span>OnRamp 2026 survey of 161 CS leaders. Most rely on what their team reports.</span></div>
+        </div>
+        <div class="fstat">
+          <div class="fstat-num">90d</div>
+          <div class="fstat-body"><strong>The window that decides retention</strong><span>60&ndash;70% of SaaS churn is seeded in the first 90 days. This is where Lyniro is focused.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BETA PROGRAM -->
+<section id="beta">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">Become a founding team</h2>
+      <p class="sec-sub">Built for <strong>B2B SaaS teams managing 10+ onboarding customers monthly</strong> who need more than a spreadsheet but less than a $30K enterprise platform. The first 50 teams get in free.</p>
+    </div>
+    <div class="beta-grid">
+      <div class="beta-card">
+        <div class="beta-icon">&#127381;</div>
+        <h3>Early access &mdash; free during beta</h3>
+        <p>Founding teams get access before public launch at no cost. Lock in founding pricing before we launch paid tiers. No surprises.</p>
+      </div>
+      <div class="beta-card">
+        <div class="beta-icon">&#128172;</div>
+        <h3>Direct line to the founder</h3>
+        <p>You get a private Slack channel with the founding team. Feature requests, bugs, questions &mdash; you talk directly to the people building Lyniro.</p>
+      </div>
+      <div class="beta-card">
+        <div class="beta-icon">&#128736;&#65039;</div>
+        <h3>Shape the roadmap</h3>
+        <p>Founding team feedback drives what gets built next. If something doesn't work for your CS team, we fix it. Your workflow shapes the product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANNED PRICING -->
+<section class="sec-bg" id="pricing">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">Planned launch pricing</h2>
+      <p class="sec-sub">These are our intended pricing tiers at public launch. Founding teams lock in lower rates during beta.</p>
+      <div style="display:inline-block;margin-top:16px;background:var(--amber-bg);border:1px solid #FDE68A;border-radius:10px;padding:10px 20px;font-size:14px;color:var(--amber);font-weight:600;">&#9888;&#65039; Planned pricing &mdash; subject to change before public launch. Founding beta members lock in discounted rates.</div><p style="margin-top:12px;font-size:14px;color:var(--muted);">During beta, all plans are free. Founding teams convert to paid at a permanent discount when we launch.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Free</div>
+        <div class="price-num">$0</div>
+        <div class="price-note">forever</div>
+        <ul class="price-list">
+          <li>&#10003; Up to 3 onboarding plans</li>
+          <li>&#10003; Email-first task delivery</li>
+          <li>&#10003; Client verification</li>
+          <li>&#10003; Basic health score</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Starter</div>
+        <div class="price-num">$79<span style="font-size:16px;font-weight:500;color:var(--muted);">/mo</span></div>
+        <div class="price-note">planned at launch</div>
+        <ul class="price-list">
+          <li>&#10003; Up to 10 plans</li>
+          <li>&#10003; All Free features</li>
+          <li>&#10003; Team management</li>
+          <li>&#10003; Portfolio analytics</li>
+        </ul>
+      </div>
+      <div class="price-card pop">
+        <div class="price-pop-label">Most popular</div>
+        <div class="price-tier blue">Growth</div>
+        <div class="price-num blue">$199<span style="font-size:16px;font-weight:500;color:var(--muted);">/mo</span></div>
+        <div class="price-note">planned at launch</div>
+        <ul class="price-list">
+          <li>&#10003; Up to 50 plans</li>
+          <li>&#10003; All Starter features</li>
+          <li>&#10003; API access</li>
+          <li>&#10003; Advanced analytics</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Scale</div>
+        <div class="price-num">$399<span style="font-size:16px;font-weight:500;color:var(--muted);">/mo</span></div>
+        <div class="price-note">planned at launch</div>
+        <ul class="price-list">
+          <li>&#10003; Unlimited plans</li>
+          <li>&#10003; All Growth features</li>
+          <li>&#10003; CRM integrations</li>
+          <li>&#10003; Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARLY ACCESS CTA -->
+<div class="cta-wrap" id="early-access">
+  <div class="cta-box">
+    <h2>Become a founding design partner.<br>Shape the product from day one.</h2>
+    <p>For B2B SaaS CS leaders managing 10+ onboarding accounts. Free during beta. Direct line to the founder. Lock in founding pricing before public launch.</p>
+    <form class="cta-form" id="waitlist-form" onsubmit="handleWaitlist(event)">
+      <input type="email" class="cta-input" id="w-email" placeholder="Work email address" required>
+      <select id="w-tool" style="flex:1;padding:13px 16px;border:1.5px solid rgba(255,255,255,.15);border-radius:10px;font-size:15px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-family:inherit;outline:none;"><option value="" disabled selected>What are you using for onboarding today?</option><option value="spreadsheets">Spreadsheets / email</option><option value="notion">Notion or similar</option><option value="asana">Asana / Monday / ClickUp</option><option value="dock">Dock</option><option value="rocketlane">Rocketlane</option><option value="guidecx">GuideCX</option><option value="arrows">Arrows</option><option value="other">Something else</option></select>
+      <button type="submit" class="btn-white">Become a Founding Design Partner</button>
+    </form>
+    <p class="cta-trust">No credit card &nbsp;&#183;&nbsp; No commitment &nbsp;&#183;&nbsp; Early access spots are limited</p>
+    <div class="cta-ok" id="cta-ok">&#10003; You're on the list. We'll reach out personally when your access is ready.</div>
+  </div>
+</div>
+
+<!-- BLOG CLUSTER -->
+<section class="sec-bg">
+  <div class="sec-inner">
+    <div class="sec-hdr ctr">
+      <h2 class="sec-title">Learn from our CS research</h2>
+      <p class="sec-sub">Practical guides on onboarding, churn prevention, and customer success &mdash; written from real CS experience.</p>
+    </div>
+    <div class="cluster-grid">
+      <a href="/blog/why-saas-customers-churn-during-onboarding/" class="cc">
+        <div class="cc-tag">Churn Analysis</div>
+        <h4>Why SaaS Customers Churn During Onboarding</h4>
+        <p>The three failure modes and what the data shows about first-90-day churn.</p>
+        <span class="cc-arrow">Read article &rarr;</span>
+      </a>
+      <a href="/blog/customer-health-score-formula/" class="cc">
+        <div class="cc-tag">CS Metrics</div>
+        <h4>Customer Health Score Formula</h4>
+        <p>A five-component formula with exact weights that predicts churn accurately.</p>
+        <span class="cc-arrow">Read article &rarr;</span>
+      </a>
+      <a href="/blog/how-to-reduce-saas-churn-first-90-days/" class="cc">
+        <div class="cc-tag">Churn Reduction</div>
+        <h4>How to Reduce SaaS Churn in the First 90 Days</h4>
+        <p>Eight specific tactics CS teams with low early churn actually use.</p>
+        <span class="cc-arrow">Read article &rarr;</span>
+      </a>
+      <a href="/blog/dock-alternatives/" class="cc">
+        <div class="cc-tag">Tool Comparison</div>
+        <h4>5 Best Dock Alternatives in 2026</h4>
+        <p>Honest comparison of Dock, Lyniro, Rocketlane, GuideCX, and Arrows.</p>
+        <span class="cc-arrow">Read article &rarr;</span>
+      </a>
+      <a href="/blog/customer-success-playbook/" class="cc">
+        <div class="cc-tag">CS Strategy</div>
+        <h4>The Customer Success Playbook</h4>
+        <p>15 documented plays covering every lifecycle stage from handoff to churn risk.</p>
+        <span class="cc-arrow">Read article &rarr;</span>
+      </a>
+      <a href="/blog/csm-to-customer-ratio/" class="cc">
+        <div class="cc-tag">CS Strategy</div>
+        <h4>CSM to Customer Ratio &mdash; Benchmarks</h4>
+        <p>Industry benchmarks by segment and how to calculate the right ratio.</p>
+        <span class="cc-arrow">Read article &rarr;</span>
+      </a>
+    </div>
+    <p style="text-align:center;margin-top:28px;"><a href="/blog/" style="color:var(--blue);font-weight:700;font-size:15px;">View all 25 articles &rarr;</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Lyniro</div>
+      <p>Customer onboarding software for SaaS customer success teams. Currently in active development &mdash; early access open.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#early-access">Early access</a>
+    </div>
+    <div class="footer-col">
+      <h4>Compare</h4>
+      <a href="/blog/dock-alternatives/">vs Dock</a>
+      <a href="/blog/rocketlane-alternatives/">vs Rocketlane</a>
+      <a href="/blog/client-collaboration-tools-comparison/">All comparisons</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="/blog/">Blog</a>
+      <a href="/blog/customer-success-playbook/">CS Playbook</a>
+      <a href="/blog/customer-onboarding-checklist-saas/">Onboarding Checklist</a>
+      <a href="/blog/customer-health-score-formula/">Health Score Formula</a>
+      <a href="/llms.txt">llms.txt</a>
+      <a href="/customer-onboarding-software/">Onboarding Software</a>
+      <a href="/saas-onboarding-software/">SaaS Onboarding</a>
+      <a href="/customer-success-software/">CS Software</a>
+      <a href="/vs/gainsight/">vs Gainsight</a>
+      <a href="/vs/churnzero/">vs ChurnZero</a>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span class="footer-copy">&copy; 2026 Lyniro. All rights reserved.</span>
+    <div class="footer-status"><div class="status-dot"></div>In active development &nbsp;&#183;&nbsp; Early access open</div>
+  </div>
+</footer>
+
+<script>
+function handleWaitlist(e) {
+  e.preventDefault();
+  const email = document.getElementById('w-email').value;
+  if (!email) return;
+  fetch('/api/waitlist', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ email })
+  }).then(() => showOk()).catch(() => {
+    window.location.href = `mailto:hello@lyniro.com?subject=Early access&body=Email: ${email}`;
+    showOk();
+  });
+}
+function showOk() {
+  document.getElementById('waitlist-form').style.display = 'none';
+  document.getElementById('cta-ok').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

@@ -283,26 +283,187 @@ footer{background:#0A0F1E;padding:52px 28px 28px;}
 .footer-status{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.35);}
 .status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);}
 
-/* RESPONSIVE */
+/* ═══ RESPONSIVE ═══════════════════════════════════════════════ */
+
+/* ── Tablet: 960px ── */
 @media(max-width:960px){
+  /* Nav */
   .nav-links{display:none;}
-  .email-feat,.founder-sec{grid-template-columns:1fr;gap:40px;}
-  .diff-grid,.steps,.problem-grid,.beta-grid,.pricing-grid{grid-template-columns:1fr;}
-  .roadmap-grid{grid-template-columns:1fr 1fr;}
-  .cta-box{padding:48px 28px;margin:0;}
-  .cta-form{flex-direction:column;}
+
+  /* Hero */
+  .hero{padding:52px 20px 48px;}
+  .hero h1{font-size:clamp(34px,6vw,52px);letter-spacing:-2px;}
+  .hero-sub{font-size:17px;}
+  .hero-actions{flex-wrap:wrap;gap:12px;}
+  .founder-strip{flex-direction:column;gap:10px;padding:14px 16px;}
+
+  /* Mockup — hide on tablet, show simplified */
+  .hero-mockup{margin-top:40px;border-radius:12px;}
   .mockup-body{grid-template-columns:1fr;}
   .mockup-sidebar{display:none;}
-  .footer-top{grid-template-columns:1fr 1fr;}
-  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .mm-title{font-size:15px;}
+  .kpi-row{grid-template-columns:repeat(3,1fr);gap:8px;}
+  .kpi-val{font-size:18px;}
+  .atbl-head,.atbl-row{grid-template-columns:2fr 1fr 1fr;font-size:11px;}
+  .atbl-head span:nth-child(2),.atbl-row>div:nth-child(2){display:none;}
+
+  /* Stats strip */
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+
+  /* Sections */
+  section{padding:56px 20px;}
+
+  /* Grids → single column */
+  .email-feat,.founder-sec{grid-template-columns:1fr;gap:36px;}
+  .diff-grid{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;gap:24px;}
+  .problem-grid{grid-template-columns:1fr;}
+  .beta-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:repeat(2,1fr);}
+  .roadmap-grid{grid-template-columns:repeat(2,1fr);}
+  .cluster-grid{grid-template-columns:repeat(2,1fr);}
+
+  /* Comparison table — hide last 2 cols */
+  .comp-table th:nth-child(n+4),
+  .comp-table td:nth-child(n+4){display:none;}
+
+  /* CTA */
+  .cta-wrap{padding:48px 20px;}
+  .cta-box{padding:44px 28px;border-radius:18px;}
+  .cta-form{flex-direction:column;gap:10px;}
+  .cta-input,.btn-white{width:100%;box-sizing:border-box;}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;}
+}
+
+/* ── Mobile: 580px ── */
+@media(max-width:580px){
+  /* Nav */
+  .nav-inner{padding:0 16px;}
+  .btn-blue{font-size:13px;padding:8px 14px;}
+
+  /* Hero */
+  .hero{padding:44px 16px 40px;}
+  .hero-badge{font-size:12px;padding:5px 12px;margin-bottom:20px;}
+  .hero h1{font-size:30px;letter-spacing:-1.5px;line-height:1.1;}
+  .hero-sub{font-size:16px;line-height:1.65;margin-bottom:24px;}
+  .btn-hero{font-size:16px;padding:13px 24px;width:100%;text-align:center;box-sizing:border-box;}
+  .btn-ghost{font-size:15px;padding:12px 20px;width:100%;text-align:center;box-sizing:border-box;}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:10px;}
+  .hero-microcopy{font-size:12px;}
+  .founder-strip{width:100%;box-sizing:border-box;}
+
+  /* Mockup — simplified on small mobile */
+  .hero-mockup{margin-top:28px;border-radius:10px;}
+  .mockup-preview-label{font-size:9px;padding:3px 8px;}
+  .kpi-row{grid-template-columns:1fr;gap:8px;}
+  .kpi{padding:10px 12px;}
+  .kpi-val{font-size:22px;}
+  .atbl-head,.atbl-row{grid-template-columns:1.5fr 1fr;font-size:10px;padding:8px 10px;}
+  .atbl-head span:nth-child(n+3),
+  .atbl-row>*:nth-child(n+3){display:none;}
+  .at-note{display:none;}
+
+  /* Stats strip */
+  .stats-grid{grid-template-columns:1fr;gap:12px;}
+  .stats-strip{padding:24px 16px;}
+  .stat-num{font-size:26px;}
+
+  /* Sections */
+  section{padding:44px 16px;}
+  .sec-title{font-size:26px;letter-spacing:-1px;}
+  .sec-sub{font-size:15px;}
+
+  /* Problem cards */
+  .problem-card{padding:22px 18px;}
+
+  /* Steps */
+  .step-num{margin-bottom:12px;}
+
+  /* Email mockup */
+  .email-feat{gap:28px;}
+  .em-body{padding:16px;}
+  .em-btns{flex-direction:column;}
+  .em-btn-p,.em-btn-s{text-align:center;}
+
+  /* Diff cards */
+  .diff-card{padding:20px 18px;}
+
+  /* Comparison table — 2 cols only */
+  .comp-table th:nth-child(n+3),
+  .comp-table td:nth-child(n+3){display:none;}
+  .comp-table th,.comp-table td{padding:9px 10px;font-size:12px;}
+
+  /* Roadmap */
+  .roadmap-grid{grid-template-columns:1fr;}
+  .rm{padding:16px;}
+
+  /* Founder section */
+  .founder-sec{gap:28px;}
+  .founder-quote{font-size:18px;}
+  .fstat-num{font-size:28px;}
+
+  /* Pricing */
+  .pricing-grid{grid-template-columns:1fr;}
+  .price-card{padding:20px 18px;}
+  .price-card.pop{padding:20px 18px;}
+
+  /* Beta cards */
+  .beta-card{padding:20px 18px;}
+
+  /* CTA box */
+  .cta-wrap{padding:32px 16px 48px;}
+  .cta-box{padding:32px 20px;border-radius:14px;}
+  .cta-box h2{font-size:24px;letter-spacing:-1px;}
+  .cta-box p{font-size:15px;}
+  .cta-form select{font-size:14px;}
+
+  /* Cluster grid */
+  .cluster-grid{grid-template-columns:1fr;}
+
+  /* Footer */
+  .footer-top{grid-template-columns:1fr;gap:24px;margin-bottom:28px;}
+  footer{padding:36px 16px 24px;}
+  .footer-bot{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+
+/* Mobile hamburger */
+#mob-menu-btn{
+  display:none;
+  background:none;
+  border:1.5px solid var(--border);
+  border-radius:8px;
+  padding:7px 10px;
+  cursor:pointer;
+  color:var(--ink);
+  font-size:20px;
+  line-height:1;
+  margin-left:8px;
 }
 @media(max-width:580px){
-  .hero h1{font-size:36px;letter-spacing:-2px;}
-  .hero-actions{flex-direction:column;align-items:flex-start;}
-  .cluster-grid{grid-template-columns:1fr;}
-  .roadmap-grid{grid-template-columns:1fr;}
-  .footer-top{grid-template-columns:1fr;}
+  .nav-links{display:none!important;}
+  .btn-blue{display:none!important;}
+  #mob-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;}
 }
+/* was already patched */
+  .btn-blue{display:none;}
+  #mob-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;}
+
+  /* Pricing — single col on mobile */
+  .pricing-grid{grid-template-columns:1fr;}
+
+  /* Footer — single col */
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bot{flex-direction:column;align-items:flex-start;gap:8px;}
+  footer{padding:36px 16px 24px;}
+}
+.mob-nav-overlay{display:none;position:fixed;inset:0;background:white;z-index:200;padding:24px 20px;flex-direction:column;gap:0;}
+.mob-nav-overlay.open{display:flex;}
+.mob-nav-close{align-self:flex-end;background:none;border:none;font-size:24px;cursor:pointer;padding:4px;color:var(--ink);}
+.mob-nav-link{font-size:18px;font-weight:700;color:var(--ink);padding:16px 0;border-bottom:1px solid var(--border);text-decoration:none;display:block;}
+.mob-nav-cta{margin-top:24px;background:var(--blue);color:white;font-size:17px;font-weight:700;padding:15px 28px;border-radius:11px;text-align:center;display:block;}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lyniro","item":"https://lyniro.com/"},{"@type":"ListItem","position":2,"name":"Customer Onboarding Software","item":"https://lyniro.com/customer-onboarding-software/"}]}</script>
 </head>
@@ -328,6 +489,7 @@ footer{background:#0A0F1E;padding:52px 28px 28px;}
       <a href="#compare">Compare</a>
     </div>
     <a href="#early-access" class="btn-blue">Become a Founding Design Partner</a>
+    <button id="mob-menu-btn" onclick="toggleMobMenu()" aria-label="Open menu">&#9776;</button>
   </div>
 </nav>
 
@@ -897,6 +1059,23 @@ footer{background:#0A0F1E;padding:52px 28px 28px;}
   </div>
 </footer>
 
+
+<div class="mob-nav-overlay" id="mob-overlay">
+  <button class="mob-nav-close" onclick="toggleMobMenu()">&#10005;</button>
+  <a href="/#features" class="mob-nav-link" onclick="toggleMobMenu()">Features</a>
+  <a href="/#how-it-works" class="mob-nav-link" onclick="toggleMobMenu()">How it works</a>
+  <a href="/#roadmap" class="mob-nav-link" onclick="toggleMobMenu()">Roadmap</a>
+  <a href="/#compare" class="mob-nav-link" onclick="toggleMobMenu()">Compare</a>
+  <a href="/blog/" class="mob-nav-link" onclick="toggleMobMenu()">Blog</a>
+  <a href="/#early-access" class="mob-nav-cta" onclick="toggleMobMenu()">Become a Founding Design Partner &rarr;</a>
+</div>
+<script>
+function toggleMobMenu(){
+  var ov = document.getElementById('mob-overlay');
+  ov.classList.toggle('open');
+  document.body.style.overflow = ov.classList.contains('open') ? 'hidden' : '';
+}
+</script>
 <script>
 function handleWaitlist(e) {
   e.preventDefault();

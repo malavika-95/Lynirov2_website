@@ -6,8 +6,8 @@
   <!-- Pillar pages -->
   <url><loc>https://lyniro.com/customer-onboarding-software/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://lyniro.com/saas-onboarding-software/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://lyniro.com/customer-success-software/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://lyniro.com/client-onboarding-software/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://lyniro.com/customer-success-software/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://lyniro.com/client-onboarding-software/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
 
   <!-- Comparison pages -->
   <url><loc>https://lyniro.com/vs/dock/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
@@ -19,10 +19,17 @@
   <url><loc>https://lyniro.com/vs/vitally/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/vs/planhat/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
 
+  <!-- Alternatives pages (high switch intent) -->
+  <url><loc>https://lyniro.com/alternatives/rocketlane/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://lyniro.com/alternatives/guidecx/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://lyniro.com/alternatives/gainsight/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://lyniro.com/alternatives/churnzero/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://lyniro.com/alternatives/vitally/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+
   <!-- Blog index -->
   <url><loc>https://lyniro.com/blog/</loc><lastmod>2026-05-14</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
 
-  <!-- Original 25 blog posts -->
+  <!-- Blog posts — original 25 -->
   <url><loc>https://lyniro.com/blog/why-saas-customers-churn-during-onboarding/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/how-to-reduce-saas-churn-first-90-days/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/dock-alternatives/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
@@ -42,14 +49,14 @@
   <url><loc>https://lyniro.com/blog/churn-prediction-saas/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/customer-health-score-formula/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/how-to-onboard-enterprise-saas-customer/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://lyniro.com/blog/rocketlane-alternatives/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://lyniro.com/blog/rocketlane-alternatives/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/customer-success-manager-day-in-life/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://lyniro.com/blog/saas-expansion-revenue-strategies/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://lyniro.com/blog/post-sales-handoff-process/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://lyniro.com/blog/customer-onboarding-kpis/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://lyniro.com/blog/how-to-write-customer-success-plan/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 
-  <!-- New 8 cluster posts -->
+  <!-- Blog posts — 8 new cluster posts -->
   <url><loc>https://lyniro.com/blog/onboarding-kickoff-agenda/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/onboarding-timeline-template/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://lyniro.com/blog/customer-onboarding-mistakes/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
@@ -58,6 +65,11 @@
   <url><loc>https://lyniro.com/blog/onboarding-milestones-saas/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://lyniro.com/blog/onboarding-risk-management/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://lyniro.com/blog/onboarding-project-plan-template/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
+
+  
+  <url><loc>https://lyniro.com/alternatives/dock/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://lyniro.com/alternatives/arrows/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://lyniro.com/alternatives/planhat/</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
 
   <url><loc>https://lyniro.com/llms.txt</loc><lastmod>2026-05-14</lastmod><changefreq>monthly</changefreq><priority>0.40</priority></url>
 

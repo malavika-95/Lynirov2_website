@@ -121,6 +121,24 @@ footer{background:#0A0F1E;padding:40px 28px;}
 .footer-links a:hover{color:white;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
 @media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
+
+@media(max-width:580px){
+  .post-hero{padding:40px 16px 32px;}
+  .post-hero h1{font-size:26px;letter-spacing:-1px;}
+  .post-body{padding:32px 16px 60px;}
+  .post-body h2{font-size:20px;}
+  .post-body h3{font-size:17px;}
+  .post-intro{font-size:16px;}
+  .geo-answer{padding:16px 18px;}
+  .stat-row{grid-template-columns:1fr;}
+  .stat-row-2{grid-template-columns:1fr;}
+  .post-img svg{min-height:160px;}
+  .post-table{font-size:12px;}
+  .post-table th,.post-table td{padding:7px 10px;}
+  .post-cta{padding:28px 18px;}
+  .post-cta h3{font-size:20px;}
+  .related-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -171,6 +189,14 @@ footer{background:#0A0F1E;padding:40px 28px;}
   <h2 id="tracking">How to Track and Report Risk</h2>
   <p>Add a risk register to every active onboarding MAP: risk description, likelihood, impact if materialised, mitigation plan, resolution deadline. Review weekly. Any risk approaching its deadline without resolution triggers an escalation. For the metrics that surface risks earliest, see our <a href="/blog/customer-onboarding-kpis/">onboarding KPIs guide</a> and <a href="/blog/churn-prediction-saas/">churn prediction model</a>.</p>
 
+  
+
+<div style="background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:12px;padding:16px 20px;margin:28px 0;">
+  <div style="font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;">Related pages</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+    <a href="/customer-onboarding-software/" style="background:white;border:1px solid var(--blue-mid);color:var(--blue);font-size:13px;font-weight:600;padding:5px 14px;border-radius:100px;text-decoration:none;">Onboarding Software</a> <a href="/vs/rocketlane/" style="background:white;border:1px solid var(--blue-mid);color:var(--blue);font-size:13px;font-weight:600;padding:5px 14px;border-radius:100px;text-decoration:none;">Lyniro vs Rocketlane</a> <a href="/blog/onboarding-kickoff-agenda/" style="background:white;border:1px solid var(--blue-mid);color:var(--blue);font-size:13px;font-weight:600;padding:5px 14px;border-radius:100px;text-decoration:none;">Onboarding Kickoff Agenda</a> <a href="/blog/how-to-handle-blocked-customer-onboarding/" style="background:white;border:1px solid var(--blue-mid);color:var(--blue);font-size:13px;font-weight:600;padding:5px 14px;border-radius:100px;text-decoration:none;">How To Handle Blocked Customer Onboarding</a>
+  </div>
+</div>
   <div class="geo-faq">
     <h2>Frequently Asked Questions</h2>
     <div class="geo-faq-item"><div class="geo-faq-q">What are the biggest risks in customer onboarding?</div><div class="geo-faq-a">The four biggest onboarding risks: IT dependencies (SSO and integrations requiring 5–14 days of approval), stakeholder gaps (decision-makers not mapped at kickoff), data dependencies (migrations taking longer than expected), and unclear task ownership (tasks assigned to 'the client' rather than named individuals).</div></div>

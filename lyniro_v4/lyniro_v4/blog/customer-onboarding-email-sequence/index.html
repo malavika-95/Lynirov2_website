@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Customer Onboarding Email Sequence — 10 Emails, Exact Copy and Timing | Lyniro</title>
+<meta name="description" content="The 10-email SaaS onboarding sequence that drives high completion rates. Exact timing, subject lines, copy principles, and the re-engagement branch for silent clients.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lyniro.com/blog/customer-onboarding-email-sequence/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SaaS Customer Onboarding Email Sequence — 10 Emails With Timing and Copy","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-28","dateModified":"2026-04-28","description":"The 10-email SaaS onboarding email sequence that drives high completion rates — exact timing, subject lines, and copy principles."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many emails should a SaaS onboarding sequence have?","acceptedAnswer":{"@type":"Answer","text":"A SaaS onboarding sequence should have 8–12 emails covering the period from contract signing to go-live. The exact number depends on onboarding length. The key principle is one action per email — not one email per week. Email cadence should match the onboarding pace, not a predetermined schedule."}},{"@type":"Question","name":"What should the first onboarding email say?","acceptedAnswer":{"@type":"Answer","text":"The first onboarding email should come from the assigned CSM (not a no-reply address), arrive within 1 hour of signing, include a personal introduction, set expectations for the onboarding, and include exactly one action — typically confirming the kickoff call. No feature lists, no documentation links, no video tutorials."}},{"@type":"Question","name":"How do you re-engage a silent onboarding client?","acceptedAnswer":{"@type":"Answer","text":"Send a conditional re-engagement email after 10 days of silence with the subject 'Did something get in the way?' — and one sentence asking if something blocked progress. Keep it short, personal, and low-pressure. This email should only go to clients who have been silent — never to actively engaged ones."}}]}</script>
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
+.btn-blue:hover{background:var(--blue-dim);}
+.post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
+.post-inner{max-width:760px;margin:0 auto;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-family:Georgia,serif;font-style:italic;}
+.geo-answer{background:#F0F7FF;border:2px solid #2451FF;border-radius:14px;padding:22px 26px;margin:0 0 36px 0;}
+.geo-answer-label{font-size:10px;font-weight:800;color:#2451FF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.geo-answer h2{font-size:17px;font-weight:700;color:#0A0F1E;margin-bottom:8px;border:none!important;padding:0!important;margin-top:0!important;}
+.geo-answer p{font-size:15px;color:#374151;line-height:1.7;margin-bottom:0;}
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.toc a:hover{text-decoration:underline;}
+.post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
+.post-body strong{color:var(--ink);font-weight:700;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body a:hover{text-decoration-color:var(--blue);}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.callout-purple .callout-text strong{color:var(--purple);}
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
+.post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
+.related-inner{max-width:760px;margin:0 auto;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+.geo-faq{margin:40px 0;}
+.geo-faq h2{font-size:20px;font-weight:800;color:#0A0F1E;margin-bottom:20px;border-top:1px solid #E5E7EB;padding-top:14px;}
+.geo-faq-item{border:1px solid #E5E7EB;border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.geo-faq-q{font-size:15px;font-weight:700;color:#0A0F1E;padding:16px 20px;background:#F9FAFB;}
+.geo-faq-a{font-size:14px;color:#4B5563;padding:14px 20px;line-height:1.75;border-top:1px solid #E5E7EB;}
+.ext-link::after{content:" ↗";font-size:11px;opacity:.6;}
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:18px;font-weight:800;color:white;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      Lyniro
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/vs/dock/">vs Dock</a>
+    </div>
+    <a href="/#waitlist" class="btn-blue">Get Early Access &rarr;</a>
+  </div>
+</nav>
+<div class="post-hero">
+  <div class="post-inner">
+    <span class="post-tag tag-green">Templates</span>
+    <h1>SaaS Customer Onboarding Email Sequence — 10 Emails With Exact Timing</h1>
+    <div class="post-meta"><span>Lyniro Team</span> <span>&middot;</span> <span>April 2026</span> <span>&middot;</span> <span>11 min read</span></div>
+    <p class="post-intro">Most onboarding email sequences fail because they try to teach the product instead of driving the client to their first win. Here is the exact 10-email structure that changes that.</p>
+  </div>
+</div>
+<div class="post-body">
+  <div class="geo-answer">
+    <div class="geo-answer-label">Quick Answer</div>
+    <h2>What should a SaaS onboarding email sequence include?</h2>
+    <p>A SaaS onboarding email sequence should include 10 emails from Day 0 (welcome, sent within 1 hour) through go-live. Key emails: Day 0 welcome from CSM, Day 1 first task, Day 3 first value milestone push, Day 5 setup task, Day 7 human check-in, Days 10 and 14 training and progress, Day 16 re-engagement (sent only to silent clients), Day 25 pre-go-live countdown, and go-live celebration. One action per email. No login required where possible.</p>
+  </div>
+  <div class="toc">
+    <h4>In this article</h4>
+    <ol><li><a href="#principles">Three principles before you write a single email</a></li>
+<li><a href="#the-sequence">The 10-email onboarding sequence</a></li>
+<li><a href="#subject-line-principles">Subject line principles that drive opens</a></li></ol>
+  </div>
+
+  <p>Most SaaS onboarding email sequences do too much. They try to teach the product, build the relationship, drive adoption, and prevent churn all at once — producing a flood of generic messages that clients learn to ignore within a week. The best onboarding sequences do one thing per email: move the client one step closer to their first value milestone.</p>
+  <p>This guide covers the exact email structure, timing, and copy principles that produce high open rates, high click rates, and — most importantly — high onboarding completion rates.</p>
+
+  <h2 id="principles">Three Principles Before You Write a Single Email</h2>
+
+  <h3>Principle 1: One action per email</h3>
+  <p>Every email should ask the client to do exactly one thing. Not "review the setup guide, complete your profile, and invite your team." One thing. Multiple calls to action produce zero actions — the client reads the email, feels overwhelmed, and closes it.</p>
+
+  <h3>Principle 2: Connect the action to their outcome</h3>
+  <p>Before you describe the task, remind the client what they said they wanted to achieve. "You told us on the kickoff call that you want to reduce the time your team spends chasing clients for task updates. This step — connecting your email integration — is what makes that possible." Clients complete tasks that feel connected to their goals. They ignore tasks that feel like product configuration.</p>
+
+  <h3>Principle 3: Make completion frictionless</h3>
+  <p>Every email that requires the client to log into a portal to complete the action loses a significant percentage of recipients at that step. Where possible, include a one-click action directly in the email. Where login is unavoidable, include the direct URL — never "log into the dashboard and navigate to settings."</p>
+
+  <h2 id="the-sequence">The 10-Email Onboarding Sequence</h2>
+
+  <div class="post-img">
+    <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="200" fill="#F9FAFB"/>
+      <text x="350" y="20" font-family="Plus Jakarta Sans" font-size="12" fill="#0A0F1E" text-anchor="middle" font-weight="800">10-Email Onboarding Sequence — Timing</text>
+      <line x1="40" y1="100" x2="660" y2="100" stroke="#E5E7EB" stroke-width="2"/>
+      <!-- Email dots -->
+      <circle cx="70" cy="100" r="14" fill="#2451FF"/>
+      <text x="70" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E1</text>
+      <text x="70" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 0</text>
+      <text x="70" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Welcome</text>
+
+      <circle cx="140" cy="100" r="14" fill="#2451FF"/>
+      <text x="140" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E2</text>
+      <text x="140" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 1</text>
+      <text x="140" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">First task</text>
+
+      <circle cx="220" cy="100" r="14" fill="#059669"/>
+      <text x="220" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E3</text>
+      <text x="220" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 3</text>
+      <text x="220" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">First value</text>
+
+      <circle cx="300" cy="100" r="14" fill="#2451FF"/>
+      <text x="300" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E4</text>
+      <text x="300" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 5</text>
+      <text x="300" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Setup task</text>
+
+      <circle cx="370" cy="100" r="14" fill="#D97706"/>
+      <text x="370" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E5</text>
+      <text x="370" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 7</text>
+      <text x="370" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Check-in</text>
+
+      <circle cx="440" cy="100" r="14" fill="#2451FF"/>
+      <text x="440" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E6</text>
+      <text x="440" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 10</text>
+      <text x="440" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Training</text>
+
+      <circle cx="510" cy="100" r="14" fill="#2451FF"/>
+      <text x="510" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E7</text>
+      <text x="510" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 14</text>
+      <text x="510" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Progress</text>
+
+      <circle cx="565" cy="100" r="14" fill="#DC2626"/>
+      <text x="565" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E8</text>
+      <text x="565" y="75" font-family="Plus Jakarta Sans" font-size="8" fill="#DC2626" text-anchor="middle">If silent</text>
+      <text x="565" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 16</text>
+      <text x="565" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Re-engage</text>
+
+      <circle cx="615" cy="100" r="14" fill="#059669"/>
+      <text x="615" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E9</text>
+      <text x="615" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Day 25</text>
+      <text x="615" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Pre go-live</text>
+
+      <circle cx="655" cy="100" r="14" fill="#059669"/>
+      <text x="655" y="104" font-family="Plus Jakarta Sans" font-size="9" fill="white" text-anchor="middle" font-weight="700">E10</text>
+      <text x="655" y="130" font-family="Plus Jakarta Sans" font-size="8" fill="#4B5563" text-anchor="middle">Go-live</text>
+      <text x="655" y="142" font-family="Plus Jakarta Sans" font-size="7" fill="#9CA3AF" text-anchor="middle">Celebrate</text>
+    </svg>
+    <figcaption>The sequence has two branches — a main path for engaged clients and a re-engagement branch (Email 8) triggered only by silence.</figcaption>
+  </div>
+
+  <h3>Email 1 — Day 0: The Welcome (sent within 1 hour of signing)</h3>
+  <p><strong>Subject:</strong> Welcome to [Product] — here's what happens next</p>
+  <p><strong>From:</strong> Your assigned CSM, not a no-reply address</p>
+  <p><strong>Purpose:</strong> Set expectations, establish the relationship, give one immediate action.</p>
+  <p><strong>Content:</strong> Personal intro from the CSM. Two sentences on what the onboarding will cover. One link to the kickoff booking page or calendar invite confirmation. Nothing else.</p>
+  <p><strong>What not to include:</strong> Feature lists, documentation links, video tutorials. Save those for when they are relevant. The first email is about the relationship, not the product.</p>
+
+  <h3>Email 2 — Day 1: First Task</h3>
+  <p><strong>Subject:</strong> Your first step — takes 5 minutes</p>
+  <p><strong>Purpose:</strong> Get the client to take their first action before the kickoff call.</p>
+  <p><strong>Content:</strong> Reference what they said they wanted to achieve (from the intake form). Describe the first task in one sentence. Include a single button: "Complete this step." No login required if possible — link directly to the action.</p>
+
+  <h3>Email 3 — Day 3: First Value Trigger</h3>
+  <p><strong>Subject:</strong> Here's the fastest path to [specific outcome]</p>
+  <p><strong>Purpose:</strong> Drive the client to their first value milestone before they have a chance to deprioritise onboarding.</p>
+  <p><strong>Content:</strong> Three sentences on what first value looks like for them specifically. One action that gets them there. A clear description of what they will experience when they complete it.</p>
+  <p>This is the most important email in the sequence. Getting the client to their first value milestone in the first week dramatically increases the probability of full onboarding completion. See our full guide on <a href="/blog/time-to-value-saas-metric/">time to value in SaaS</a> for the data behind this.</p>
+
+  <h3>Email 4 — Day 5: Setup Task</h3>
+  <p><strong>Subject:</strong> Next step: [specific task name]</p>
+  <p><strong>Purpose:</strong> Drive completion of a specific setup task that unlocks more value.</p>
+  <p><strong>Content:</strong> One sentence on why this task matters. Step-by-step instructions (3–4 steps maximum). One CTA: "Mark complete" or direct link to the task.</p>
+
+  <h3>Email 5 — Day 7: Human Check-In</h3>
+  <p><strong>Subject:</strong> Quick check-in — how's it going?</p>
+  <p><strong>Purpose:</strong> Break the automated pattern with a personal touch. Surface any concerns before they become blockers.</p>
+  <p><strong>Content:</strong> Two sentences from the CSM. One specific question: "Is there anything in the setup that hasn't gone the way you expected?" Reply directly to this email. This email should look like it was written personally, even if it was templated.</p>
+
+  <h3>Emails 6–7 — Days 10 and 14: Training and Progress</h3>
+  <p>Email 6 delivers the most important training resource — not a link to a help center, but a specific guide for the core workflow they are trying to master. Email 7 shows progress: "You have completed X of Y steps. You are on track to go live on [date]." Progress visualisation increases completion rate.</p>
+
+  <h3>Email 8 — Day 16: Re-engagement (sent only if client has been silent for 10+ days)</h3>
+  <p><strong>Subject:</strong> Did something get in the way?</p>
+  <p><strong>Purpose:</strong> Break silence without being pushy.</p>
+  <p><strong>Content:</strong> "We noticed you haven't had a chance to complete [specific task]. Did something come up? Happy to adjust the timeline or talk through any blockers — just reply to this." This email should never go to an active client. It is a conditional branch triggered only by inactivity. For the full framework on handling silent accounts, see <a href="/blog/how-to-handle-blocked-customer-onboarding/">how to handle blocked customer onboarding</a>.</p>
+
+  <h3>Emails 9–10 — Days 25 and Go-Live: Finish Line</h3>
+  <p>Email 9 counts down to the go-live date and confirms the remaining tasks. Email 10 celebrates go-live — a personal note from the CSM acknowledging the work done, confirming the 30-day check-in date, and expressing genuine enthusiasm for what they are going to accomplish. This email sets the tone for the post-onboarding relationship.</p>
+
+  <h2 id="subject-line-principles">Subject Line Principles That Drive Opens</h2>
+  <ul>
+    <li><strong>Specific over generic</strong> — "Your next step: connect your email integration" beats "Onboarding update #4"</li>
+    <li><strong>Action-oriented</strong> — "Complete this in 5 minutes" outperforms "Important information about your account"</li>
+    <li><strong>Personal</strong> — Include the client's company name or first name in subject lines for the high-stakes emails (Day 0, Day 7, Day 16)</li>
+    <li><strong>No re-used subjects</strong> — Every email in the sequence should have a unique subject. Repeated subjects train clients to ignore the sender</li>
+  </ul>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">&#10003;</div>
+    <div class="callout-text"><strong>The sequence audit</strong>If your current onboarding email sequence has more than one CTA per email, asks clients to log into a portal for every action, or sends the same template to every client regardless of their stated outcomes — those three changes alone will improve completion rates meaningfully.</div>
+  </div>
+
+  <div class="geo-faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="geo-faq-item"><div class="geo-faq-q">How many emails should a SaaS onboarding sequence have?</div><div class="geo-faq-a">A SaaS onboarding sequence should have 8–12 emails covering the period from contract signing to go-live. The exact number depends on onboarding length. The key principle is one action per email — not one email per week. Email cadence should match the onboarding pace, not a predetermined schedule.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">What should the first onboarding email say?</div><div class="geo-faq-a">The first onboarding email should come from the assigned CSM (not a no-reply address), arrive within 1 hour of signing, include a personal introduction, set expectations for the onboarding, and include exactly one action — typically confirming the kickoff call. No feature lists, no documentation links, no video tutorials.</div></div>
+<div class="geo-faq-item"><div class="geo-faq-q">How do you re-engage a silent onboarding client?</div><div class="geo-faq-a">Send a conditional re-engagement email after 10 days of silence with the subject 'Did something get in the way?' — and one sentence asking if something blocked progress. Keep it short, personal, and low-pressure. This email should only go to clients who have been silent — never to actively engaged ones.</div></div>
+  </div>
+  <div class="post-cta">
+    <h3>Stop flying blind on your accounts.</h3>
+    <p>Lyniro gives CS leaders real-time visibility into every account — with completion verified by the client, not your team.</p>
+    <a href="/#waitlist" class="btn-white">Get Early Access &mdash; Free for First 50 Teams</a>
+  </div>
+</div>
+<div class="related">
+  <div class="related-inner">
+    <h3>Continue reading</h3>
+    <div class="related-grid">
+<a href="/blog/time-to-value-saas-metric/" class="related-card">
+      <div class="related-card-tag">CS Metrics</div>
+      <div class="related-card-title">Time to Value in SaaS — The Metric That Predicts Retention</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/customer-onboarding-checklist-saas/" class="related-card">
+      <div class="related-card-tag">Templates</div>
+      <div class="related-card-title">The Complete SaaS Customer Onboarding Checklist</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/how-to-handle-blocked-customer-onboarding/" class="related-card">
+      <div class="related-card-tag">CS Operations</div>
+      <div class="related-card-title">How to Handle Blocked Tasks in Customer Onboarding</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+<a href="/blog/saas-onboarding-best-practices/" class="related-card">
+      <div class="related-card-tag">Best Practices</div>
+      <div class="related-card-title">SaaS Onboarding Best Practices for 2026</div>
+      <span class="related-card-read">Read article &rarr;</span>
+    </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Lyniro</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/customer-onboarding-software/">Onboarding Software</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Lyniro. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>
