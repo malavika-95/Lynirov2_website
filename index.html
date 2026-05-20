@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customer Onboarding Software for VP of Customer Success | Lyniro</title>
+<title>Customer Onboarding Software for CS Leaders | Lyniro</title>
 <meta name="description" content="Lyniro is customer onboarding software built for VP of Customer Success at B2B SaaS. Email-first tasks your clients complete from their inbox. Client-verified completion. Real-time health scores for CS leaders. Early access open.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://lyniro.com/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta property="og:title" content="Customer Onboarding Software for VP of Customer Success | Lyniro">
+<meta property="og:title" content="Customer Onboarding Software for CS Leaders | Lyniro">
 <meta property="og:description" content="Email-first onboarding built for customer success teams. No portal login for clients. Real-time health scores for leaders. Early access now open.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lyniro.com/">
@@ -16,10 +16,10 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Customer Onboarding Software for VP of Customer Success | Lyniro">
+<meta name="twitter:title" content="Customer Onboarding Software for CS Leaders | Lyniro">
 <meta name="twitter:description" content="Email-first onboarding for SaaS CS leaders. No login friction for clients. Real-time health scores across your portfolio. Early access open.">
 <meta name="twitter:image" content="https://lyniro.com/og-image.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com","logo":"https://lyniro.com/favicon.svg","description":"Customer onboarding software for SaaS customer success teams."},{"@type":"WebSite","name":"Lyniro","url":"https://lyniro.com"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://lyniro.com/#organization","name":"Lyniro","url":"https://lyniro.com","logo":"https://lyniro.com/favicon.svg","description":"Customer onboarding software for B2B SaaS customer success teams. Email-first tasks, client-verified completion, and portfolio health scores for CS leaders.","foundingDate":"2026"},{"@type":"WebSite","@id":"https://lyniro.com/#website","name":"Lyniro","url":"https://lyniro.com","publisher":{"@id":"https://lyniro.com/#organization"}},{"@type":"SoftwareApplication","@id":"https://lyniro.com/#software","name":"Lyniro","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Customer onboarding software for VP of Customer Success at B2B SaaS. Email-first task delivery, client-verified completion, real-time portfolio health scores.","url":"https://lyniro.com/","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD","description":"Up to 3 onboarding plans"},{"@type":"Offer","name":"Starter","price":"79","priceCurrency":"USD","description":"Up to 10 plans (planned at launch)"},{"@type":"Offer","name":"Growth","price":"199","priceCurrency":"USD","description":"Up to 50 plans + API access (planned at launch)"},{"@type":"Offer","name":"Scale","price":"399","priceCurrency":"USD","description":"Unlimited plans + CRM integrations (planned at launch)"}],"publisher":{"@id":"https://lyniro.com/#organization"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is Lyniro built for?","acceptedAnswer":{"@type":"Answer","text":"Lyniro is built for VP of Customer Success and CS leaders at B2B SaaS companies managing 10+ concurrent onboarding plans. It is not designed for enterprise implementation teams needing full project management, or for individual CSMs without a CS leader needing portfolio visibility."}},{"@type":"Question","name":"How is Lyniro different from other onboarding tools?","acceptedAnswer":{"@type":"Answer","text":"Lyniro delivers tasks to the client's inbox instead of asking them to log into a portal, which eliminates the login friction that causes most onboarding drop-off. It also adds client-verified completion (clients confirm tasks are done, not just CSMs) and portfolio health scores for CS leaders."}},{"@type":"Question","name":"Is Lyniro available now?","acceptedAnswer":{"@type":"Answer","text":"Lyniro is in active development. Early access (founding beta) is open to the first 50 CS teams. Founding teams get free access during beta and a direct line to the founding team."}},{"@type":"Question","name":"What does Lyniro cost?","acceptedAnswer":{"@type":"Answer","text":"Founding beta is free. Planned launch pricing: Free tier at $0/month for up to 3 plans, Starter at $79/month for up to 10 plans, Growth at $199/month for up to 50 plans with API access, Scale at $399/month for unlimited plans plus CRM integrations."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -965,22 +965,68 @@ footer{background:#0A0F1E;padding:52px 28px 28px;}
 </footer>
 
 <script>
+// =====================================================================
+// WAITLIST SETUP
+// 1) Create a Google Sheet (see SETUP_INSTRUCTIONS.md for full guide).
+// 2) Deploy a Google Apps Script as a web app and paste its URL below.
+// 3) Until WAITLIST_WEBHOOK_URL is filled in, submissions fall back to
+//    a mailto: to hello@lyniro.com so no signups are lost.
+// =====================================================================
+const WAITLIST_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbw5tsQ7ir5O4XWNamizgujKOHL7i120w1ewn-y4siOdrtYVkm98EJSWSEh_UW4ciQ/exec'; // <-- paste your Apps Script web app URL here
+const WAITLIST_FALLBACK_EMAIL = 'hello@lyniro.com';
+
 function handleWaitlist(e) {
   e.preventDefault();
-  const email = document.getElementById('w-email').value;
+  const emailEl = document.getElementById('w-email');
+  const toolEl  = document.getElementById('w-tool');
+  const email   = emailEl ? emailEl.value.trim() : '';
+  const tool    = toolEl  ? toolEl.value         : '';
   if (!email) return;
-  fetch('/api/waitlist', {
+
+  const payload = {
+    email: email,
+    currentTool: tool,
+    source: window.location.pathname || '/',
+    referrer: document.referrer || '',
+    timestamp: new Date().toISOString(),
+    userAgent: navigator.userAgent
+  };
+
+  // No webhook configured yet -- fall back to mailto so signups still reach inbox.
+  if (!WAITLIST_WEBHOOK_URL) {
+    const body = encodeURIComponent(
+      'Email: ' + email +
+      '\nCurrent tool: ' + (tool || '(not specified)') +
+      '\nPage: ' + payload.source
+    );
+    window.location.href = 'mailto:' + WAITLIST_FALLBACK_EMAIL +
+      '?subject=' + encodeURIComponent('Early access request') +
+      '&body=' + body;
+    showOk();
+    return;
+  }
+
+  // no-cors + text/plain avoids CORS preflight; Apps Script reads e.postData.contents.
+  fetch(WAITLIST_WEBHOOK_URL, {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ email })
-  }).then(() => showOk()).catch(() => {
-    window.location.href = `mailto:hello@lyniro.com?subject=Early access&body=Email: ${email}`;
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(function () {
+    showOk();
+  }).catch(function () {
+    window.location.href = 'mailto:' + WAITLIST_FALLBACK_EMAIL +
+      '?subject=' + encodeURIComponent('Early access request') +
+      '&body=' + encodeURIComponent('Email: ' + email);
     showOk();
   });
 }
+
 function showOk() {
-  document.getElementById('waitlist-form').style.display = 'none';
-  document.getElementById('cta-ok').style.display = 'block';
+  var form = document.getElementById('waitlist-form');
+  var ok   = document.getElementById('cta-ok');
+  if (form) form.style.display = 'none';
+  if (ok)   ok.style.display   = 'block';
 }
 </script>
 
