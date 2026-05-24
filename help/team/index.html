@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Invite and Manage Your Team in Lyniro | Lyniro Help</title>
+<meta name="description" content="Learn how to invite team members, set roles, manage permissions, and handle team member changes in Lyniro.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://lyniro.com/help/team/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="How to Invite and Manage Your Team in Lyniro | Lyniro Help">
+<meta property="og:description" content="Learn how to invite team members, set roles, manage permissions, and handle team member changes in Lyniro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lyniro.com/help/team/">
+<meta property="og:image" content="https://lyniro.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.2;color:var(--ink);}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);}
+.nav-logo-mark{width:34px;height:34px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.nav-links{display:flex;gap:32px;}
+.nav-links a{font-size:15px;font-weight:500;color:var(--mid);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.btn-blue{background:var(--blue);color:white;font-size:15px;font-weight:700;padding:9px 22px;border-radius:9px;display:inline-block;transition:all .15s;}
+.btn-blue:hover{background:var(--blue-dim);}
+.post-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
+.post-inner{max-width:760px;margin:0 auto;}
+.post-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;}
+.tag-blue{background:var(--blue-pale);color:var(--blue);}
+.tag-green{background:var(--green-bg);color:var(--green);}
+.tag-amber{background:var(--amber-bg);color:var(--amber);}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-teal{background:var(--teal-bg);color:var(--teal);}
+.post-hero h1{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.post-meta{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.post-intro{font-size:18px;color:var(--mid);line-height:1.75;border-left:4px solid var(--blue-mid);padding-left:20px;font-style:italic;}
+.geo-answer{background:#F0F7FF;border:2px solid #2451FF;border-radius:14px;padding:22px 26px;margin:0 0 36px 0;}
+.geo-answer-label{font-size:10px;font-weight:800;color:#2451FF;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.geo-answer h2{font-size:17px;font-weight:700;color:#0A0F1E;margin-bottom:8px;border:none!important;padding:0!important;margin-top:0!important;}
+.geo-answer p{font-size:15px;color:#374151;line-height:1.7;margin-bottom:0;}
+.toc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;margin:40px 0;}
+.toc h4{font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;}
+.toc ol{padding-left:20px;}
+.toc li{font-size:14px;color:var(--blue);font-weight:600;line-height:1.7;margin-bottom:2px;}
+.toc a{color:var(--blue);}
+.post-body{max-width:760px;margin:0 auto;padding:48px 28px 80px;}
+.post-body p{font-size:16px;color:var(--mid);line-height:1.85;margin-bottom:22px;}
+.post-body h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.6px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--border);}
+.post-body h3{font-size:18px;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+.post-body h4{font-size:15px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.post-body ul,.post-body ol{padding-left:26px;margin-bottom:22px;}
+.post-body li{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:8px;}
+.post-body strong{color:var(--ink);font-weight:700;}
+.post-body a{color:var(--blue);font-weight:600;text-decoration:underline;text-decoration-color:var(--blue-mid);text-underline-offset:3px;}
+.post-body blockquote{border-left:4px solid var(--blue-mid);margin:28px 0;padding:16px 20px;background:var(--blue-pale);border-radius:0 8px 8px 0;}
+.post-body blockquote p{color:var(--ink);font-style:italic;margin-bottom:0;font-size:17px;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+.stat-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:var(--r);padding:20px;text-align:center;}
+.stat-box .stat-number{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-1px;display:block;margin-bottom:4px;}
+.stat-box .stat-label{font-size:13px;color:var(--mid);line-height:1.5;}
+.stat-row-2{grid-template-columns:repeat(2,1fr);}
+.callout{border-radius:var(--r);padding:20px 24px;margin:28px 0;display:flex;gap:14px;align-items:flex-start;}
+.callout-blue{background:var(--blue-pale);border:1px solid var(--blue-mid);}
+.callout-green{background:var(--green-bg);border:1px solid #A7F3D0;}
+.callout-amber{background:var(--amber-bg);border:1px solid #FDE68A;}
+.callout-purple{background:var(--purple-bg);border:1px solid #DDD6FE;}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-text{font-size:15px;color:var(--ink);line-height:1.65;}
+.callout-text strong{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;color:var(--blue);}
+.callout-green .callout-text strong{color:var(--green);}
+.callout-amber .callout-text strong{color:var(--amber);}
+.post-img{margin:36px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);}
+.post-img svg{display:block;width:100%;}
+.post-img figcaption{font-size:12px;color:var(--muted);padding:10px 16px;background:var(--bg);text-align:center;border-top:1px solid var(--border);}
+.post-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.post-table th{background:var(--bg);font-weight:700;text-align:left;padding:10px 14px;border:1px solid var(--border);font-size:13px;text-transform:uppercase;letter-spacing:.4px;}
+.post-table td{padding:10px 14px;border:1px solid var(--border);color:var(--mid);line-height:1.5;}
+.post-table tr:hover td{background:var(--bg);}
+.check{color:var(--green);font-weight:700;}
+.cross{color:var(--red);}
+.post-cta{background:linear-gradient(135deg,#0A0F1E,#152054);border-radius:var(--r-lg);padding:48px;text-align:center;margin:48px 0;}
+.post-cta h3{font-size:26px;font-weight:800;color:white;margin-bottom:10px;letter-spacing:-.8px;}
+.post-cta p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:460px;margin-left:auto;margin-right:auto;}
+.btn-white{background:white;color:var(--blue);font-size:16px;font-weight:700;padding:13px 28px;border-radius:10px;display:inline-block;transition:all .2s;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.related{background:var(--bg);border-top:1px solid var(--border);padding:48px 28px;}
+.related-inner{max-width:760px;margin:0 auto;}
+.related-inner h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;transition:all .2s;}
+.related-card:hover{border-color:var(--blue-mid);box-shadow:0 4px 16px rgba(36,81,255,.08);}
+.related-card-tag{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px;}
+.related-card-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.4;}
+.related-card-read{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;display:block;}
+.geo-faq{margin:40px 0;}
+.geo-faq h2{font-size:20px;font-weight:800;color:#0A0F1E;margin-bottom:20px;border-top:1px solid #E5E7EB;padding-top:14px;}
+.geo-faq-item{border:1px solid #E5E7EB;border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.geo-faq-q{font-size:15px;font-weight:700;color:#0A0F1E;padding:16px 20px;background:#F9FAFB;}
+.geo-faq-a{font-size:14px;color:#4B5563;padding:14px 20px;line-height:1.75;border-top:1px solid #E5E7EB;}
+footer{background:#0A0F1E;padding:40px 28px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:18px;font-weight:800;color:white;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
+@media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
+
+.help-hero{background:linear-gradient(180deg,var(--bg) 0%,var(--white) 100%);padding:64px 28px 48px;border-bottom:1px solid var(--border);}
+.help-inner{max-width:960px;margin:0 auto;}
+.help-tag{display:inline-block;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:20px;letter-spacing:.3px;text-transform:uppercase;background:var(--blue-pale);color:var(--blue);}
+.help-hero h1{font-size:clamp(26px,4vw,42px);font-weight:800;letter-spacing:-1.5px;line-height:1.12;margin-bottom:16px;}
+.help-hero p{font-size:17px;color:var(--mid);line-height:1.7;max-width:640px;}
+.help-layout{max-width:960px;margin:0 auto;padding:48px 28px 80px;display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start;}
+@media(max-width:768px){.help-layout{grid-template-columns:1fr;}.help-sidebar{display:none;}}
+.help-sidebar{position:sticky;top:88px;}
+.help-sidebar nav{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:20px;}
+.help-sidebar nav h4{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;}
+.help-sidebar nav a{display:block;font-size:14px;font-weight:500;color:var(--mid);padding:7px 10px;border-radius:8px;margin-bottom:2px;transition:all .15s;}
+.help-sidebar nav a:hover,.help-sidebar nav a.active{background:var(--blue-pale);color:var(--blue);}
+.help-content{}
+.help-section{margin-bottom:52px;}
+.help-section h2{font-size:21px;font-weight:800;color:var(--ink);letter-spacing:-.5px;margin-bottom:4px;padding-bottom:12px;border-bottom:2px solid var(--blue-mid);}
+.help-section .section-desc{font-size:14px;color:var(--muted);margin:8px 0 20px;}
+.qa-card{border:1px solid var(--border);border-radius:var(--r);margin-bottom:12px;overflow:hidden;}
+.qa-q{padding:16px 20px;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--white);transition:background .15s;user-select:none;line-height:1.4;}
+.qa-q:hover{background:var(--bg);}
+.qa-q .chev{width:18px;height:18px;color:var(--muted);transition:transform .2s;flex-shrink:0;}
+.qa-card.open .chev{transform:rotate(180deg);}
+.qa-card.open .qa-q{background:var(--blue-pale);color:var(--blue);}
+.qa-a{display:none;padding:20px 20px 20px;border-top:1px solid var(--border);background:var(--white);}
+.qa-card.open .qa-a{display:block;}
+.qa-a p{font-size:15px;color:var(--mid);line-height:1.8;margin-bottom:14px;}
+.qa-a p:last-child{margin-bottom:0;}
+.qa-a ol,.qa-a ul{padding-left:20px;margin:10px 0 14px;}
+.qa-a li{font-size:15px;color:var(--mid);line-height:1.8;margin-bottom:6px;}
+.qa-a strong{color:var(--ink);font-weight:700;}
+.qa-a a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:2px;}
+.steps{margin:14px 0;}
+.step{display:flex;gap:14px;align-items:flex-start;margin-bottom:10px;padding:12px 16px;background:var(--bg);border-radius:10px;}
+.step-num{width:26px;height:26px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;margin-top:1px;}
+.step-text{font-size:15px;color:var(--mid);line-height:1.7;}
+.step-text strong{color:var(--ink);}
+.tip{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:10px;padding:12px 16px;margin:14px 0;}
+.tip p{margin:0!important;color:var(--ink);font-size:14px;line-height:1.6;}
+.warn{background:#FEF3C7;border:1px solid #FCD34D;border-radius:10px;padding:12px 16px;margin:14px 0;}
+.warn p{margin:0!important;color:#92400E;font-size:14px;line-height:1.6;}
+.help-contact{background:linear-gradient(135deg,#0A0F1E,#1a2e6e);border-radius:var(--r-lg);padding:36px 40px;margin-top:48px;text-align:center;}
+.help-contact h3{font-size:22px;font-weight:800;color:white;margin-bottom:8px;}
+.help-contact p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto;}
+.help-contact a{background:var(--blue);color:white;font-weight:700;padding:12px 28px;border-radius:10px;display:inline-block;font-size:15px;}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:32px 0;}
+.hub-card{border:1px solid var(--border);border-radius:var(--r);padding:24px;background:var(--white);transition:all .15s;text-decoration:none;display:block;}
+.hub-card:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(36,81,255,.08);}
+.hub-card .ic{font-size:26px;margin-bottom:12px;}
+.hub-card h3{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+.hub-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+.hub-card .cnt{font-size:12px;color:var(--blue);font-weight:600;margin-top:8px;}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How to Invite and Manage Your Team in Lyniro","description":"Learn how to invite team members, set roles, manage permissions, and handle team member changes in Lyniro.","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"mainEntityOfPage":"https://lyniro.com/help/team/","datePublished":"2026-05-23","dateModified":"2026-05-23"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://lyniro.com/"},{"@type":"ListItem","position":2,"name":"Help Center","item":"https://lyniro.com/help/"},{"@type":"ListItem","position":3,"name":"How to Invite and Manage Your Team in Lyniro","item":"https://lyniro.com/help/team/"}]}</script>
+</head>
+<body><nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 14 14" fill="none" width="18" height="18"><path d="M2 2h4v10H2zM8 2h4v4H8zM8 9h4v3H8z" fill="white"/></svg></div>
+      <span style="font-size:20px;font-weight:800;color:#0A0F1E;">Lyniro</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a><a href="/help/">Help</a>
+      <a href="/vs/dock/">vs Dock</a>
+    </div>
+    <a href="/#early-access" class="btn-blue">Become a Design Partner &rarr;</a>
+  </div>
+</nav>
+<div class="help-hero"><div class="help-inner">
+<span class="help-tag">Team</span>
+<h1>How to Invite and Manage Your Team in Lyniro</h1>
+<p>Invite your CS team, set the right roles, and manage your workspace.</p>
+</div></div>
+<div class="help-layout">
+<aside class="help-sidebar"><nav><h4>Help Topics</h4><a href="/help/">Help Home</a>
+<a href="/help/getting-started/">Getting Started</a>
+<a href="/help/plans/">Plans</a>
+<a href="/help/tasks/">Tasks</a>
+<a href="/help/templates/">Templates</a>
+<a href="/help/clients/">Clients</a>
+<a href="/help/team/" class="active">Team</a>
+<a href="/help/notifications/">Notifications</a>
+<a href="/help/analytics/">Analytics</a>
+<a href="/help/integrations/">Integrations</a>
+<a href="/help/settings/">Settings</a>
+<a href="/help/billing/">Billing</a>
+<a href="/help/security/">Security</a>
+<a href="/help/troubleshooting/">Troubleshooting</a>
+</nav></aside>
+<main class="help-content"><div class="help-section">
+<h2>Inviting Team Members</h2>
+<p class="section-desc">Add people to your Lyniro workspace.</p>
+<div class="qa-card">
+<div class="qa-q">How do I invite a team member?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-text">Go to <strong>Settings → Team</strong></div></div><div class="step"><div class="step-num">2</div><div class="step-text">Click <strong>Invite member</strong></div></div><div class="step"><div class="step-num">3</div><div class="step-text">Enter their work email address</div></div><div class="step"><div class="step-num">4</div><div class="step-text">Select their role: Owner, Admin, or Member</div></div><div class="step"><div class="step-num">5</div><div class="step-text">Click <strong>Send invite</strong></div></div></div><p>They receive an email with a link to join your workspace. The invite expires after 7 days. If it expires, go back to Settings → Team and send a new invite.</p><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div><div class="qa-card">
+<div class="qa-q">What is the difference between Owner, Admin, and Member?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><p><strong>Owner:</strong> Full access to everything — plans, settings, billing, team management, and integrations. Only one owner per workspace.</p><p><strong>Admin:</strong> Full access to plans and team management. Can invite and remove members. Can manage integrations and settings. Cannot change billing.</p><p><strong>Member (CSM):</strong> Can create and manage plans. Can view all plans in the workspace. Cannot manage team, billing, or integrations.</p><div class="tip"><p>💡 <strong>Tip:</strong> Make your direct manager an Admin so they can see the leadership dashboard and team performance. CSMs should be Members.</p></div><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div><div class="qa-card">
+<div class="qa-q">What are Viewer seats and how do I add them?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><p>Viewers have read-only access — they can see plans and tasks but cannot create, edit, or send anything.</p><p>Viewers are useful for: sales reps who want to check their customer's onboarding status, executives who need portfolio visibility without editing anything.</p><p><strong>Viewer seats are always free</strong> and do not count toward your plan seat limit.</p><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-text">Go to Settings → Team → Invite member</div></div><div class="step"><div class="step-num">2</div><div class="step-text">Enter the email address</div></div><div class="step"><div class="step-num">3</div><div class="step-text">Select <strong>Viewer</strong> as the role</div></div><div class="step"><div class="step-num">4</div><div class="step-text">Send invite</div></div></div><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div>
+</div><div class="help-section">
+<h2>Managing Your Team</h2>
+<p class="section-desc">Change roles and handle team changes.</p>
+<div class="qa-card">
+<div class="qa-q">How do I change someone's role?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-text">Go to <strong>Settings → Team</strong></div></div><div class="step"><div class="step-num">2</div><div class="step-text">Find the team member in the list</div></div><div class="step"><div class="step-num">3</div><div class="step-text">Click the role dropdown next to their name</div></div><div class="step"><div class="step-num">4</div><div class="step-text">Select the new role — changes take effect immediately</div></div></div><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div><div class="qa-card">
+<div class="qa-q">How do I remove a team member?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-text">Go to <strong>Settings → Team</strong></div></div><div class="step"><div class="step-num">2</div><div class="step-text">Find the team member</div></div><div class="step"><div class="step-num">3</div><div class="step-text">Click the <strong>Remove</strong> button</div></div><div class="step"><div class="step-num">4</div><div class="step-text">Confirm in the dialog</div></div></div><p>After removal, they can no longer log into your Lyniro workspace. All their plans and data remain in the workspace.</p><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div><div class="qa-card">
+<div class="qa-q">What happens to plans when a CSM leaves?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><p>Plans remain in your workspace and are still fully visible to all remaining team members. The plans are not deleted or hidden.</p><p>To reassign plans to another CSM, open each plan and change the assigned CSM in the plan header.</p><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div><div class="qa-card">
+<div class="qa-q">Can team members see each other's plans?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><p>Yes. All plans in a workspace are visible to all team members regardless of who created them. This ensures continuity when a CSM is on leave or transitions out.</p><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div><div class="qa-card">
+<div class="qa-q">How do I resend an invite that has expired?<svg class="chev" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></div>
+<div class="qa-a"><div class="steps"><div class="step"><div class="step-num">1</div><div class="step-text">Go to Settings → Team</div></div><div class="step"><div class="step-num">2</div><div class="step-text">Find the pending invite in the Pending Invites section</div></div><div class="step"><div class="step-num">3</div><div class="step-text">Click <strong>Resend</strong></div></div><div class="step"><div class="step-num">4</div><div class="step-text">A new invite email is sent with a fresh 7-day expiry</div></div></div><p>Still stuck? Email us at <a href="mailto:help@lyniro.com"><strong>help@lyniro.com</strong></a> — we respond within 24 hours.</p></div>
+</div>
+</div><div class="help-contact"><h3>Still need help?</h3><p>Our team responds within 24 hours on business days. For urgent issues, mark your subject [URGENT].</p><a href="mailto:help@lyniro.com">Email help@lyniro.com</a></div></main>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Lyniro</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/customer-onboarding-software/">Onboarding Software</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Lyniro. All rights reserved.</span>
+  </div>
+</footer><script>
+document.querySelectorAll('.qa-card').forEach((c,i)=>{
+  if(i===0||c.closest('.help-section').querySelectorAll('.qa-card')[0]===c)
+    c.classList.add('open');
+});
+document.querySelectorAll('.qa-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const c=q.parentElement;
+    const wasOpen=c.classList.contains('open');
+    c.closest('.help-section').querySelectorAll('.qa-card').forEach(x=>x.classList.remove('open'));
+    if(!wasOpen)c.classList.add('open');
+  });
+});
+</script></body></html>

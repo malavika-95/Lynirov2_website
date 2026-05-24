@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.lyniro.com" }],
+      "destination": "https://lyniro.com/:path*",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": true
+}
