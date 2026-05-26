@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Predict SaaS Churn &mdash; 8 Signals &amp; Model | Lyniro</title>
-<meta name="description" content="How to predict SaaS churn before customers cancel. 8 signals that predict churn 90+ days out, a simple weighted scoring model, and response protocols for each signal type.">
+<title>How to Predict SaaS Churn: 8 Signals + Model | Lyniro</title>
+<meta name="description" content="How to predict SaaS churn before customers cancel. 8 signals that predict churn 90+ days out, a simple weighted scoring model, and response protocols for…">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://lyniro.com/blog/churn-prediction-saas/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Predict SaaS Churn — 8 Signals and a Simple Scoring Model","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-28","dateModified":"2026-04-28","description":"8 signals that predict SaaS churn 90+ days out, a weighted scoring model, and response protocols for each signal type."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Predict SaaS Churn — 8 Signals and a Simple Scoring Model","author":{"@type":"Organization","name":"Lyniro","url":"https://lyniro.com"},"publisher":{"@type":"Organization","name":"Lyniro","logo":{"@type":"ImageObject","url":"https://lyniro.com/favicon.svg"}},"datePublished":"2026-04-28","dateModified":"2026-04-28","description":"8 signals that predict SaaS churn 90+ days out, a weighted scoring model, and response protocols for each signal type.","image":"https://lyniro.com/og-image.png"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you predict SaaS churn?","acceptedAnswer":{"@type":"Answer","text":"Predict SaaS churn by tracking 8 signals across the customer lifecycle: onboarding completion at day 30, days since last client action, first value milestone timing, champion stability, product usage trend, support ticket volume, NPS trajectory, and renewal engagement. Build a weighted scoring model — accounts above 40 points get immediate CSM review, above 60 get CS manager escalation."}},{"@type":"Question","name":"What is the earliest churn signal in SaaS?","acceptedAnswer":{"@type":"Answer","text":"The earliest and strongest churn signal is onboarding completion below 60% at the 30-day mark. This appears in Month 1 and predicts churn at renewal 11 months later with high accuracy. The second earliest is days since last client action exceeding 14 days — which can appear at any point and indicates disengagement before it becomes a decision."}},{"@type":"Question","name":"When is it too late to prevent SaaS churn?","acceptedAnswer":{"@type":"Answer","text":"It is almost never fully 'too late' until the customer has explicitly cancelled, but intervention effectiveness drops sharply after the customer stops responding to renewal outreach. Acting on Month 1–3 signals is 3x more effective than acting on Month 11 signals. If a customer reaches renewal with no response to 90-day prep outreach, executive escalation is the only remaining lever."}}]}</script>
 <style>
 :root{--ink:#0A0F1E;--blue:#2451FF;--blue-dim:#1A3FD4;--blue-pale:#EEF2FF;--blue-mid:#C7D2FE;--mid:#4B5563;--muted:#9CA3AF;--border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--green:#059669;--green-bg:#ECFDF5;--red:#DC2626;--amber:#D97706;--amber-bg:#FFFBEB;--purple:#7C3AED;--purple-bg:#F5F3FF;--teal:#0F6E56;--teal-bg:#ECFDF5;--r:14px;--r-lg:20px;}
@@ -114,6 +114,15 @@ footer{background:#0A0F1E;padding:40px 28px;}
 .footer-copy{font-size:13px;color:rgba(255,255,255,.3);}
 @media(max-width:768px){.nav-links{display:none;}.post-cta{padding:32px 20px;}.stat-row,.stat-row-2,.related-grid{grid-template-columns:1fr;}}
 </style>
+<meta property="og:title" content="How to Predict SaaS Churn: 8 Signals + Model | Lyniro">
+<meta property="og:description" content="How to predict SaaS churn before customers cancel. 8 signals that predict churn 90+ days out, a simple weighted scoring model, and response protocols for…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lyniro.com/blog/churn-prediction-saas/">
+<meta property="og:image" content="https://lyniro.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Predict SaaS Churn: 8 Signals + Model | Lyniro">
+<meta name="twitter:description" content="How to predict SaaS churn before customers cancel. 8 signals that predict churn 90+ days out, a simple weighted scoring model, and response protocols for…">
+<meta name="twitter:image" content="https://lyniro.com/og-image.png">
 </head>
 <body>
 <nav>
@@ -126,6 +135,7 @@ footer{background:#0A0F1E;padding:40px 28px;}
       <a href="/#features">Features</a>
       <a href="/#pricing">Pricing</a>
       <a href="/blog/">Blog</a>
+      <a href="/help/">Help</a>
       <a href="/vs/dock/">vs Dock</a>
     </div>
     <a href="/#waitlist" class="btn-blue">Get Early Access &rarr;</a>
